@@ -60,32 +60,31 @@ In class we ran a **retrospective across all work teams** (not only The Illusion
 
 ### Evolutionary MVP — repository layout defined
 
-We **defined the repositories** that will carry the evolutionary progression of the first MVP (monolith → bounded-context services), aligned with the canonical domain map in `opti-docs` (`ms-pacientes` / `ms-inventario` / `ms-ordenes` / `ms-facturacion`):
+We **defined and created** the evolutionary repositories under the org [`code-corhuila`](https://github.com/orgs/code-corhuila/repositories?q=opti) (**19 private `opti-*` repos**). Pattern per bounded context: **`api` + `db` + `portal`**, plus shared platform repos.
 
-| Repository (planned / defined) | Role in the evolution |
-|--------------------------------|------------------------|
-| `optiview-platform` | MVP 1 baseline (modular monolith + React SPA) — remains the runnable reference |
-| `opti-docs` | Documentation SSOT (domain, governance, API contracts) |
-| `ms-pacientes` | Patients bounded context (extract from monolith) |
-| `ms-inventario` | Inventory / frames & lenses bounded context |
-| `ms-ordenes` | Work orders bounded context |
-| `ms-facturacion` | Billing / invoicing bounded context |
-| `api-gateway` | Single entry point for the SPA as services are split |
-| Frontend SPA | Continues as React client; later points at gateway instead of monolith `/api` |
+| Area | Repositories | Role |
+|------|----------------|------|
+| MVP baseline | `opti-view` | MVP 1 reference repo |
+| Docs | `opti-docs` | Documentation SSOT |
+| Platform | `opti-front`, `opti-api-gateway`, `opti-infra`, `opti-workflow`, `opti-worker` | Shell UI, gateway, Compose/IaC, saga orchestration, async jobs |
+| Auth BC | `opti-auth-api`, `opti-auth-db`, `opti-auth-portal` | Auth service, DB, remote UI |
+| Customers BC | `opti-customers-api`, `opti-customers-db`, `opti-customers-portal` | Customers / patients context |
+| Products BC | `opti-products-api`, `opti-products-db`, `opti-products-portal` | Products / inventory context |
+| Sales BC | `opti-sales-api`, `opti-sales-db`, `opti-sales-portal` | Sales / work-orders context |
 
-This layout supports **incremental extraction**: keep MVP 1 working while each `ms-*` is carved out with its own Git Flow (`feature` → `develop` → `qa` → `main`).
+This layout supports **incremental extraction** from MVP 1: keep `opti-view` as the runnable baseline while each BC evolves in its own repos with Git Flow (`feature` → `develop` → `qa` → `main`).
 
 ## 3. Blockers and risks
 
-- Evolutionary repos are **defined** this week; service scaffolds and CI per repo are still upcoming.
+- Evolutionary repos are **defined/created** this week under `code-corhuila`; service scaffolds and CI per `opti-*-api` are still upcoming.
 - Compose is sufficient for local MVP; production orchestration (K8s) is documented conceptually but not deployed yet.
-- Config/secrets strategy is documented; team still needs a concrete secret-store choice for shared environments.
+- Config/secrets strategy is documented; team still needs a concrete secret-store choice for shared environments (owned by `opti-infra`).
 
 ## 4. Plan for next week
 
-- Start scaffolding the first evolutionary repos (`ms-*` / gateway) from the layout above.
-- Align OpenAPI / events docs in `opti-docs` with the extraction order.
-- Keep Compose local stack as the integration harness while services are split.
+- Grant full collaborator access on all `opti-*` repos to the OptiView team.
+- Align OpenAPI / events docs in `opti-docs` with auth / customers / products / sales extraction order.
+- Keep Compose local stack (`opti-infra`) as the integration harness while services are split.
 
 ## 5. Compliance self-check
 

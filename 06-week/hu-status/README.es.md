@@ -62,32 +62,31 @@ En clase hicimos una **retrospectiva que cubrió todos los equipos de trabajo** 
 
 ### MVP evolutivo — layout de repositorios definido
 
-**Definimos los repositorios** que llevarán la progresión evolutiva del primer MVP (monolito → servicios por bounded context), alineados con el mapa de dominio canónico en `opti-docs` (`ms-pacientes` / `ms-inventario` / `ms-ordenes` / `ms-facturacion`):
+**Definimos y creamos** los repositorios evolutivos bajo la org [`code-corhuila`](https://github.com/orgs/code-corhuila/repositories?q=opti) (**19 repos privados `opti-*`**). Patrón por bounded context: **`api` + `db` + `portal`**, más repos de plataforma compartida.
 
-| Repositorio (planeado / definido) | Rol en la evolución |
-|-----------------------------------|---------------------|
-| `optiview-platform` | Línea base MVP 1 (monolito modular + SPA React) — sigue como referencia ejecutable |
-| `opti-docs` | SSOT documental (dominio, gobernanza, contratos API) |
-| `ms-pacientes` | Bounded context Pacientes (extraer del monolito) |
-| `ms-inventario` | Bounded context Inventario / monturas y lentes |
-| `ms-ordenes` | Bounded context Órdenes de trabajo |
-| `ms-facturacion` | Bounded context Facturación |
-| `api-gateway` | Punto de entrada único para la SPA cuando se dividan los servicios |
-| Frontend SPA | Sigue como cliente React; más adelante apunta al gateway en lugar del `/api` del monolito |
+| Área | Repositorios | Rol |
+|------|--------------|-----|
+| Línea base MVP | `opti-view` | Repo de referencia MVP 1 |
+| Docs | `opti-docs` | SSOT documental |
+| Plataforma | `opti-front`, `opti-api-gateway`, `opti-infra`, `opti-workflow`, `opti-worker` | Shell UI, gateway, Compose/IaC, orquestación saga, jobs async |
+| Auth BC | `opti-auth-api`, `opti-auth-db`, `opti-auth-portal` | Servicio auth, DB, UI remote |
+| Customers BC | `opti-customers-api`, `opti-customers-db`, `opti-customers-portal` | Contexto customers / pacientes |
+| Products BC | `opti-products-api`, `opti-products-db`, `opti-products-portal` | Contexto products / inventario |
+| Sales BC | `opti-sales-api`, `opti-sales-db`, `opti-sales-portal` | Contexto sales / órdenes |
 
-Este layout soporta **extracción incremental**: mantener el MVP 1 funcionando mientras cada `ms-*` se separa con su propio Git Flow (`feature` → `develop` → `qa` → `main`).
+Este layout soporta **extracción incremental** desde el MVP 1: mantener `opti-view` como línea base ejecutable mientras cada BC evoluciona en sus propios repos con Git Flow (`feature` → `develop` → `qa` → `main`).
 
 ## 3. Bloqueadores y riesgos
 
-- Los repos evolutivos están **definidos** esta semana; scaffolds de servicio y CI por repo aún faltan.
+- Los repos evolutivos están **definidos/creados** esta semana bajo `code-corhuila`; scaffolds de servicio y CI por `opti-*-api` aún faltan.
 - Compose alcanza para el MVP local; orquestación de producción (K8s) está documentada a nivel conceptual, no desplegada.
-- La estrategia de config/secretos está documentada; el equipo aún debe elegir un secret-store concreto para ambientes compartidos.
+- La estrategia de config/secretos está documentada; el equipo aún debe elegir un secret-store concreto para ambientes compartidos (dueño: `opti-infra`).
 
 ## 4. Plan para la próxima semana
 
-- Empezar scaffolds de los primeros repos evolutivos (`ms-*` / gateway) según el layout de arriba.
-- Alinear docs OpenAPI / eventos en `opti-docs` con el orden de extracción.
-- Mantener el stack Compose local como arnés de integración mientras se dividen servicios.
+- Dar acceso de colaborador completo en todos los repos `opti-*` al equipo OptiView.
+- Alinear docs OpenAPI / eventos en `opti-docs` con el orden de extracción auth / customers / products / sales.
+- Mantener el stack Compose local (`opti-infra`) como arnés de integración mientras se dividen servicios.
 
 ## 5. Autoverificación de cumplimiento
 
