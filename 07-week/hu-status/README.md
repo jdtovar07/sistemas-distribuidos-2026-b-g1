@@ -21,7 +21,7 @@
 | HU-OPT-062 | Produce visual summary of REST / gRPC / messaging | done | [`inter-service-communication-rest-grpc-messaging.png`](./inter-service-communication-rest-grpc-messaging.png) |
 | HU-OPT-063 | Document versioned contracts and contract testing | done | [`planning-versioned-contracts-contract-testing.md`](./planning-versioned-contracts-contract-testing.md) |
 | HU-OPT-064 | Produce visual summary of versioned contracts / contract testing | done | [`planning-versioned-contracts-contract-testing.png`](./planning-versioned-contracts-contract-testing.png) |
-| HU-OPT-065 | Add all OptiView collaborators (people + team) on the created evolutionary repos | done | [`repo-collaborators-access.png`](./repo-collaborators-access.png) — Manage access on `code-corhuila/opti-docs` |
+| HU-OPT-065 | Grant Manage access to all OptiView collaborators on all 19 `code-corhuila/opti-*` repos | done | [`repo-collaborators-access.png`](./repo-collaborators-access.png) + [`opti-repos-page1.png`](./opti-repos-page1.png) · [`page2`](./opti-repos-page2.png) · [`page3`](./opti-repos-page3.png) |
 
 ## 2. My individual contribution
 
@@ -41,16 +41,19 @@
 | Topic | OptiView application |
 |-------|----------------------|
 | REST | External / SPA ↔ `api-gateway` and public HTTP APIs (MVP 1 already uses REST) |
-| gRPC | Candidate for internal service-to-service calls once `ms-*` are extracted |
-| Messaging | Event-driven flows (e.g. order Saga across patients / inventory / orders) — aligns with Week-01 Saga design |
-| Versioned contracts | OpenAPI (and later Protobuf) per service in `opti-docs/07-api/` — evolve without breaking the SPA or sibling services |
-| Contract testing | CDC / provider checks before promoting `develop` → `qa` → `main` on each `ms-*` |
+| gRPC | Candidate for internal service-to-service calls once `opti-*-api` services are extracted |
+| Messaging | Event-driven flows via `opti-workflow` / `opti-worker` (e.g. order Saga) — aligns with Week-01 Saga design |
+| Versioned contracts | OpenAPI (and later Protobuf) per BC in `opti-docs` — evolve without breaking `opti-front` or sibling services |
+| Contract testing | CDC / provider checks before promoting `develop` → `qa` → `main` on each `opti-*-api` |
 
-### Team access — all collaborators on the created repos
+### Team access — all collaborators on all created `opti-*` repos
 
-In Week 06 we **defined** the evolutionary repository layout. This week I completed **Manage access** so **all collaborators below** have access on the created repos under `code-corhuila` (same access pattern applied across the evolutionary repos).
+In Week 06 we **defined/created** the evolutionary layout under [`code-corhuila`](https://github.com/orgs/code-corhuila/repositories?q=opti). This week I completed **Manage access** so **all collaborators below** have access on **all 19 `opti-*` repositories**.
 
-Evidence (screenshot of Manage access): [`repo-collaborators-access.png`](./repo-collaborators-access.png) — example from [`code-corhuila/opti-docs`](https://github.com/code-corhuila/opti-docs/settings/access).
+Evidence:
+
+- Manage access (example `opti-docs`): [`repo-collaborators-access.png`](./repo-collaborators-access.png)
+- Org repo list (`q=opti`, 19 repos): [`opti-repos-page1.png`](./opti-repos-page1.png) · [`opti-repos-page2.png`](./opti-repos-page2.png) · [`opti-repos-page3.png`](./opti-repos-page3.png)
 
 | Name | GitHub | Access |
 |------|--------|--------|
@@ -63,30 +66,29 @@ Evidence (screenshot of Manage access): [`repo-collaborators-access.png`](./repo
 | Daniela Sanabria Mosquera | `DaniKaizenNetwork` | write (outside collaborator) |
 | Team `@code-corhuila/opti-view` | team (3 members) | **admin** |
 
-**Repositories covered** (evolutionary layout from Week 06 — now with this collaborator set):
+**All repositories with access granted** (`code-corhuila`, private):
 
-| Repository | Purpose |
-|------------|---------|
-| `opti-docs` | Documentation SSOT (`code-corhuila/opti-docs`) |
-| `optiview-platform` | MVP 1 baseline (monolith + SPA) |
-| `ms-pacientes` | Patients bounded context |
-| `ms-inventario` | Inventory bounded context |
-| `ms-ordenes` | Work orders bounded context |
-| `ms-facturacion` | Billing bounded context |
-| `api-gateway` | Edge entry point for the SPA |
+| Area | Repositories |
+|------|----------------|
+| MVP / docs | `opti-view`, `opti-docs` |
+| Platform | `opti-front`, `opti-api-gateway`, `opti-infra`, `opti-workflow`, `opti-worker` |
+| Auth | `opti-auth-api`, `opti-auth-db`, `opti-auth-portal` |
+| Customers | `opti-customers-api`, `opti-customers-db`, `opti-customers-portal` |
+| Products | `opti-products-api`, `opti-products-db`, `opti-products-portal` |
+| Sales | `opti-sales-api`, `opti-sales-db`, `opti-sales-portal` |
 
-Result: every listed person/team can contribute on the evolutionary repos without waiting for individual ad-hoc grants.
+**Total: 19 repos** — every listed person/team can contribute on every `opti-*` repo without ad-hoc grants.
 
 ## 3. Blockers and risks
 
-- Contract-testing tooling (Pact / Spring Cloud Contract) is documented but not wired into CI yet on the new `ms-*` repos.
+- Contract-testing tooling (Pact / Spring Cloud Contract) is documented but not wired into CI yet on the new `opti-*-api` repos.
 - Communication style per boundary (REST vs gRPC vs events) still needs ADRs per service pair before coding starts.
 - Outside collaborators (`AllanZapata23`, `DaniKaizenNetwork`, `jssanchezzz`, `julianvargasb`) must keep invites accepted; org team `@code-corhuila/opti-view` is the preferred path for shared admin access.
 
 ## 4. Plan for next week
 
-- Publish first OpenAPI (or Proto) stubs for the highest-priority `ms-*` and store them in `opti-docs`.
-- Scaffold service skeletons with Git Flow branches (`develop` / `qa` / `main`) now that everyone has access.
+- Publish first OpenAPI (or Proto) stubs for the highest-priority BC (`opti-customers-*` / `opti-sales-*`) and store them in `opti-docs`.
+- Scaffold service skeletons with Git Flow branches (`develop` / `qa` / `main`) now that everyone has access on all 19 repos.
 - Decide first contract-testing tool and add a smoke check on PR to `develop`.
 
 ## 5. Compliance self-check
@@ -98,7 +100,7 @@ Result: every listed person/team can contribute on the evolutionary repos withou
 - [ ] DDD / hexagonal boundaries respected (domain has no I/O)
 - [x] No secrets; config via environment variables
 
-Notes: Week 07 is documentation (communication + contracts) plus GitHub collaborator setup on evolutionary repos. No application code this week — unchecked items apply when `ms-*` start receiving implementation PRs. Contract versioning and “no secrets in contracts/docs” are explicit in the planning notes.
+Notes: Week 07 is documentation (communication + contracts) plus GitHub collaborator setup on all `code-corhuila/opti-*` repos. No application code this week — unchecked items apply when `opti-*-api` start receiving implementation PRs. Contract versioning and “no secrets in contracts/docs” are explicit in the planning notes.
 
 ## 6. Evidence links
 
@@ -109,9 +111,11 @@ Notes: Week 07 is documentation (communication + contracts) plus GitHub collabor
 - Versioned contracts / contract testing notes: [`planning-versioned-contracts-contract-testing.md`](./planning-versioned-contracts-contract-testing.md)
 - Contracts visual: [`planning-versioned-contracts-contract-testing.png`](./planning-versioned-contracts-contract-testing.png)
 - Repo collaborators (Manage access): [`repo-collaborators-access.png`](./repo-collaborators-access.png)
+- Org `opti-*` repo list (19): [`opti-repos-page1.png`](./opti-repos-page1.png) · [`opti-repos-page2.png`](./opti-repos-page2.png) · [`opti-repos-page3.png`](./opti-repos-page3.png)
 
 **Related prior work:**
 
 - Week 06 repo layout + Compose / environments: [`06-week/hu-status/README.md`](../../06-week/hu-status/README.md)
-- Domain map (4 microservices): https://github.com/jdtovar07/opti-docs/blob/main/02-domain/domain-map.md
-- MVP 1 platform: https://github.com/jdtovar07/optiview-platform (tag `v1.0.0`)
+- Org repos: https://github.com/orgs/code-corhuila/repositories?q=opti
+- Domain map: https://github.com/code-corhuila/opti-docs/blob/main/02-domain/domain-map.md
+- MVP baseline: https://github.com/code-corhuila/opti-view
