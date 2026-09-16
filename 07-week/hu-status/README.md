@@ -8,7 +8,7 @@
 - FULL_NAME: Juan Diego Tovar Rodriguez
 - GITHUB_USER: jdtovar07
 - TEAM: The Illusionists
-- SPRINT_GOAL: Document inter-service communication (REST, gRPC, messaging) and versioned contracts / contract testing for OptiView's evolutionary microservices path, and grant every Illusionists teammate collaborator access on all repos created for the post-MVP 1 layout.
+- SPRINT_GOAL: Document inter-service communication (REST, gRPC, messaging) and versioned contracts / contract testing for OptiView's evolutionary microservices path, and grant Manage access to all OptiView collaborators (people + `@code-corhuila/opti-view` team) on the created repos.
 <!-- CONFIG-END -->
 
 > **Week 07 deliverable — communication contracts + team access on evolutionary repos.** Builds on Week 06 (Compose, environments, repo layout). This week documents **how services will talk** and **how contracts evolve safely**, and completes the org setup by **adding every team member to all created repositories**.
@@ -21,7 +21,7 @@
 | HU-OPT-062 | Produce visual summary of REST / gRPC / messaging | done | [`inter-service-communication-rest-grpc-messaging.png`](./inter-service-communication-rest-grpc-messaging.png) |
 | HU-OPT-063 | Document versioned contracts and contract testing | done | [`planning-versioned-contracts-contract-testing.md`](./planning-versioned-contracts-contract-testing.md) |
 | HU-OPT-064 | Produce visual summary of versioned contracts / contract testing | done | [`planning-versioned-contracts-contract-testing.png`](./planning-versioned-contracts-contract-testing.png) |
-| HU-OPT-065 | Add every Illusionists teammate as collaborator on all evolutionary repos | done | See §2 — Team access on created repos |
+| HU-OPT-065 | Add all OptiView collaborators (people + team) on the created evolutionary repos | done | [`repo-collaborators-access.png`](./repo-collaborators-access.png) — Manage access on `code-corhuila/opti-docs` |
 
 ## 2. My individual contribution
 
@@ -46,39 +46,42 @@
 | Versioned contracts | OpenAPI (and later Protobuf) per service in `opti-docs/07-api/` — evolve without breaking the SPA or sibling services |
 | Contract testing | CDC / provider checks before promoting `develop` → `qa` → `main` on each `ms-*` |
 
-### Team access — collaborators added to all created repos
+### Team access — all collaborators on the created repos
 
-In Week 06 we **defined** the evolutionary repository layout. This week I **added each Illusionists teammate** as collaborator on **every created repo**, so the whole team can push, open PRs and follow Git Flow per service.
+In Week 06 we **defined** the evolutionary repository layout. This week I completed **Manage access** so **all collaborators below** have access on the created repos under `code-corhuila` (same access pattern applied across the evolutionary repos).
 
-**Team members granted access** (5-member Illusionists roster):
+Evidence (screenshot of Manage access): [`repo-collaborators-access.png`](./repo-collaborators-access.png) — example from [`code-corhuila/opti-docs`](https://github.com/code-corhuila/opti-docs/settings/access).
 
-| GitHub user | Role in access setup |
-|-------------|----------------------|
-| `jdtovar07` | Owner / admin of the created repos — performed the collaborator invites |
-| `BackSua` | Collaborator added to all created repos |
-| `ItzJunixs` | Collaborator added to all created repos |
-| `jssanchezzz` | Collaborator added to all created repos |
-| `julianvargasb` | Collaborator added to all created repos |
+| Name | GitHub | Access |
+|------|--------|--------|
+| Juan Diego Tovar Rodriguez | `jdtovar07` | **admin** (performed / verified invites) |
+| BaironSuarez | `BackSua` | **admin** |
+| JDev | `ItzJunixs` | write |
+| jssanchezzz | `jssanchezzz` | write (outside collaborator) |
+| julianvargasb | `julianvargasb` | write (outside collaborator) |
+| ALLAN ZAPATA TORRES | `AllanZapata23` | write (outside collaborator) |
+| Daniela Sanabria Mosquera | `DaniKaizenNetwork` | write (outside collaborator) |
+| Team `@code-corhuila/opti-view` | team (3 members) | **admin** |
 
-**Repositories covered** (evolutionary layout from Week 06 — now with full team access):
+**Repositories covered** (evolutionary layout from Week 06 — now with this collaborator set):
 
 | Repository | Purpose |
 |------------|---------|
+| `opti-docs` | Documentation SSOT (`code-corhuila/opti-docs`) |
 | `optiview-platform` | MVP 1 baseline (monolith + SPA) |
-| `opti-docs` | Documentation SSOT |
 | `ms-pacientes` | Patients bounded context |
 | `ms-inventario` | Inventory bounded context |
 | `ms-ordenes` | Work orders bounded context |
 | `ms-facturacion` | Billing bounded context |
 | `api-gateway` | Edge entry point for the SPA |
 
-Result: any Illusionist can contribute on any evolutionary repo without waiting for individual access grants.
+Result: every listed person/team can contribute on the evolutionary repos without waiting for individual ad-hoc grants.
 
 ## 3. Blockers and risks
 
 - Contract-testing tooling (Pact / Spring Cloud Contract) is documented but not wired into CI yet on the new `ms-*` repos.
 - Communication style per boundary (REST vs gRPC vs events) still needs ADRs per service pair before coding starts.
-- Collaborator invites depend on teammates accepting GitHub invitations where required.
+- Outside collaborators (`AllanZapata23`, `DaniKaizenNetwork`, `jssanchezzz`, `julianvargasb`) must keep invites accepted; org team `@code-corhuila/opti-view` is the preferred path for shared admin access.
 
 ## 4. Plan for next week
 
@@ -105,6 +108,7 @@ Notes: Week 07 is documentation (communication + contracts) plus GitHub collabor
 - Communication visual: [`inter-service-communication-rest-grpc-messaging.png`](./inter-service-communication-rest-grpc-messaging.png)
 - Versioned contracts / contract testing notes: [`planning-versioned-contracts-contract-testing.md`](./planning-versioned-contracts-contract-testing.md)
 - Contracts visual: [`planning-versioned-contracts-contract-testing.png`](./planning-versioned-contracts-contract-testing.png)
+- Repo collaborators (Manage access): [`repo-collaborators-access.png`](./repo-collaborators-access.png)
 
 **Related prior work:**
 

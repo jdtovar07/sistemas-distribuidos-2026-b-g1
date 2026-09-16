@@ -10,7 +10,7 @@
 - FULL_NAME: Juan Diego Tovar Rodriguez
 - GITHUB_USER: jdtovar07
 - TEAM: The Illusionists
-- SPRINT_GOAL: Documentar comunicación inter-servicios (REST, gRPC, mensajería) y contratos versionados / contract testing para el camino evolutivo de microservicios de OptiView, y dar acceso de colaborador a cada integrante de Illusionists en todos los repos creados del layout post-MVP 1.
+- SPRINT_GOAL: Documentar comunicación inter-servicios (REST, gRPC, mensajería) y contratos versionados / contract testing para el camino evolutivo de microservicios de OptiView, y dar Manage access a todos los colaboradores de OptiView (personas + team `@code-corhuila/opti-view`) en los repos creados.
 <!-- CONFIG-END -->
 
 > **Entrega Semana 07 — contratos de comunicación + acceso del equipo a los repos evolutivos.** Parte de la Semana 06 (Compose, ambientes, layout de repos). Esta semana documenta **cómo hablarán los servicios** y **cómo evolucionan los contratos con seguridad**, y completa el setup de org **agregando a cada miembro del equipo en todos los repositorios creados**.
@@ -23,7 +23,7 @@
 | HU-OPT-062 | Elaborar resumen visual de REST / gRPC / mensajería | done | [`inter-service-communication-rest-grpc-messaging.png`](./inter-service-communication-rest-grpc-messaging.png) |
 | HU-OPT-063 | Documentar contratos versionados y contract testing | done | [`planning-versioned-contracts-contract-testing.md`](./planning-versioned-contracts-contract-testing.md) |
 | HU-OPT-064 | Elaborar resumen visual de contratos versionados / contract testing | done | [`planning-versioned-contracts-contract-testing.png`](./planning-versioned-contracts-contract-testing.png) |
-| HU-OPT-065 | Agregar a cada integrante de Illusionists como colaborador en todos los repos evolutivos | done | Ver §2 — Acceso del equipo a los repos creados |
+| HU-OPT-065 | Agregar a todos los colaboradores de OptiView (personas + team) en los repos evolutivos creados | done | [`repo-collaborators-access.png`](./repo-collaborators-access.png) — Manage access en `code-corhuila/opti-docs` |
 
 ## 2. Mi contribución individual
 
@@ -48,39 +48,42 @@
 | Contratos versionados | OpenAPI (y luego Protobuf) por servicio en `opti-docs/07-api/` — evolucionar sin romper la SPA ni servicios hermanos |
 | Contract testing | Checks CDC / provider antes de promover `develop` → `qa` → `main` en cada `ms-*` |
 
-### Acceso del equipo — colaboradores agregados a todos los repos creados
+### Acceso del equipo — todos los colaboradores en los repos creados
 
-En la Semana 06 **definimos** el layout de repositorios evolutivos. Esta semana **agregué a cada integrante de Illusionists** como colaborador en **todos los repos creados**, para que el equipo completo pueda pushear, abrir PRs y seguir Git Flow por servicio.
+En la Semana 06 **definimos** el layout de repositorios evolutivos. Esta semana completé **Manage access** para que **todos los colaboradores de abajo** tengan acceso en los repos creados bajo `code-corhuila` (mismo patrón de acceso aplicado en los repos evolutivos).
 
-**Integrantes con acceso** (roster de 5 de The Illusionists):
+Evidencia (captura de Manage access): [`repo-collaborators-access.png`](./repo-collaborators-access.png) — ejemplo de [`code-corhuila/opti-docs`](https://github.com/code-corhuila/opti-docs/settings/access).
 
-| Usuario GitHub | Rol en el setup de acceso |
-|----------------|---------------------------|
-| `jdtovar07` | Owner / admin de los repos creados — realicé las invitaciones de colaborador |
-| `BackSua` | Colaborador agregado en todos los repos creados |
-| `ItzJunixs` | Colaborador agregado en todos los repos creados |
-| `jssanchezzz` | Colaborador agregado en todos los repos creados |
-| `julianvargasb` | Colaborador agregado en todos los repos creados |
+| Nombre | GitHub | Acceso |
+|--------|--------|--------|
+| Juan Diego Tovar Rodriguez | `jdtovar07` | **admin** (realicé / verifiqué las invitaciones) |
+| BaironSuarez | `BackSua` | **admin** |
+| JDev | `ItzJunixs` | write |
+| jssanchezzz | `jssanchezzz` | write (outside collaborator) |
+| julianvargasb | `julianvargasb` | write (outside collaborator) |
+| ALLAN ZAPATA TORRES | `AllanZapata23` | write (outside collaborator) |
+| Daniela Sanabria Mosquera | `DaniKaizenNetwork` | write (outside collaborator) |
+| Team `@code-corhuila/opti-view` | team (3 miembros) | **admin** |
 
-**Repositorios cubiertos** (layout evolutivo Semana 06 — ahora con acceso completo del equipo):
+**Repositorios cubiertos** (layout evolutivo Semana 06 — ahora con este set de colaboradores):
 
 | Repositorio | Propósito |
 |-------------|-----------|
+| `opti-docs` | SSOT documental (`code-corhuila/opti-docs`) |
 | `optiview-platform` | Línea base MVP 1 (monolito + SPA) |
-| `opti-docs` | SSOT documental |
 | `ms-pacientes` | Bounded context Pacientes |
 | `ms-inventario` | Bounded context Inventario |
 | `ms-ordenes` | Bounded context Órdenes de trabajo |
 | `ms-facturacion` | Bounded context Facturación |
 | `api-gateway` | Punto de entrada edge para la SPA |
 
-Resultado: cualquier Illusionist puede contribuir en cualquier repo evolutivo sin esperar grants individuales de acceso.
+Resultado: todas las personas/team listados pueden contribuir en los repos evolutivos sin esperar grants individuales ad-hoc.
 
 ## 3. Bloqueadores y riesgos
 
 - El tooling de contract testing (Pact / Spring Cloud Contract) está documentado pero aún no cableado en CI de los nuevos `ms-*`.
 - El estilo de comunicación por frontera (REST vs gRPC vs eventos) aún necesita ADRs por par de servicios antes de codear.
-- Las invitaciones de colaborador dependen de que los compañeros las acepten en GitHub cuando aplique.
+- Los outside collaborators (`AllanZapata23`, `DaniKaizenNetwork`, `jssanchezzz`, `julianvargasb`) deben mantener las invitaciones aceptadas; el team org `@code-corhuila/opti-view` es la vía preferida para acceso admin compartido.
 
 ## 4. Plan para la próxima semana
 
@@ -107,6 +110,7 @@ Notas: La Semana 07 es documentación (comunicación + contratos) más setup de 
 - Visual de comunicación: [`inter-service-communication-rest-grpc-messaging.png`](./inter-service-communication-rest-grpc-messaging.png)
 - Notas contratos versionados / contract testing: [`planning-versioned-contracts-contract-testing.md`](./planning-versioned-contracts-contract-testing.md)
 - Visual de contratos: [`planning-versioned-contracts-contract-testing.png`](./planning-versioned-contracts-contract-testing.png)
+- Colaboradores del repo (Manage access): [`repo-collaborators-access.png`](./repo-collaborators-access.png)
 
 **Trabajo previo relacionado:**
 
