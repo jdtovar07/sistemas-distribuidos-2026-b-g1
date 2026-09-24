@@ -10,10 +10,10 @@
 - FULL_NAME: Juan Diego Tovar Rodriguez
 - GITHUB_USER: jdtovar07
 - TEAM: The Illusionists
-- SPRINT_GOAL: Documentar prácticas Agile & DevOps para equipos distribuidos y prácticas de planeación (story mapping, estimación, compromiso MVP) para guiar los siguientes cortes evolutivos de OptiView después del MVP 1 y el layout de 19 repos bajo code-corhuila.
+- SPRINT_GOAL: Documentar prácticas Agile & DevOps para equipos distribuidos y prácticas de planeación (story mapping, estimación, compromiso MVP); renombrar la sección 08 de opti-docs a 08-diagrams; y agregar cuatro diagramas de arquitectura de OptiView para guiar los siguientes cortes evolutivos después del MVP 1.
 <!-- CONFIG-END -->
 
-> **Entrega Semana 08 — planear los siguientes cortes de OptiView.** Después del MVP 1 (Semana 05), bases operativas (Semana 06) y contratos + acceso a repos (Semana 07), esta semana documenta **cómo un equipo distribuido planea y entrega** (Agile + DevOps) y **cómo mapeamos / estimamos / comprometemos el alcance MVP** para los servicios evolutivos `opti-*`.
+> **Entrega Semana 08 — planear los siguientes cortes de OptiView.** Después del MVP 1 (Semana 05), bases operativas (Semana 06) y contratos + acceso a repos (Semana 07), esta semana documenta **cómo un equipo distribuido planea y entrega** (Agile + DevOps) y **cómo mapeamos / estimamos / comprometemos el alcance MVP** para los servicios evolutivos `opti-*`, más el **rename `08-uml/` → `08-diagrams/`** y **cuatro diagramas Mermaid** en `code-corhuila/opti-docs` adaptados de la sesión simple-stock-flow del profesor.
 
 ## 1. Historias de usuario trabajadas esta semana
 
@@ -23,10 +23,15 @@
 | HU-OPT-067 | Elaborar resumen visual de Agile & DevOps para equipos distribuidos | done | [`agile-devops-distributed-teams.png`](./agile-devops-distributed-teams.png) |
 | HU-OPT-068 | Documentar story mapping, estimación y compromiso MVP | done | [`planning-story-mapping-estimation-mvp-commitment.md`](./planning-story-mapping-estimation-mvp-commitment.md) |
 | HU-OPT-069 | Elaborar resumen visual de story mapping / estimación / compromiso MVP | done | [`planning-story-mapping-estimation-mvp-commitment.png`](./planning-story-mapping-estimation-mvp-commitment.png) |
+| HU-OPT-070 | Renombrar la carpeta de sección `08-uml/` → `08-diagrams/` en `opti-docs` y registrarlo en CHANGELOG | done | https://github.com/code-corhuila/opti-docs/commit/1d613d37d7a0cb361fb9b55dfc2680bc56d8b97f |
+| HU-OPT-071 | Agregar diagrama del árbol de trabajo del monorepo (`flow-arbol-de-trabajo.mmd`) | done | https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/flow-arbol-de-trabajo.mmd |
+| HU-OPT-072 | Agregar diagrama hexagonal de repos Java + Go (`c4-estructura-repositorios.mmd`) | done | https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/c4-estructura-repositorios.mmd |
+| HU-OPT-073 | Agregar diagrama de doble hexágono portal-paciente + ms-pacientes (`c4-doble-hexagono.mmd`) | done | https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/c4-doble-hexagono.mmd |
+| HU-OPT-074 | Agregar diagrama de dependencias inward + capas de test (`flow-regla-dependencia.mmd`) | done | https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/flow-regla-dependencia.mmd |
 
 ## 2. Mi contribución individual
 
-> **Alcance esta semana:** documentación Agile / planeación de producto mapeada a OptiView — **no** código nuevo de features. Parte del MVP 1 (`opti-view`) y del catálogo evolutivo `code-corhuila/opti-*` (19 repos) con acceso completo de colaboradores desde la Semana 07.
+> **Alcance esta semana:** documentación Agile / planeación de producto mapeada a OptiView, más diagramas de arquitectura en `opti-docs` — **no** código nuevo de features. Parte del MVP 1 (`opti-view`) y del catálogo evolutivo `code-corhuila/opti-*` (19 repos) con acceso completo de colaboradores desde la Semana 07.
 
 ### Notas de estudio y visuales
 
@@ -36,6 +41,27 @@
 | [`agile-devops-distributed-teams.png`](./agile-devops-distributed-teams.png) | Resumen visual de Agile & DevOps para equipos distribuidos |
 | [`planning-story-mapping-estimation-mvp-commitment.md`](./planning-story-mapping-estimation-mvp-commitment.md) | Story maps (actividades → tareas → historias); estimación (story points, Fibonacci, T-shirt, Planning Poker); definición y compromiso MVP; MoSCoW; valor vs esfuerzo; planeación de releases |
 | [`planning-story-mapping-estimation-mvp-commitment.png`](./planning-story-mapping-estimation-mvp-commitment.png) | Resumen visual de story mapping, estimación y compromiso MVP |
+
+### Rename de carpeta en `opti-docs`
+
+Se renombró la sección **`08-uml/` → `08-diagrams/`** para que la carpeta numerada quede en inglés (ADR-001 / `documentation-rules.md`). Commit [`1d613d3`](https://github.com/code-corhuila/opti-docs/commit/1d613d37d7a0cb361fb9b55dfc2680bc56d8b97f) en la rama `docs/rename-08-uml-to-08-diagrams` (PR [`#14`](https://github.com/code-corhuila/opti-docs/pull/14)).
+
+| Antes | Después |
+|-------|---------|
+| `08-uml/` | `08-diagrams/` |
+
+Quedó registrado en [`CHANGELOG.md`](https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/CHANGELOG.md) (ruta anterior → ruta nueva + motivo) para que no lo tomen como carpeta rota. También se actualizaron `README.md` (índice + mermaid), `00-sdd-guide.md`, `06-data/README.md` y las rutas internas de la sección.
+
+### Diagramas OptiView en `opti-docs` (`08-diagrams/`)
+
+Adapté la sesión *simple-stock-flow* del profesor (`08-week/02-session/diagramas/`) a OptiView. Mis cuatro fuentes Mermaid (commit [`c9bba3f`](https://github.com/code-corhuila/opti-docs/commit/c9bba3f0bc8e8427e0d295f2bdb68eb8e0294235), mismo PR [`#14`](https://github.com/code-corhuila/opti-docs/pull/14)):
+
+| ID | Fuente | Qué muestra |
+|----|--------|-------------|
+| INFRA-03 | [`flow-arbol-de-trabajo.mmd`](https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/flow-arbol-de-trabajo.mmd) | Árbol planeado del monorepo (`optiview-distributed-system`: services, apps, infra, docs) |
+| INFRA-04 | [`c4-estructura-repositorios.mmd`](https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/c4-estructura-repositorios.mmd) | Layout hexagonal de `ms-pacientes` (Java) y `ms-ordenes` (Go) |
+| HEX-01 | [`c4-doble-hexagono.mmd`](https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/c4-doble-hexagono.mmd) | `portal-paciente` (React) + `ms-pacientes` tocándose en un solo punto HTTP |
+| DEP-01 | [`flow-regla-dependencia.mmd`](https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/flow-regla-dependencia.mmd) | Dependencias inward (`infrastructure` → `application` → `domain`) + tres capas de test |
 
 ### Mapeo a OptiView
 
@@ -47,6 +73,8 @@
 | Estimación | Story points / Planning Poker sobre HUs del backlog antes de codear scaffolds en `opti-customers-*` / `opti-sales-*` |
 | Compromiso MVP | MVP 1 ya entregado (`opti-view`); siguiente compromiso = slice vertical más delgado en repos evolutivos (no rewrite big-bang) |
 | MoSCoW | Must: gateway + un BC end-to-end; Should: BCs restantes; Won't (este corte): orquestación K8s completa en producción |
+| Rename de carpeta | `08-uml/` → `08-diagrams/` para que las secciones queden en inglés (ADR-001); registrado en CHANGELOG para que living-docs no lo tome como ruta rota |
+| Diagramas hexagonales | Congelar la regla de dependencias inward y el punto de contacto portal↔API **antes** de armar scaffolds de `opti-*-api` / portals |
 
 ### Continuidad Semanas 05–07
 
@@ -77,7 +105,7 @@
 - [ ] Límites DDD / hexagonal respetados (dominio sin I/O)
 - [x] Sin secretos; config vía variables de entorno
 
-Notas: La Semana 08 es documentación (Agile/DevOps + story mapping / estimación / compromiso MVP). Sin código de aplicación esta semana — los ítems sin marcar aplican cuando empiecen los PRs de servicios evolutivos. Las notas de planeación enfatizan slices MVP pequeños y estimación colaborativa.
+Notas: La Semana 08 es documentación (Agile/DevOps + story mapping / estimación / compromiso MVP + diagramas y rename en `opti-docs`). Sin código de features esta semana — los ítems DDD/tests sin marcar aplican cuando empiecen los PRs de servicios evolutivos. El trabajo en `opti-docs` usó la rama hija `docs/rename-08-uml-to-08-diagrams` → PR a `main` (regla del repo de docs), no una rama `hu-xxx-dev` en este fork del curso.
 
 ## 6. Enlaces de evidencia
 
@@ -87,6 +115,17 @@ Notas: La Semana 08 es documentación (Agile/DevOps + story mapping / estimació
 - Visual Agile & DevOps: [`agile-devops-distributed-teams.png`](./agile-devops-distributed-teams.png)
 - Notas story mapping / estimación / MVP: [`planning-story-mapping-estimation-mvp-commitment.md`](./planning-story-mapping-estimation-mvp-commitment.md)
 - Visual de planeación: [`planning-story-mapping-estimation-mvp-commitment.png`](./planning-story-mapping-estimation-mvp-commitment.png)
+
+**opti-docs (rename de carpeta + mis cuatro diagramas):**
+
+- Commit del rename: https://github.com/code-corhuila/opti-docs/commit/1d613d37d7a0cb361fb9b55dfc2680bc56d8b97f
+- CHANGELOG (ruta vieja → ruta nueva): https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/CHANGELOG.md
+- Commit de los diagramas: https://github.com/code-corhuila/opti-docs/commit/c9bba3f0bc8e8427e0d295f2bdb68eb8e0294235
+- PR #14: https://github.com/code-corhuila/opti-docs/pull/14
+- INFRA-03 árbol de trabajo: [`flow-arbol-de-trabajo.mmd`](https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/flow-arbol-de-trabajo.mmd)
+- INFRA-04 estructura de repos: [`c4-estructura-repositorios.mmd`](https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/c4-estructura-repositorios.mmd)
+- HEX-01 doble hexágono: [`c4-doble-hexagono.mmd`](https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/c4-doble-hexagono.mmd)
+- DEP-01 regla de dependencia: [`flow-regla-dependencia.mmd`](https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/flow-regla-dependencia.mmd)
 
 **Trabajo previo relacionado:**
 
