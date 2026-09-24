@@ -22,10 +22,10 @@
 | HU-OPT-068 | Document story mapping, estimation and MVP commitment | done | [`planning-story-mapping-estimation-mvp-commitment.md`](./planning-story-mapping-estimation-mvp-commitment.md) |
 | HU-OPT-069 | Produce visual summary of story mapping / estimation / MVP commitment | done | [`planning-story-mapping-estimation-mvp-commitment.png`](./planning-story-mapping-estimation-mvp-commitment.png) |
 | HU-OPT-070 | Rename `opti-docs` section folder `08-uml/` → `08-diagrams/` and record it in CHANGELOG | done | https://github.com/code-corhuila/opti-docs/commit/1d613d37d7a0cb361fb9b55dfc2680bc56d8b97f |
-| HU-OPT-071 | Add planned monorepo work-tree diagram (`flow-arbol-de-trabajo.mmd`) | done | https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/flow-arbol-de-trabajo.mmd |
-| HU-OPT-072 | Add hexagonal repo-structure diagram for Java + Go (`c4-estructura-repositorios.mmd`) | done | https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/c4-estructura-repositorios.mmd |
-| HU-OPT-073 | Add double-hexagon diagram portal-paciente + ms-pacientes (`c4-doble-hexagono.mmd`) | done | https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/c4-doble-hexagono.mmd |
-| HU-OPT-074 | Add inward-dependency + test-layers diagram (`flow-regla-dependencia.mmd`) | done | https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/flow-regla-dependencia.mmd |
+| HU-OPT-071 | Add planned monorepo work-tree diagram (`flow-arbol-de-trabajo.mmd`) | done | https://github.com/code-corhuila/opti-docs/blob/main/08-diagrams/diagrams/source/flow-arbol-de-trabajo.mmd |
+| HU-OPT-072 | Add hexagonal repo-structure diagram for Java + Go (`c4-estructura-repositorios.mmd`) | done | https://github.com/code-corhuila/opti-docs/blob/main/08-diagrams/diagrams/source/c4-estructura-repositorios.mmd |
+| HU-OPT-073 | Add double-hexagon diagram portal-paciente + ms-pacientes (`c4-doble-hexagono.mmd`) | done | https://github.com/code-corhuila/opti-docs/blob/main/08-diagrams/diagrams/source/c4-doble-hexagono.mmd |
+| HU-OPT-074 | Add inward-dependency + test-layers diagram (`flow-regla-dependencia.mmd`) | done | https://github.com/code-corhuila/opti-docs/blob/main/08-diagrams/diagrams/source/flow-regla-dependencia.mmd |
 
 ## 2. My individual contribution
 
@@ -42,13 +42,13 @@
 
 ### Folder rename in `opti-docs`
 
-Renamed section **`08-uml/` → `08-diagrams/`** so the numbered folder is English (ADR-001 / `documentation-rules.md`). Commit [`1d613d3`](https://github.com/code-corhuila/opti-docs/commit/1d613d37d7a0cb361fb9b55dfc2680bc56d8b97f) on branch `docs/rename-08-uml-to-08-diagrams` (PR [`#14`](https://github.com/code-corhuila/opti-docs/pull/14)).
+Renamed section **`08-uml/` → `08-diagrams/`** so the numbered folder is English (ADR-001 / `documentation-rules.md`). Commit [`1d613d3`](https://github.com/code-corhuila/opti-docs/commit/1d613d37d7a0cb361fb9b55dfc2680bc56d8b97f), merged to `main` via PR [`#14`](https://github.com/code-corhuila/opti-docs/pull/14).
 
 | Before | After |
 |--------|--------|
 | `08-uml/` | `08-diagrams/` |
 
-Recorded in [`CHANGELOG.md`](https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/CHANGELOG.md) (previous path → current path + reason) so living-docs checks do not treat the move as a broken folder. Also updated `README.md` (index + mermaid graph), `00-sdd-guide.md`, `06-data/README.md`, and paths inside the section.
+Recorded in [`CHANGELOG.md`](https://github.com/code-corhuila/opti-docs/blob/main/CHANGELOG.md) (previous path → current path + reason) so living-docs checks do not treat the move as a broken folder. Also updated `README.md` (index + mermaid graph), `00-sdd-guide.md`, `06-data/README.md`, and paths inside the section.
 
 ### OptiView diagrams in `opti-docs` (`08-diagrams/`)
 
@@ -56,10 +56,10 @@ Adapted the instructor *simple-stock-flow* session (`08-week/02-session/diagrama
 
 | ID | Source | What it shows |
 |----|--------|----------------|
-| INFRA-03 | [`flow-arbol-de-trabajo.mmd`](https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/flow-arbol-de-trabajo.mmd) | Planned monorepo tree (`optiview-distributed-system`: services, apps, infra, docs) |
-| INFRA-04 | [`c4-estructura-repositorios.mmd`](https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/c4-estructura-repositorios.mmd) | Hexagonal layout of `ms-pacientes` (Java) and `ms-ordenes` (Go) |
-| HEX-01 | [`c4-doble-hexagono.mmd`](https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/c4-doble-hexagono.mmd) | `portal-paciente` (React) + `ms-pacientes` touching at one HTTP point |
-| DEP-01 | [`flow-regla-dependencia.mmd`](https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/flow-regla-dependencia.mmd) | Inward dependencies (`infrastructure` → `application` → `domain`) + three test layers |
+| INFRA-03 | [`flow-arbol-de-trabajo.mmd`](https://github.com/code-corhuila/opti-docs/blob/main/08-diagrams/diagrams/source/flow-arbol-de-trabajo.mmd) | Planned monorepo tree (`optiview-distributed-system`: services, apps, infra, docs) |
+| INFRA-04 | [`c4-estructura-repositorios.mmd`](https://github.com/code-corhuila/opti-docs/blob/main/08-diagrams/diagrams/source/c4-estructura-repositorios.mmd) | Hexagonal layout of `ms-pacientes` (Java) and `ms-ordenes` (Go) |
+| HEX-01 | [`c4-doble-hexagono.mmd`](https://github.com/code-corhuila/opti-docs/blob/main/08-diagrams/diagrams/source/c4-doble-hexagono.mmd) | `portal-paciente` (React) + `ms-pacientes` touching at one HTTP point |
+| DEP-01 | [`flow-regla-dependencia.mmd`](https://github.com/code-corhuila/opti-docs/blob/main/08-diagrams/diagrams/source/flow-regla-dependencia.mmd) | Inward dependencies (`infrastructure` → `application` → `domain`) + three test layers |
 
 ### Mapping to OptiView
 
@@ -103,7 +103,7 @@ Adapted the instructor *simple-stock-flow* session (`08-week/02-session/diagrama
 - [ ] DDD / hexagonal boundaries respected (domain has no I/O)
 - [x] No secrets; config via environment variables
 
-Notes: Week 08 is documentation (Agile/DevOps + story mapping / estimation / MVP commitment + `08-uml/` → `08-diagrams/` rename + `opti-docs` diagrams). No application feature code this week — unchecked DDD/tests apply when evolutionary service PRs start. The `opti-docs` work used child branch `docs/rename-08-uml-to-08-diagrams` → PR to `main` (docs-repo rule), not a `hu-xxx-dev` branch on this course fork.
+Notes: Week 08 is documentation (Agile/DevOps + story mapping / estimation / MVP commitment + `08-uml/` → `08-diagrams/` rename + `opti-docs` diagrams). No application feature code this week — unchecked DDD/tests apply when evolutionary service PRs start. The `opti-docs` work used child branches `docs/rename-08-uml-to-08-diagrams` (PR #14, merged) and `docs/translate-week8-diagrams-to-english` (English follow-up) → PR to `main` (docs-repo rule), not a `hu-xxx-dev` branch on this course fork.
 
 ## 6. Evidence links
 
@@ -117,13 +117,14 @@ Notes: Week 08 is documentation (Agile/DevOps + story mapping / estimation / MVP
 **opti-docs (folder rename + my four diagrams):**
 
 - Rename commit: https://github.com/code-corhuila/opti-docs/commit/1d613d37d7a0cb361fb9b55dfc2680bc56d8b97f
-- CHANGELOG (old path → new path): https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/CHANGELOG.md
+- CHANGELOG (old path → new path): https://github.com/code-corhuila/opti-docs/blob/main/CHANGELOG.md
 - Diagrams commit: https://github.com/code-corhuila/opti-docs/commit/c9bba3f0bc8e8427e0d295f2bdb68eb8e0294235
-- PR #14: https://github.com/code-corhuila/opti-docs/pull/14
-- INFRA-03 work tree: [`flow-arbol-de-trabajo.mmd`](https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/flow-arbol-de-trabajo.mmd)
-- INFRA-04 repo structure: [`c4-estructura-repositorios.mmd`](https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/c4-estructura-repositorios.mmd)
-- HEX-01 double hexagon: [`c4-doble-hexagono.mmd`](https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/c4-doble-hexagono.mmd)
-- DEP-01 dependency rule: [`flow-regla-dependencia.mmd`](https://github.com/code-corhuila/opti-docs/blob/docs/rename-08-uml-to-08-diagrams/08-diagrams/diagrams/source/flow-regla-dependencia.mmd)
+- PR #14 (merged): https://github.com/code-corhuila/opti-docs/pull/14
+- English follow-up: https://github.com/code-corhuila/opti-docs/commit/e4305aa (branch [`docs/translate-week8-diagrams-to-english`](https://github.com/code-corhuila/opti-docs/compare/main...docs/translate-week8-diagrams-to-english))
+- INFRA-03 work tree: [`flow-arbol-de-trabajo.mmd`](https://github.com/code-corhuila/opti-docs/blob/main/08-diagrams/diagrams/source/flow-arbol-de-trabajo.mmd)
+- INFRA-04 repo structure: [`c4-estructura-repositorios.mmd`](https://github.com/code-corhuila/opti-docs/blob/main/08-diagrams/diagrams/source/c4-estructura-repositorios.mmd)
+- HEX-01 double hexagon: [`c4-doble-hexagono.mmd`](https://github.com/code-corhuila/opti-docs/blob/main/08-diagrams/diagrams/source/c4-doble-hexagono.mmd)
+- DEP-01 dependency rule: [`flow-regla-dependencia.mmd`](https://github.com/code-corhuila/opti-docs/blob/main/08-diagrams/diagrams/source/flow-regla-dependencia.mmd)
 
 **Related prior work:**
 
