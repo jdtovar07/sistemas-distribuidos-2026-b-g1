@@ -77,7 +77,7 @@
 - [ ] DDD / hexagonal boundaries respected (domain has no I/O)
 - [x] No secrets; config via environment variables
 
-Notes: Week 09 is documentation (configuration / secrets / flags + secure-config and progressive-delivery planning). No application feature code this week — unchecked DDD/tests apply when evolutionary service PRs start. This fork has no `develop`/`qa` long-lived branches, so the work uses child branch `docs/week-09-hu-status` → PR to `main` (no direct commit to the permanent branch), not `hu-xxx-dev` → `develop`. “No secrets in repo” and env-based configuration are the core of this week’s notes.
+Notes: Week 09 is documentation (configuration / secrets / flags + secure-config and progressive-delivery planning). No application feature code this week — unchecked DDD/tests apply when evolutionary service PRs start. Weekly HU-status on this course fork is committed on `main` (same as weeks 06–08), not `hu-xxx-dev` → `develop`. “No secrets in repo” and env-based configuration are the core of this week’s notes.
 
 ## 6. Evidence links
 

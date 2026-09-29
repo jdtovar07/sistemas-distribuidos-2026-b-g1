@@ -79,7 +79,7 @@
 - [ ] Límites DDD / hexagonal respetados (dominio sin I/O)
 - [x] Sin secretos; config vía variables de entorno
 
-Notas: La Semana 09 es documentación (configuración / secretos / flags + planeación de config segura y progressive delivery). Sin código de features esta semana — los ítems DDD/tests sin marcar aplican cuando empiecen los PRs de servicios evolutivos. Este fork no tiene ramas largas `develop`/`qa`, así que el trabajo usa la rama hija `docs/week-09-hu-status` → PR a `main` (sin commit directo a la rama permanente), no `hu-xxx-dev` → `develop`. “Sin secretos en el repo” y config por ambiente son el núcleo de las notas de esta semana.
+Notas: La Semana 09 es documentación (configuración / secretos / flags + planeación de config segura y progressive delivery). Sin código de features esta semana — los ítems DDD/tests sin marcar aplican cuando empiecen los PRs de servicios evolutivos. El HU-status semanal de este fork se commitea en `main` (igual que las semanas 06–08), no `hu-xxx-dev` → `develop`. “Sin secretos en el repo” y config por ambiente son el núcleo de las notas de esta semana.
 
 ## 6. Enlaces de evidencia
 
