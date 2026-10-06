@@ -10,12 +10,15 @@
 - FULL_NAME: Juan Diego Tovar Rodriguez
 - GITHUB_USER: jdtovar07
 - TEAM: The Illusionists
-- SPRINT_GOAL: Documentar patrones de persistencia (saga, outbox, CQRS) y prácticas de release de MVP 2; y aterrizar slices verticales sobre los scaffolds de la Semana 09 — notificaciones, atribución al vendedor, reportes de ventas, rutas del gateway, polish del front, alertas del worker e identidad en la saga — hacia un release integrado de OptiView.
+- SPRINT_GOAL: Documentar patrones de persistencia (saga, outbox, CQRS) y prácticas de release de MVP 2; aterrizar los slices verticales de esta semana sobre los scaffolds de la Semana 09; y reportar tarde los fixes de hardening del domingo 4 oct que no alcanzaron a entrar en el HU-status de la Semana 09.
 <!-- CONFIG-END -->
 
-> **Entrega Semana 10 — patrones de persistencia + slices verticales hacia MVP 2.** Tras los scaffolds de la Semana 09 (auth / sales / gateway / front / worker / workflow), esta semana: (1) documenta **database-per-service, saga, outbox, CQRS y consistencia eventual**, (2) documenta **cómo shipping MVP 2 como sistema integrado**, y (3) implementa los primeros **slices cross-service** en `develop` que ejercitan esos patrones.
+> **Ventana de la semana:** lunes **2026-10-05** → domingo **2026-10-11** (cada semana del curso es lun–dom).  
+> **Entrega Semana 10:** (1) notas de **persistencia** y **release MVP 2**, (2) slices verticales **de esta semana** sobre los scaffolds de la Semana 09, y (3) un bloque de **reporte tardío** del trabajo del **domingo 2026-10-04** (Semana 09) que no alcanzó a quedar en el HU-status de esa semana.
 
 ## 1. Historias de usuario trabajadas esta semana
+
+### A. Esta semana (lun 2026-10-05 → dom 2026-10-11)
 
 | HU ID | Título | Estado (todo/doing/done) | Evidencia (URL de PR o commit) |
 |---|---|---|---|
@@ -23,28 +26,43 @@
 | HU-OPT-091 | Elaborar resumen visual de saga / outbox / CQRS | done | [`persistence-saga-outbox-cqrs.png`](./persistence-saga-outbox-cqrs.png) |
 | HU-OPT-092 | Documentar prácticas de release para shipping MVP 2 | done | [`release-shipping-mvp-2.md`](./release-shipping-mvp-2.md) |
 | HU-OPT-093 | Elaborar resumen visual del release MVP 2 | done | [`release-shipping-mvp-2.png`](./release-shipping-mvp-2.png) |
-| HU-OPT-094 | Schema de sales-goal + notificaciones en `opti-auth-db` | done | https://github.com/code-corhuila/opti-auth-db/pull/4 |
-| HU-OPT-095 | Notificaciones + metas de vendedor en `opti-auth-api` | done | https://github.com/code-corhuila/opti-auth-api/pull/2 |
-| HU-OPT-096 | Agregar `seller_id` a work orders en `opti-sales-db` | done | https://github.com/code-corhuila/opti-sales-db/pull/4 |
-| HU-OPT-097 | Agregar `gateway_transaction_id` a payments en `opti-sales-db` | done | https://github.com/code-corhuila/opti-sales-db/pull/5 |
-| HU-OPT-098 | Atribuir work orders al vendedor + reportes de ingresos en `opti-sales-api` | done | https://github.com/code-corhuila/opti-sales-api/pull/2 |
-| HU-OPT-099 | Reporte seller-sales solo SERVICE en `opti-sales-api` | done | https://github.com/code-corhuila/opti-sales-api/pull/4 |
+| HU-OPT-094 | Email opcional de usuario (auth-db + auth-api) | done | https://github.com/code-corhuila/opti-auth-db/pull/6 · https://github.com/code-corhuila/opti-auth-api/pull/4 |
+| HU-OPT-095 | Validación de nombre solo letras en `opti-auth-api` | done | https://github.com/code-corhuila/opti-auth-api/pull/3 |
+| HU-OPT-096 | Rutar pagos Nequi por Wompi en `opti-sales-api` | done | https://github.com/code-corhuila/opti-sales-api/pull/5 |
+| HU-OPT-097 | Rehacer shell de `opti-front` con sidebar + topbar | done | https://github.com/code-corhuila/opti-front/pull/3 |
+| HU-OPT-098 | Polish del shell front (FormData, CSS avatar/tabs, iconos sidebar) | done | https://github.com/code-corhuila/opti-front/pull/10 · [#8](https://github.com/code-corhuila/opti-front/pull/8) |
+| HU-OPT-099 | Login split-screen según mockup en `opti-front` | done | https://github.com/code-corhuila/opti-front/pull/4 |
 | HU-OPT-100 | Rutar `/api/v1/lenses` a products-api en `opti-api-gateway` | done | https://github.com/code-corhuila/opti-api-gateway/pull/3 |
-| HU-OPT-101 | Rutar `/api/v1/notifications` a auth-api en `opti-api-gateway` | done | https://github.com/code-corhuila/opti-api-gateway/pull/5 |
-| HU-OPT-102 | Rehacer shell de `opti-front` con sidebar + topbar | done | https://github.com/code-corhuila/opti-front/pull/3 |
-| HU-OPT-103 | Login split-screen según mockup en `opti-front` | done | https://github.com/code-corhuila/opti-front/pull/4 |
-| HU-OPT-104 | Notificar al vendedor al alcanzar meta en `opti-worker` | done | https://github.com/code-corhuila/opti-worker/pull/2 |
-| HU-OPT-105 | Llevar identidad del caller en la saga place-order en `opti-workflow` | done | https://github.com/code-corhuila/opti-workflow/pull/2 |
-| HU-OPT-106 | Email opcional de usuario (auth-db + auth-api) | done | https://github.com/code-corhuila/opti-auth-db/pull/6 · https://github.com/code-corhuila/opti-auth-api/pull/4 |
-| HU-OPT-107 | Validación de nombre solo letras en `opti-auth-api` | done | https://github.com/code-corhuila/opti-auth-api/pull/3 |
-| HU-OPT-108 | Rutar pagos Nequi por Wompi en `opti-sales-api` | done | https://github.com/code-corhuila/opti-sales-api/pull/5 |
-| HU-OPT-109 | Polish del shell front (FormData, CSS avatar/tabs, iconos sidebar) | done | https://github.com/code-corhuila/opti-front/pull/10 · [#8](https://github.com/code-corhuila/opti-front/pull/8) |
+| HU-OPT-101 | Agregar `seller_id` a work orders en `opti-sales-db` | done | https://github.com/code-corhuila/opti-sales-db/pull/4 |
+| HU-OPT-102 | Agregar `gateway_transaction_id` a payments en `opti-sales-db` | done | https://github.com/code-corhuila/opti-sales-db/pull/5 |
+| HU-OPT-103 | Atribuir work orders al vendedor + reportes de ingresos en `opti-sales-api` | done | https://github.com/code-corhuila/opti-sales-api/pull/2 |
+| HU-OPT-104 | Llevar identidad del caller en la saga place-order en `opti-workflow` | done | https://github.com/code-corhuila/opti-workflow/pull/2 |
+| HU-OPT-105 | Schema de sales-goal + notificaciones en `opti-auth-db` | done | https://github.com/code-corhuila/opti-auth-db/pull/4 |
+| HU-OPT-106 | Notificaciones + metas de vendedor en `opti-auth-api` | done | https://github.com/code-corhuila/opti-auth-api/pull/2 |
+| HU-OPT-107 | Reporte seller-sales solo SERVICE en `opti-sales-api` | done | https://github.com/code-corhuila/opti-sales-api/pull/4 |
+| HU-OPT-108 | Rutar `/api/v1/notifications` a auth-api en `opti-api-gateway` | done | https://github.com/code-corhuila/opti-api-gateway/pull/5 |
+| HU-OPT-109 | Notificar al vendedor al alcanzar meta en `opti-worker` | done | https://github.com/code-corhuila/opti-worker/pull/2 |
+
+### B. Reporte tardío de la Semana 09 (hecho el domingo 2026-10-04 — no quedó en el HU-status de esa semana)
+
+> **Nota:** Este trabajo se completó el **domingo 2026-10-04** (último día de la Semana 09) pero **no alcanzó a entrar** en [`09-week/hu-status/README.md`](../../09-week/hu-status/README.md). **No** es trabajo nuevo de la Semana 10; se informa aquí solo para no perder la evidencia.
+
+| HU ID | Título | Estado (todo/doing/done) | Evidencia (URL de PR o commit) |
+|---|---|---|---|
+| HU-OPT-110 | Corregir schemas Flyway `[environments.default]` en `opti-auth-db` | done | https://github.com/code-corhuila/opti-auth-db/pull/3 |
+| HU-OPT-111 | Marcar `verify-rebuild.sh` ejecutable en `opti-auth-db` | done | https://github.com/code-corhuila/opti-auth-db/pull/2 |
+| HU-OPT-112 | Corregir schemas Flyway `[environments.default]` en `opti-sales-db` | done | https://github.com/code-corhuila/opti-sales-db/pull/3 |
+| HU-OPT-113 | Marcar `verify-rebuild.sh` ejecutable en `opti-sales-db` | done | https://github.com/code-corhuila/opti-sales-db/pull/2 |
+| HU-OPT-114 | Marcar `smoke.sh` ejecutable en `opti-api-gateway` | done | https://github.com/code-corhuila/opti-api-gateway/pull/2 |
+| HU-OPT-115 | Permitir que Vitest pase sin unit tests aún en `opti-front` | done | https://github.com/code-corhuila/opti-front/pull/2 |
 
 ## 2. Mi contribución individual
 
-> **Alcance esta semana:** notas de estudio sobre persistencia + release, **y** primeros slices verticales sobre los scaffolds de la Semana 09 (Git Flow: `feat/*` → `develop`). Autor: Juan Diego Tovar Rodriguez / `jdtovar07` (`jdtovar-2021a@corhuila.edu.co`).
+> **Autor:** Juan Diego Tovar Rodriguez / `jdtovar07` (`jdtovar-2021a@corhuila.edu.co`).  
+> **Alcance Semana 10 (lun–dom):** notas de estudio + slices con fecha **2026-10-05 … 2026-10-11**.  
+> **Reporte tardío:** fixes de hardening con fecha **2026-10-04** (Semana 09) que faltaron en el archivo de la semana pasada.
 
-### Notas de estudio y visuales
+### Notas de estudio y visuales (esta semana)
 
 | Artefacto | Qué cubre |
 |-----------|-----------|
@@ -53,43 +71,37 @@
 | [`release-shipping-mvp-2.md`](./release-shipping-mvp-2.md) | Release, MVP, sistema integrado, pasos y buenas prácticas |
 | [`release-shipping-mvp-2.png`](./release-shipping-mvp-2.png) | Resumen visual de shipping MVP 2 |
 
-### Slices verticales que ejercitan los patrones
+### Slices verticales de esta semana (sobre scaffolds Semana 09)
 
-| Patrón (Sesión 1) | Cómo lo apliqué en OptiView |
-|-------------------|-----------------------------|
-| Database-per-service | Schema auth de metas/notificaciones (`opti-auth-db` #4); schema sales de `seller_id` / gateway tx (`opti-sales-db` #4/#5) |
-| Saga | `opti-workflow` #2 lleva la identidad del caller en place-order |
-| Outbox / async | `opti-worker` #2 notifica cuando el vendedor alcanza su meta |
-| Lecturas tipo CQRS | Reportes en `opti-sales-api` #2/#4; gateway expone `/notifications` y `/lenses` (#5/#3) |
-| Release integrado (Sesión 2) | Shell + login (#3/#4), email/nombre y Wompi Nequi para acercar un MVP 2 usable |
+| Patrón | Cómo lo apliqué esta semana |
+|--------|-----------------------------|
+| Database-per-service | Schema auth de metas/notificaciones; sales `seller_id` / gateway tx |
+| Saga | `opti-workflow` lleva la identidad del caller en place-order |
+| Outbox / async | `opti-worker` notifica al alcanzar la meta de ventas |
+| Lecturas tipo CQRS | Reportes de ventas; gateway `/lenses` + `/notifications` |
+| Release integrado | Shell/login, email opcional, nombre solo letras, Wompi Nequi |
 
-### Commits representativos (autoría mía)
+### Commits representativos de esta semana (fechas dentro de lun–dom)
 
-- Auth: [`e0883ff`](https://github.com/code-corhuila/opti-auth-db/commit/e0883ff) · [`789b64c`](https://github.com/code-corhuila/opti-auth-api/commit/789b64c) · [`362dce4`](https://github.com/code-corhuila/opti-auth-api/commit/362dce4)
-- Sales: [`ac8ce44`](https://github.com/code-corhuila/opti-sales-db/commit/ac8ce44) · [`7c7481a`](https://github.com/code-corhuila/opti-sales-db/commit/7c7481a) · [`be311b9`](https://github.com/code-corhuila/opti-sales-api/commit/be311b9) · [`ee08573`](https://github.com/code-corhuila/opti-sales-api/commit/ee08573) · [`93c2776`](https://github.com/code-corhuila/opti-sales-api/commit/93c2776) · [`8c7708d`](https://github.com/code-corhuila/opti-sales-api/commit/8c7708d)
-- Platform: [`4b36f57`](https://github.com/code-corhuila/opti-api-gateway/commit/4b36f57) · [`7bb20c8`](https://github.com/code-corhuila/opti-api-gateway/commit/7bb20c8) · [`7e2fecc`](https://github.com/code-corhuila/opti-front/commit/7e2fecc) · [`3df81a4`](https://github.com/code-corhuila/opti-front/commit/3df81a4) · [`6db0832`](https://github.com/code-corhuila/opti-worker/commit/6db0832) · [`031209a`](https://github.com/code-corhuila/opti-workflow/commit/031209a)
+- **Lun 5 oct:** email/auth, Wompi Nequi, shell front / FormData  
+- **Mar–dom (misma semana):** login, lenses, seller_id, reportes, saga identity, notificaciones/metas, worker  
 
-### Continuidad Semanas 05–09
+### Reporte tardío Semana 09 (solo domingo 4 oct)
 
-| Semana | Qué ya tenemos | Cómo lo usa la Semana 10 |
-|--------|----------------|--------------------------|
-| 05 | MVP 1 (`opti-view`) | UX base mientras el front evolutivo avanza |
-| 06–07 | Layout 19 repos + contratos | Nuevas rutas detrás del gateway + OpenAPI |
-| 08 | Agile/DevOps + Git Flow | Cada slice usó `feat/*` → PR → `develop` |
-| 09 | Primeros scaffolds | Esta semana llena esos esqueletos con features reales |
+- Flyway + exec bits en auth-db / sales-db, smoke.sh en gateway, Vitest en front (PRs #2/#3 según repo)
 
 ## 3. Bloqueadores y riesgos
 
-- El release “one-click” de MVP 2 aún **no está tageado** — los slices van a `develop`, falta el corte coordinado a `qa`/`main`.
-- Customers / products avanzan sobre todo en PRs de otros; la ruta de lenses depende de products-api.
-- Secret store compartido sigue sin decidir (`opti-infra`).
+- MVP 2 tageado end-to-end aún **no cortado** — los slices van a `develop`.
+- La ruta de lenses depende de products-api (otros compañeros).
+- Secret store compartido sin decidir (`opti-infra`).
 - Riesgo: drift de contratos de reportes/notificaciones vs `opti-docs`.
 
 ## 4. Plan para la próxima semana
 
-- Promover los slices integrados hacia un candidato MVP 2 (`develop` → smoke en `qa`).
-- Cablear UX de portales para notificaciones y reportes de vendedor end to end.
-- Ampliar cobertura de saga / outbox (más compensaciones, más consumers).
+- Promover slices hacia candidato MVP 2 (`develop` → smoke en `qa`).
+- Cablear UX de portales para notificaciones y reportes end to end.
+- Ampliar cobertura de saga / outbox.
 
 ## 5. Autoverificación de cumplimiento
 
@@ -100,7 +112,7 @@
 - [x] Límites DDD / hexagonal respetados (dominio sin I/O)
 - [x] Sin secretos; config vía variables de entorno
 
-Notas: Las notas de estudio son documentación. El trabajo evolutivo usó `feat/*` → PR → `develop`. Auth-api / sales-api / worker / workflow mantienen hexagonal; Flyway en `*-db`. El HU-status del fork del curso se sigue commiteando en `main`.
+Notas: Ventana lun–dom. La sección B solo reporta tarde el domingo 4 oct de la Semana 09. Git Flow `feat/*` → `develop`. HU-status del fork en `main`.
 
 ## 6. Enlaces de evidencia
 
@@ -111,23 +123,17 @@ Notas: Las notas de estudio son documentación. El trabajo evolutivo usó `feat/
 - [`release-shipping-mvp-2.md`](./release-shipping-mvp-2.md)
 - [`release-shipping-mvp-2.png`](./release-shipping-mvp-2.png)
 
-**Slices auth / sales:**
+**Esta semana (lun–dom):**
 
-- https://github.com/code-corhuila/opti-auth-db/pull/4 · https://github.com/code-corhuila/opti-auth-db/pull/6
-- https://github.com/code-corhuila/opti-auth-api/pull/2 · https://github.com/code-corhuila/opti-auth-api/pull/3 · https://github.com/code-corhuila/opti-auth-api/pull/4
-- https://github.com/code-corhuila/opti-sales-db/pull/4 · https://github.com/code-corhuila/opti-sales-db/pull/5
-- https://github.com/code-corhuila/opti-sales-api/pull/2 · https://github.com/code-corhuila/opti-sales-api/pull/4 · https://github.com/code-corhuila/opti-sales-api/pull/5
+- Auth/sales/platform PRs listados en la sección A (ver README en inglés para URLs completas)
 
-**Slices de plataforma:**
+**Reporte tardío Semana 09 (domingo 4 oct):**
 
-- https://github.com/code-corhuila/opti-api-gateway/pull/3 · https://github.com/code-corhuila/opti-api-gateway/pull/5
-- https://github.com/code-corhuila/opti-front/pull/3 · https://github.com/code-corhuila/opti-front/pull/4 · https://github.com/code-corhuila/opti-front/pull/8 · https://github.com/code-corhuila/opti-front/pull/10
-- https://github.com/code-corhuila/opti-worker/pull/2
-- https://github.com/code-corhuila/opti-workflow/pull/2
+- https://github.com/code-corhuila/opti-auth-db/pull/2 · https://github.com/code-corhuila/opti-auth-db/pull/3
+- https://github.com/code-corhuila/opti-sales-db/pull/2 · https://github.com/code-corhuila/opti-sales-db/pull/3
+- https://github.com/code-corhuila/opti-api-gateway/pull/2
+- https://github.com/code-corhuila/opti-front/pull/2
 
-**Trabajo previo relacionado:**
+**Trabajo previo:**
 
 - Semana 09: [`09-week/hu-status/README.md`](../../09-week/hu-status/README.md)
-- Semana 08: [`08-week/hu-status/README.md`](../../08-week/hu-status/README.md)
-- Repos org: https://github.com/orgs/code-corhuila/repositories?q=opti
-- MVP: https://github.com/code-corhuila/opti-view
