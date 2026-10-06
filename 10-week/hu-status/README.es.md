@@ -83,12 +83,15 @@
 
 ### Commits representativos de esta semana (fechas dentro de lun–dom)
 
-- **Lun 5 oct:** email/auth, Wompi Nequi, shell front / FormData  
-- **Mar–dom (misma semana):** login, lenses, seller_id, reportes, saga identity, notificaciones/metas, worker  
+- **Lun 5 oct:** [`ec92f2a`](https://github.com/code-corhuila/opti-auth-db/commit/ec92f2a) email · [`669b820`](https://github.com/code-corhuila/opti-auth-api/commit/669b820) / [`f80fa74`](https://github.com/code-corhuila/opti-auth-api/commit/f80fa74) auth · [`8c7708d`](https://github.com/code-corhuila/opti-sales-api/commit/8c7708d) Wompi · [`7e2fecc`](https://github.com/code-corhuila/opti-front/commit/7e2fecc) shell · [`51a55fe`](https://github.com/code-corhuila/opti-front/commit/51a55fe) FormData  
+- **Mar–dom (misma semana):** [`3df81a4`](https://github.com/code-corhuila/opti-front/commit/3df81a4) login · [`4b36f57`](https://github.com/code-corhuila/opti-api-gateway/commit/4b36f57) lenses · [`ac8ce44`](https://github.com/code-corhuila/opti-sales-db/commit/ac8ce44) / [`7c7481a`](https://github.com/code-corhuila/opti-sales-db/commit/7c7481a) sales-db · [`be311b9`](https://github.com/code-corhuila/opti-sales-api/commit/be311b9) / [`ee08573`](https://github.com/code-corhuila/opti-sales-api/commit/ee08573) / [`93c2776`](https://github.com/code-corhuila/opti-sales-api/commit/93c2776) sales-api · [`031209a`](https://github.com/code-corhuila/opti-workflow/commit/031209a) saga · [`e0883ff`](https://github.com/code-corhuila/opti-auth-db/commit/e0883ff) / [`789b64c`](https://github.com/code-corhuila/opti-auth-api/commit/789b64c) notifications · [`7bb20c8`](https://github.com/code-corhuila/opti-api-gateway/commit/7bb20c8) notifications route · [`6db0832`](https://github.com/code-corhuila/opti-worker/commit/6db0832) meta  
 
 ### Reporte tardío Semana 09 (solo domingo 4 oct)
 
-- Flyway + exec bits en auth-db / sales-db, smoke.sh en gateway, Vitest en front (PRs #2/#3 según repo)
+- [`30f0c40`](https://github.com/code-corhuila/opti-auth-db/commit/30f0c40) / [`2a9c46f`](https://github.com/code-corhuila/opti-auth-db/commit/2a9c46f) auth-db  
+- [`b4f7ccc`](https://github.com/code-corhuila/opti-sales-db/commit/b4f7ccc) / [`0b6be0f`](https://github.com/code-corhuila/opti-sales-db/commit/0b6be0f) sales-db  
+- [`68202ed`](https://github.com/code-corhuila/opti-api-gateway/commit/68202ed) gateway  
+- [`74faf25`](https://github.com/code-corhuila/opti-front/commit/74faf25) front Vitest
 
 ## 3. Bloqueadores y riesgos
 
@@ -123,9 +126,15 @@ Notas: Ventana lun–dom. La sección B solo reporta tarde el domingo 4 oct de l
 - [`release-shipping-mvp-2.md`](./release-shipping-mvp-2.md)
 - [`release-shipping-mvp-2.png`](./release-shipping-mvp-2.png)
 
-**Esta semana (lun–dom):**
+**Esta semana (lun–dom) — auth / sales / platform:**
 
-- Auth/sales/platform PRs listados en la sección A (ver README en inglés para URLs completas)
+- https://github.com/code-corhuila/opti-auth-db/pull/4 · https://github.com/code-corhuila/opti-auth-db/pull/6
+- https://github.com/code-corhuila/opti-auth-api/pull/2 · https://github.com/code-corhuila/opti-auth-api/pull/3 · https://github.com/code-corhuila/opti-auth-api/pull/4
+- https://github.com/code-corhuila/opti-sales-db/pull/4 · https://github.com/code-corhuila/opti-sales-db/pull/5
+- https://github.com/code-corhuila/opti-sales-api/pull/2 · https://github.com/code-corhuila/opti-sales-api/pull/4 · https://github.com/code-corhuila/opti-sales-api/pull/5
+- https://github.com/code-corhuila/opti-api-gateway/pull/3 · https://github.com/code-corhuila/opti-api-gateway/pull/5
+- https://github.com/code-corhuila/opti-front/pull/3 · https://github.com/code-corhuila/opti-front/pull/4 · https://github.com/code-corhuila/opti-front/pull/8 · https://github.com/code-corhuila/opti-front/pull/10
+- https://github.com/code-corhuila/opti-worker/pull/2 · https://github.com/code-corhuila/opti-workflow/pull/2
 
 **Reporte tardío Semana 09 (domingo 4 oct):**
 
@@ -137,3 +146,4 @@ Notas: Ventana lun–dom. La sección B solo reporta tarde el domingo 4 oct de l
 **Trabajo previo:**
 
 - Semana 09: [`09-week/hu-status/README.md`](../../09-week/hu-status/README.md)
+- Repos org: https://github.com/orgs/code-corhuila/repositories?q=opti
