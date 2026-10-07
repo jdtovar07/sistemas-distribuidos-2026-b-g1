@@ -50,6 +50,14 @@
 | HU-OPT-123 | Sell lenses, accessories and liquids in `opti-sales-portal` (HU-25) | done | https://github.com/code-corhuila/opti-sales-portal/pull/4 |
 | HU-OPT-124 | Update new-sale subtitle for HU-25 / HU-22 in `opti-sales-portal` | done | https://github.com/code-corhuila/opti-sales-portal/pull/7 |
 | HU-OPT-125 | Generalize place-order saga to any product type in `opti-workflow` (HU-25) | done | https://github.com/code-corhuila/opti-workflow/pull/3 |
+| HU-OPT-126 | New-sale registration screen in `opti-sales-portal` | done | https://github.com/code-corhuila/opti-sales-portal/pull/2 |
+| HU-OPT-127 | Document demo user passwords in `opti-auth-db` | done | https://github.com/code-corhuila/opti-auth-db/pull/5 |
+| HU-OPT-128 | Align auth-portal profile sections with shared redesign | done | https://github.com/code-corhuila/opti-auth-portal/pull/7 |
+| HU-OPT-129 | Complete front redesign, Spanish errors and media routing | done | https://github.com/code-corhuila/opti-front/pull/21 |
+| HU-OPT-130 | Track one sale operation and complete billing workflow in `opti-sales-portal` | done | https://github.com/code-corhuila/opti-sales-portal/pull/11 |
+| HU-OPT-131 | Require settled invoice before delivery in `opti-sales-api` | done | https://github.com/code-corhuila/opti-sales-api/pull/10 |
+| HU-OPT-132 | CI: publish Docker images to GHCR on push to develop (portals / front / workflow) | done | https://github.com/code-corhuila/opti-auth-portal/pull/6 · [customers-portal#9](https://github.com/code-corhuila/opti-customers-portal/pull/9) · [front#18](https://github.com/code-corhuila/opti-front/pull/18) · [products-portal#8](https://github.com/code-corhuila/opti-products-portal/pull/8) · [sales-portal#10](https://github.com/code-corhuila/opti-sales-portal/pull/10) · [workflow#4](https://github.com/code-corhuila/opti-workflow/pull/4) |
+| HU-OPT-133 | CI: package Flyway migrations as GHCR images (`customers-db`, `sales-db`) | done | https://github.com/code-corhuila/opti-customers-db/pull/4 · https://github.com/code-corhuila/opti-sales-db/pull/7 |
 
 ### B. Late-reported from Week 09 (done Sunday 2026-10-04 — not in the Week 09 HU-status)
 
@@ -87,12 +95,13 @@
 | Saga | `opti-workflow` carries caller identity and reserves any product type (HU-25) through place-order |
 | Outbox / async | `opti-worker` notifies when a seller hits their sales goal |
 | CQRS-style reads | Sales revenue + seller-sales reports; gateway `/lenses` + `/notifications` |
-| Integrated release | Front shell/login polish, auth-portal account tabs, Nequi phone, sell any product type, Wompi Nequi |
+| Integrated release | Front shell/login + redesign, auth-portal tabs, Nequi phone, sell any product type, Wompi, GHCR publish for apps/migrations |
 
 ### Representative commits this week (author dates in the Mon–Sun window)
 
 - **Mon 5 Oct:** [`ec92f2a`](https://github.com/code-corhuila/opti-auth-db/commit/ec92f2a) email schema · [`669b820`](https://github.com/code-corhuila/opti-auth-api/commit/669b820) / [`f80fa74`](https://github.com/code-corhuila/opti-auth-api/commit/f80fa74) auth · [`eac2745`](https://github.com/code-corhuila/opti-auth-portal/commit/eac2745) / [`014c8a9`](https://github.com/code-corhuila/opti-auth-portal/commit/014c8a9) / [`0d7aea2`](https://github.com/code-corhuila/opti-auth-portal/commit/0d7aea2) auth-portal · [`8c7708d`](https://github.com/code-corhuila/opti-sales-api/commit/8c7708d) Wompi · [`a8916e2`](https://github.com/code-corhuila/opti-sales-portal/commit/a8916e2) Nequi phone · [`a92f443`](https://github.com/code-corhuila/opti-sales-db/commit/a92f443) polymorphic item · [`7e2fecc`](https://github.com/code-corhuila/opti-front/commit/7e2fecc) shell · [`51a55fe`](https://github.com/code-corhuila/opti-front/commit/51a55fe) FormData  
-- **Tue 6 Oct+ (same week):** [`3df81a4`](https://github.com/code-corhuila/opti-front/commit/3df81a4) login · [`4b36f57`](https://github.com/code-corhuila/opti-api-gateway/commit/4b36f57) lenses · [`6002dab`](https://github.com/code-corhuila/opti-sales-api/commit/6002dab) / [`1c204f4`](https://github.com/code-corhuila/opti-sales-portal/commit/1c204f4) / [`910cac3`](https://github.com/code-corhuila/opti-workflow/commit/910cac3) HU-25 · [`ac8ce44`](https://github.com/code-corhuila/opti-sales-db/commit/ac8ce44) / [`7c7481a`](https://github.com/code-corhuila/opti-sales-db/commit/7c7481a) sales-db · [`be311b9`](https://github.com/code-corhuila/opti-sales-api/commit/be311b9) / [`ee08573`](https://github.com/code-corhuila/opti-sales-api/commit/ee08573) / [`93c2776`](https://github.com/code-corhuila/opti-sales-api/commit/93c2776) sales-api · [`031209a`](https://github.com/code-corhuila/opti-workflow/commit/031209a) saga identity · [`e0883ff`](https://github.com/code-corhuila/opti-auth-db/commit/e0883ff) / [`789b64c`](https://github.com/code-corhuila/opti-auth-api/commit/789b64c) notifications · [`7bb20c8`](https://github.com/code-corhuila/opti-api-gateway/commit/7bb20c8) notifications route · [`6db0832`](https://github.com/code-corhuila/opti-worker/commit/6db0832) goal alert  
+- **Tue 6 Oct+ (same week):** [`3df81a4`](https://github.com/code-corhuila/opti-front/commit/3df81a4) login · [`03ef5e0`](https://github.com/code-corhuila/opti-front/commit/03ef5e0) redesign · [`191db60`](https://github.com/code-corhuila/opti-auth-portal/commit/191db60) profile redesign · [`54a58a1`](https://github.com/code-corhuila/opti-sales-portal/commit/54a58a1) billing workflow · [`5f80d80`](https://github.com/code-corhuila/opti-sales-api/commit/5f80d80) payment-before-delivery · [`4b36f57`](https://github.com/code-corhuila/opti-api-gateway/commit/4b36f57) lenses · [`6002dab`](https://github.com/code-corhuila/opti-sales-api/commit/6002dab) / [`1c204f4`](https://github.com/code-corhuila/opti-sales-portal/commit/1c204f4) / [`910cac3`](https://github.com/code-corhuila/opti-workflow/commit/910cac3) HU-25 · GHCR publish ([`b77f610`](https://github.com/code-corhuila/opti-front/commit/b77f610) + portals/workflow) · Flyway GHCR ([`9258f84`](https://github.com/code-corhuila/opti-customers-db/commit/9258f84) / [`e2550a7`](https://github.com/code-corhuila/opti-sales-db/commit/e2550a7)) · [`ea76900`](https://github.com/code-corhuila/opti-auth-db/commit/ea76900) demo passwords · notifications / seller reports / worker goal alert  
+
 
 ### Late-reported Week 09 commits (Sunday 4 Oct only)
 
@@ -143,15 +152,16 @@ Notes: Week window is Mon–Sun. Section B is late-reporting of Sunday 4 Oct Wee
 
 **This week (Mon–Sun) — auth / sales / platform:**
 
-- https://github.com/code-corhuila/opti-auth-db/pull/4 · https://github.com/code-corhuila/opti-auth-db/pull/6
+- https://github.com/code-corhuila/opti-auth-db/pull/4 · https://github.com/code-corhuila/opti-auth-db/pull/5 · https://github.com/code-corhuila/opti-auth-db/pull/6
 - https://github.com/code-corhuila/opti-auth-api/pull/2 · https://github.com/code-corhuila/opti-auth-api/pull/3 · https://github.com/code-corhuila/opti-auth-api/pull/4
-- https://github.com/code-corhuila/opti-auth-portal/pull/2 · https://github.com/code-corhuila/opti-auth-portal/pull/3 · https://github.com/code-corhuila/opti-auth-portal/pull/4 · https://github.com/code-corhuila/opti-auth-portal/pull/5
-- https://github.com/code-corhuila/opti-sales-db/pull/4 · https://github.com/code-corhuila/opti-sales-db/pull/5 · https://github.com/code-corhuila/opti-sales-db/pull/6
-- https://github.com/code-corhuila/opti-sales-api/pull/2 · https://github.com/code-corhuila/opti-sales-api/pull/4 · https://github.com/code-corhuila/opti-sales-api/pull/5 · https://github.com/code-corhuila/opti-sales-api/pull/6
-- https://github.com/code-corhuila/opti-sales-portal/pull/3 · https://github.com/code-corhuila/opti-sales-portal/pull/4 · https://github.com/code-corhuila/opti-sales-portal/pull/7
+- https://github.com/code-corhuila/opti-auth-portal/pull/2 · https://github.com/code-corhuila/opti-auth-portal/pull/3 · https://github.com/code-corhuila/opti-auth-portal/pull/4 · https://github.com/code-corhuila/opti-auth-portal/pull/5 · https://github.com/code-corhuila/opti-auth-portal/pull/6 · https://github.com/code-corhuila/opti-auth-portal/pull/7
+- https://github.com/code-corhuila/opti-sales-db/pull/4 · https://github.com/code-corhuila/opti-sales-db/pull/5 · https://github.com/code-corhuila/opti-sales-db/pull/6 · https://github.com/code-corhuila/opti-sales-db/pull/7
+- https://github.com/code-corhuila/opti-sales-api/pull/2 · https://github.com/code-corhuila/opti-sales-api/pull/4 · https://github.com/code-corhuila/opti-sales-api/pull/5 · https://github.com/code-corhuila/opti-sales-api/pull/6 · https://github.com/code-corhuila/opti-sales-api/pull/10
+- https://github.com/code-corhuila/opti-sales-portal/pull/2 · https://github.com/code-corhuila/opti-sales-portal/pull/3 · https://github.com/code-corhuila/opti-sales-portal/pull/4 · https://github.com/code-corhuila/opti-sales-portal/pull/7 · https://github.com/code-corhuila/opti-sales-portal/pull/10 · https://github.com/code-corhuila/opti-sales-portal/pull/11
+- https://github.com/code-corhuila/opti-customers-db/pull/4 · https://github.com/code-corhuila/opti-customers-portal/pull/9 · https://github.com/code-corhuila/opti-products-portal/pull/8
 - https://github.com/code-corhuila/opti-api-gateway/pull/3 · https://github.com/code-corhuila/opti-api-gateway/pull/5
-- https://github.com/code-corhuila/opti-front/pull/3 · https://github.com/code-corhuila/opti-front/pull/4 · https://github.com/code-corhuila/opti-front/pull/8 · https://github.com/code-corhuila/opti-front/pull/10
-- https://github.com/code-corhuila/opti-worker/pull/2 · https://github.com/code-corhuila/opti-workflow/pull/2 · https://github.com/code-corhuila/opti-workflow/pull/3
+- https://github.com/code-corhuila/opti-front/pull/3 · https://github.com/code-corhuila/opti-front/pull/4 · https://github.com/code-corhuila/opti-front/pull/8 · https://github.com/code-corhuila/opti-front/pull/10 · https://github.com/code-corhuila/opti-front/pull/18 · https://github.com/code-corhuila/opti-front/pull/21
+- https://github.com/code-corhuila/opti-worker/pull/2 · https://github.com/code-corhuila/opti-workflow/pull/2 · https://github.com/code-corhuila/opti-workflow/pull/3 · https://github.com/code-corhuila/opti-workflow/pull/4
 
 **Late-reported Week 09 (Sunday 4 Oct):**
 
