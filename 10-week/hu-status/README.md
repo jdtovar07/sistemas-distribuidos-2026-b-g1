@@ -123,6 +123,16 @@
 | 09 | First scaffolds on auth/sales/gateway/front/worker/workflow | This week fills those skeletons with real BC features (Mon–Sun) |
 | 05–08 | MVP 1, 19 repos, contracts, Git Flow | Same `feat/*` → `develop` path |
 
+### Ceremonies & flow (this week)
+
+| Ceremony | When / evidence |
+|----------|-----------------|
+| Planning | Mon kickoff: committed to persistence docs, vertical slices, MVP 2 `v2.0.0` tag, demo seeds (`SPRINT_GOAL`) |
+| Daily | Async check-ins: blockers + who owns which `opti-*` PR |
+| Review | Demo of MVP 2 tag + seeded catalog / goals / orders promoted develop → qa → main |
+| Retro | Keep `feat/*` → develop → `qa-*` → `release/*` → main; sync team board after each merge |
+| Per-env PRs | e.g. products-db [#13](https://github.com/code-corhuila/opti-products-db/pull/13) (develop) · [#14](https://github.com/code-corhuila/opti-products-db/pull/14) (qa) · [#15](https://github.com/code-corhuila/opti-products-db/pull/15) (main); same pattern on auth-db [#10](https://github.com/code-corhuila/opti-auth-db/pull/10)–[#12](https://github.com/code-corhuila/opti-auth-db/pull/12) and sales-db [#10](https://github.com/code-corhuila/opti-sales-db/pull/10)–[#12](https://github.com/code-corhuila/opti-sales-db/pull/12) |
+
 ## 3. Blockers and risks
 
 - `v2.0.0` is tagged on all 19 repos; demo-seed cut `release/2.1.0` is on `main` for products/auth/sales db — keep `develop`/`qa`/`main` trees from drifting after further slices.
@@ -145,7 +155,7 @@
 - [x] DDD / hexagonal boundaries respected (domain has no I/O)
 - [x] No secrets; config via environment variables
 
-Notes: Week window is Mon–Sun. Section B is late-reporting of Sunday 4 Oct Week 09 work only. Evolutionary work used `feat/*` → PR → `develop`. Course-fork HU-status commits on `main`.
+Notes: Week window is Mon–Sun. Section B is late-reporting of Sunday 4 Oct Week 09 work only. Team uses `feat/*` (not `hu-xxx-dev`) by agreement; one PR per environment (develop / qa / main). Course-fork HU-status commits on `main`.
 
 ## 6. Evidence links
 

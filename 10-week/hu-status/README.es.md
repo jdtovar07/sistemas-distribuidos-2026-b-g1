@@ -117,6 +117,16 @@
 - [`68202ed`](https://github.com/code-corhuila/opti-api-gateway/commit/68202ed) gateway  
 - [`74faf25`](https://github.com/code-corhuila/opti-front/commit/74faf25) front Vitest
 
+### Ceremonias y flujo (esta semana)
+
+| Ceremonia | Cuándo / evidencia |
+|-----------|--------------------|
+| Planning | Kickoff lunes: compromiso con docs de persistencia, slices verticales, tag MVP 2 `v2.0.0`, seeds demo (`SPRINT_GOAL`) |
+| Daily | Check-ins async: bloqueos + quién lleva cada PR `opti-*` |
+| Review | Demo del tag MVP 2 + catálogo / metas / órdenes seed promovidos develop → qa → main |
+| Retro | Mantener `feat/*` → develop → `qa-*` → `release/*` → main; sincronizar tablero del equipo tras cada merge |
+| PRs por ambiente | ej. products-db [#13](https://github.com/code-corhuila/opti-products-db/pull/13) (develop) · [#14](https://github.com/code-corhuila/opti-products-db/pull/14) (qa) · [#15](https://github.com/code-corhuila/opti-products-db/pull/15) (main); mismo patrón en auth-db [#10](https://github.com/code-corhuila/opti-auth-db/pull/10)–[#12](https://github.com/code-corhuila/opti-auth-db/pull/12) y sales-db [#10](https://github.com/code-corhuila/opti-sales-db/pull/10)–[#12](https://github.com/code-corhuila/opti-sales-db/pull/12) |
+
 ## 3. Bloqueadores y riesgos
 
 - `v2.0.0` ya está en los 19 repos; el corte de seeds `release/2.1.0` ya está en `main` (products/auth/sales db) — cuidar que `develop`/`qa`/`main` no se desalineen con slices nuevos.
@@ -139,7 +149,7 @@
 - [x] Límites DDD / hexagonal respetados (dominio sin I/O)
 - [x] Sin secretos; config vía variables de entorno
 
-Notas: Ventana lun–dom. La sección B solo reporta tarde el domingo 4 oct de la Semana 09. Git Flow `feat/*` → `develop`. HU-status del fork en `main`.
+Notas: Ventana lun–dom. La sección B solo reporta tarde el domingo 4 oct de la Semana 09. El equipo usa `feat/*` (no `hu-xxx-dev`) por acuerdo; un PR por ambiente (develop / qa / main). HU-status del fork en `main`.
 
 ## 6. Enlaces de evidencia
 
