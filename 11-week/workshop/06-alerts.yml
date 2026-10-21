@@ -1,0 +1,82 @@
+# Burn-rate alerts for the SLOs of 05-slo.md (journey place-order of opti-workflow).
+# Availability SLO 99.5 %  -> budget 0.005. Latency SLO 99 % under 2 s -> budget 0.01.
+# Burn rate 14.4 over 1 h spends 2 % of the 30-day budget; burn rate 6 over 6 h spends 5 %.
+# Every alert also needs a minimum of traffic: the shops are closed at night, a ratio of 2 requests means nothing.
+
+groups:
+  - name: place-order-slo-recording
+    rules:
+      - record: place_order:error_ratio
+        expr: |
+          sum(rate(workflow_saga_requests_total{saga="place-order",outcome="failed"}[5m]))
+          / sum(rate(workflow_saga_requests_total{saga="place-order",outcome!="rejected"}[5m]))
+        labels: {window: 5m}
+      - record: place_order:error_ratio
+        expr: |
+          sum(rate(workflow_saga_requests_total{saga="place-order",outcome="failed"}[30m]))
+          / sum(rate(workflow_saga_requests_total{saga="place-order",outcome!="rejected"}[30m]))
+        labels: {window: 30m}
+      - record: place_order:error_ratio
+        expr: |
+          sum(rate(workflow_saga_requests_total{saga="place-order",outcome="failed"}[1h]))
+          / sum(rate(workflow_saga_requests_total{saga="place-order",outcome!="rejected"}[1h]))
+        labels: {window: 1h}
+      - record: place_order:error_ratio
+        expr: |
+          sum(rate(workflow_saga_requests_total{saga="place-order",outcome="failed"}[6h]))
+          / sum(rate(workflow_saga_requests_total{saga="place-order",outcome!="rejected"}[6h]))
+        labels: {window: 6h}
+      - record: place_order:slow_ratio
+        expr: |
+          1 - sum(rate(workflow_saga_duration_seconds_bucket{saga="place-order",le="2.0"}[5m]))
+          / sum(rate(workflow_saga_duration_seconds_count{saga="place-order"}[5m]))
+        labels: {window: 5m}
+      - record: place_order:slow_ratio
+        expr: |
+          1 - sum(rate(workflow_saga_duration_seconds_bucket{saga="place-order",le="2.0"}[1h]))
+          / sum(rate(workflow_saga_duration_seconds_count{saga="place-order"}[1h]))
+        labels: {window: 1h}
+
+  - name: place-order-slo-alerts
+    rules:
+      # Fast: 14.4 x 0.005 = 0.072 -> more than 7.2 % of the sagas failed in the last hour and still failing in the last 5 min.
+      - alert: PlaceOrderAvailabilityFastBurn
+        expr: |
+          place_order:error_ratio{window="1h"} > (14.4 * 0.005)
+          and place_order:error_ratio{window="5m"} > (14.4 * 0.005)
+          and sum(increase(workflow_saga_requests_total{saga="place-order"}[1h])) > 20
+        for: 0m
+        labels:
+          severity: page
+          team: the-illusionists
+        annotations:
+          summary: "place-order is spending the availability budget 14.4 times too fast (2 % of the month in 1 h)"
+          runbook_url: "https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/blob/main/11-week/workshop/07-runbook.md"
+
+      # Slow: 6 x 0.005 = 0.03 -> more than 3 % failed in the last 6 h and still more than 3 % in the last 30 min.
+      - alert: PlaceOrderAvailabilitySlowBurn
+        expr: |
+          place_order:error_ratio{window="6h"} > (6 * 0.005)
+          and place_order:error_ratio{window="30m"} > (6 * 0.005)
+          and sum(increase(workflow_saga_requests_total{saga="place-order"}[6h])) > 60
+        for: 0m
+        labels:
+          severity: ticket
+          team: the-illusionists
+        annotations:
+          summary: "place-order is spending the availability budget 6 times too fast (5 % of the month in 6 h)"
+          runbook_url: "https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/blob/main/11-week/workshop/07-runbook.md"
+
+      # Extra, for the latency SLO: 14.4 x 0.01 = 0.144 -> more than 14.4 % of the sagas took over 2 s in the last hour.
+      - alert: PlaceOrderLatencyFastBurn
+        expr: |
+          place_order:slow_ratio{window="1h"} > (14.4 * 0.01)
+          and place_order:slow_ratio{window="5m"} > (14.4 * 0.01)
+          and sum(increase(workflow_saga_duration_seconds_count{saga="place-order"}[1h])) > 20
+        for: 0m
+        labels:
+          severity: page
+          team: the-illusionists
+        annotations:
+          summary: "place-order is spending the latency budget 14.4 times too fast (sagas over 2 s)"
+          runbook_url: "https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/blob/main/11-week/workshop/07-runbook.md#variant-latency-fast-burn"
