@@ -115,9 +115,11 @@ Notes: Week window is Mon–Sun. Study + classroom expo week on top of the Week 
 - Org repos: https://github.com/orgs/code-corhuila/repositories?q=opti
 
 <!-- W11-WORKSHOP-START -->
-## 7. Guided workshop - observability on my project (delivery 1)
+## 7. Guided workshop - observability on my project
 
-Individual in-class workshop of 2026-10-20, checkpoints CP0 to CP4. Journey observed: the `place-order` saga of `opti-workflow` (`opti-api-gateway`, `opti-customers-api`, `opti-products-api`, `opti-sales-api`).
+Individual workshop, journey `place-order` saga of `opti-workflow` (`opti-api-gateway`, `opti-customers-api`, `opti-products-api`, `opti-sales-api`).
+
+**Delivery 1 (in class, 2026-10-20), CP0 to CP4**
 
 | Checkpoint | What | File | Commit |
 |---|---|---|---|
@@ -127,6 +129,15 @@ Individual in-class workshop of 2026-10-20, checkpoints CP0 to CP4. Journey obse
 | CP3 (push 1) | Trace-context filter and JSON logger | [`workshop/03-instrumentation/`](../workshop/03-instrumentation/) | [`e5c1c65`](https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/commit/e5c1c65ce5a582b0f14a386428294b18d5ed2cac) |
 | CP3 (push 2) | Downstream propagation, metrics and test | [`workshop/03-instrumentation/HOW-TO-RUN.md`](../workshop/03-instrumentation/HOW-TO-RUN.md) | [`d866d03`](https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/commit/d866d0300a922559f7e5d1636e20e9ca21481a04) |
 | CP4 | Golden signals and metric catalog | [`workshop/04-metrics.md`](../workshop/04-metrics.md) | [`d020764`](https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/commit/d0207648e89ca3d6901d6cfe9d31565e4575b992) |
+
+**Delivery 2 (take-home, until 2026-10-22 10:10), CP6 to CP9**
+
+| Checkpoint | What | File | Commit |
+|---|---|---|---|
+| CP6 | SLIs, SLOs and error budget | [`workshop/05-slo.md`](../workshop/05-slo.md) | [`d2e581a`](https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/commit/d2e581a1b97c624a86abfc0ab06629dde878979b) |
+| CP7 | Burn-rate alerting rules and policy | [`workshop/06-alerts.yml`](../workshop/06-alerts.yml) | [`5377b37`](https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/commit/5377b3759aae6a843cfbaf79a3686313d10fcaa2) |
+| CP8 | Runbook for the fast-burn alert | [`workshop/07-runbook.md`](../workshop/07-runbook.md) | [`58e78d3`](https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/commit/58e78d37502f381b19b8c3e4bb75dde24d81b419) |
+| CP9 | Incident drill and blameless postmortem | [`workshop/08-incident.md`](../workshop/08-incident.md) | [`7767691`](https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/commit/7767691262264ced33f9ad0364b134497874f681) |
 
 Reflection document: https://docs.google.com/document/d/1wNcQKXvOGbR3IC6YAwaY2q2N6iZZHF96EAHxq3cKygA/edit?usp=sharing
 <!-- W11-WORKSHOP-END -->
