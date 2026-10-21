@@ -113,3 +113,20 @@ Notes: Week window is Mon–Sun. Study + classroom expo week on top of the Week 
 
 - Week 10: [`10-week/hu-status/README.md`](../../10-week/hu-status/README.md)
 - Org repos: https://github.com/orgs/code-corhuila/repositories?q=opti
+
+<!-- W11-WORKSHOP-START -->
+## 7. Guided workshop - observability on my project (delivery 1)
+
+Individual in-class workshop of 2026-10-20, checkpoints CP0 to CP4. Journey observed: the `place-order` saga of `opti-workflow` (`opti-api-gateway`, `opti-customers-api`, `opti-products-api`, `opti-sales-api`).
+
+| Checkpoint | What | File | Commit |
+|---|---|---|---|
+| CP0 | Setup and CONFIG block | [`workshop/README.md`](../workshop/README.md) | [`50be758`](https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/commit/50be75865a8607500088f5c90d82d6d706c68807) |
+| CP1 | Critical journey `place-order` and trace map | [`workshop/01-journey.md`](../workshop/01-journey.md) | [`e74085d`](https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/commit/e74085de5015c24504e3642980abd5ceddcddbfa) |
+| CP2 | Structured log contract | [`workshop/02-log-contract.md`](../workshop/02-log-contract.md) | [`74e067e`](https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/commit/74e067e174e7ec56e9bf04fcc896c084c6885318) |
+| CP3 (push 1) | Trace-context filter and JSON logger | [`workshop/03-instrumentation/`](../workshop/03-instrumentation/) | [`e5c1c65`](https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/commit/e5c1c65ce5a582b0f14a386428294b18d5ed2cac) |
+| CP3 (push 2) | Downstream propagation, metrics and test | [`workshop/03-instrumentation/HOW-TO-RUN.md`](../workshop/03-instrumentation/HOW-TO-RUN.md) | pending |
+| CP4 | Golden signals and metric catalog | [`workshop/04-metrics.md`](../workshop/04-metrics.md) | pending |
+
+Reflection document: https://docs.google.com/document/d/1wNcQKXvOGbR3IC6YAwaY2q2N6iZZHF96EAHxq3cKygA/edit?usp=sharing
+<!-- W11-WORKSHOP-END -->
