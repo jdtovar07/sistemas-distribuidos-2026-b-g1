@@ -10,11 +10,11 @@
 - FULL_NAME: Juan Diego Tovar Rodriguez
 - GITHUB_USER: jdtovar07
 - TEAM: The Illusionists
-- SPRINT_GOAL: Documentar modelos de despliegue en la nube y estrategias zero-downtime (rolling / blue-green / canary); documentar el plan de despliegue, Infrastructure as Code y el ciclo de rollback; y mapear ambos al Git Flow de OptiView (develop → qa → release → main), imágenes GHCR, rollbacks Flyway y tags SemVer tras MVP 2.
+- SPRINT_GOAL: Documentar modelos de despliegue en la nube y estrategias zero-downtime (rolling / blue-green / canary); documentar el plan de despliegue, Infrastructure as Code y el ciclo de rollback; mapear ambos al Git Flow / GHCR / Flyway / SemVer de OptiView tras MVP 2; y completar el taller guiado de observabilidad sobre la saga `place-order` (CP0–CP9 + reflexión).
 <!-- CONFIG-END -->
 
 > **Ventana de la semana:** lunes **2026-10-19** → domingo **2026-10-25** (cada semana del curso es lun–dom).  
-> **Entrega Semana 12:** (1) notas + visuales de **despliegue en la nube** y **plan de despliegue / IaC / rollback**, y (2) mapeo a OptiView sobre el camino de release del MVP 2.
+> **Entrega Semana 12:** (1) notas + visuales de **despliegue en la nube** y **plan / IaC / rollback**, (2) mapeo a OptiView, y (3) **taller de observabilidad** sobre `place-order` (artefactos en `11-week/workshop/`, ejecutado 20–21 oct dentro de esta ventana).
 
 ## 1. Historias de usuario trabajadas esta semana
 
@@ -24,64 +24,47 @@
 | HU-OPT-144 | Elaborar resumen visual de modelos / estrategias de cloud deployment | done | [`cloud-deployment-models-strategies-vertical.png`](./cloud-deployment-models-strategies-vertical.png) |
 | HU-OPT-145 | Documentar plan de despliegue, Infrastructure as Code y rollback | done | [`deployment-plan-iac-rollback.md`](./deployment-plan-iac-rollback.md) |
 | HU-OPT-146 | Elaborar resumen visual de plan de despliegue / IaC / rollback | done | [`deployment-plan-iac-rollback-vertical.png`](./deployment-plan-iac-rollback-vertical.png) |
+| HU-OPT-147 | Taller observabilidad Entrega 1 — journey, contrato de logs, instrumentación, métricas (CP0–CP4) | done | [`../workshop/`](../../11-week/workshop/) · [`50be758`](https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/commit/50be758) … [`d020764`](https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/commit/d020764) · [`resumen-observabilidad.md`](./resumen-observabilidad.md) |
+| HU-OPT-148 | Taller observabilidad Entrega 2 — SLOs, alertas burn-rate, runbook, simulacro (CP6–CP9) + reflexión | done | [`05-slo.md`](../../11-week/workshop/05-slo.md) · [`06-alerts.yml`](../../11-week/workshop/06-alerts.yml) · [`07-runbook.md`](../../11-week/workshop/07-runbook.md) · [`08-incident.md`](../../11-week/workshop/08-incident.md) · [`7767691`](https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/commit/7767691) · [Doc reflexión](https://docs.google.com/document/d/1wNcQKXvOGbR3IC6YAwaY2q2N6iZZHF96EAHxq3cKygA/edit?usp=sharing) |
 
 ## 2. Mi contribución individual
 
 > **Autor:** Juan Diego Tovar Rodriguez / `jdtovar07` (`jdtovar-2021a@corhuila.edu.co`).  
-> **Alcance Semana 12 (lun–dom):** notas y visuales de cloud deployment + IaC/rollback, mapeadas a cómo OptiView ya shippea el MVP 2.
+> **Alcance Semana 12:** notas cloud/IaC + taller de observabilidad sobre `place-order` (carpeta `11-week/workshop/` por layout del curso; fechas 20–21 oct = Semana 12).
 
-### Notas de estudio y visuales (esta semana)
+### Notas y visuales
 
 | Artefacto | Qué cubre |
 |-----------|-----------|
-| [`cloud-deployment-models-strategies.md`](./cloud-deployment-models-strategies.md) | IaaS / PaaS / containers / serverless; registry → orquestador → LB → health checks; rolling / blue-green / canary; escala horizontal / autoscaling |
-| [`cloud-deployment-models-strategies-vertical.png`](./cloud-deployment-models-strategies-vertical.png) | Resumen visual de esos conceptos |
-| [`deployment-plan-iac-rollback.md`](./deployment-plan-iac-rollback.md) | Plan escrito, IaC declarativo, checklist pre-deploy, triggers de rollback, Plan → Provision → Deploy → Verify → Keep/Rollback |
-| [`deployment-plan-iac-rollback-vertical.png`](./deployment-plan-iac-rollback-vertical.png) | Resumen visual del ciclo de release seguro |
+| [`cloud-deployment-models-strategies.md`](./cloud-deployment-models-strategies.md) | Modelos cloud, zero-downtime, scaling |
+| [`cloud-deployment-models-strategies-vertical.png`](./cloud-deployment-models-strategies-vertical.png) | Resumen visual |
+| [`deployment-plan-iac-rollback.md`](./deployment-plan-iac-rollback.md) | Plan, IaC, checklist, rollback |
+| [`deployment-plan-iac-rollback-vertical.png`](./deployment-plan-iac-rollback-vertical.png) | Resumen visual |
+| [`resumen-observabilidad.md`](./resumen-observabilidad.md) | Hechos del taller: CP, SLOs, alertas, simulacro, plan al código real |
 
-### Mapeo a OptiView (cómo aterrizan los conceptos del MVP 2)
+### Taller de observabilidad (esta semana)
 
-| Concepto | Dónde aparece en OptiView |
-|----------|---------------------------|
-| Contenedores + registry | Cada servicio `opti-*` construye imagen Docker; CI publica a **GHCR** en push a `develop` |
-| Compose local como plataforma | `opti-infra` hace `include` de los `deploy/compose.yml` hermanos en la red `platform` |
-| Promoción por ambiente | Git Flow: `feat/*` → `develop` → `qa-*` → `release/x.y.z` → `main` con **un PR por ambiente** |
-| Entrega progresiva | Notas Semana 09 + framing en `opti-docs`; rings/flags antes del cutover total |
-| Artefactos versionados | Tags SemVer `v2.0.0` (19 repos) y `v2.1.0` (tips post-seed) |
-| Cambios de DB reversibles | Flyway `V*` + `U*` en `05_rollbacks/` (p. ej. seeds demo) |
-| Trigger de rollback | Health/smoke fallido tras promover → redesplegar tag anterior o revertir el PR de ambiente |
-| Observabilidad en el release | `otel-collector` / Prometheus / Grafana en `opti-infra` (Semana 11) para verificar el corte |
-
-### Continuidad
-
-| Semana | Qué ya tenemos | Cómo lo usa la Semana 12 |
-|--------|----------------|--------------------------|
-| 11 | Observabilidad + SLI/SLO; expo MVP 2 | Verificar / decidir rollback con esas señales |
-| 10 | MVP 2 taggeado; seeds vía `release/2.1.0` → main | Ejemplo concreto de corte planeado y versionado |
-| 09 | Progressive delivery + scaffolds | Vocabulario (canary / rings) encuentra el Git Flow real |
+Journey crítico: saga `place-order`. Entrega 1 (20 oct, clase): CP0–CP4. Entrega 2 (take-home): CP6–CP9 + reflexión. Tests del módulo: **7/7 ALL CHECKS PASSED**. SLO hipotético 99.5% disponibilidad / 99% &lt; 2 s. Detalle: [`resumen-observabilidad.md`](./resumen-observabilidad.md).
 
 ### Ceremonias y flujo (esta semana)
 
 | Ceremonia | Cuándo / evidencia |
 |-----------|--------------------|
-| Planning | Kickoff lunes: notas cloud + IaC/rollback; mapear a Git Flow / GHCR / Flyway (`SPRINT_GOAL`) |
-| Daily | Check-ins async: bloqueos en docs, alinear tags vs PRs de ambiente |
-| Review | Recorrido de estrategias vs cómo promovemos OptiView (develop → qa → main) + evidencia de tags |
-| Retro | Mantener un PR por ambiente; siempre dejar un tag SemVer previo alcanzable para rollback; siguiente: runbook corto promote/rollback en `opti-infra` |
-| PRs por ambiente | Semana de estudio — sin PRs de producto nuevos. Evidencia de arrastre: products-db [#13](https://github.com/code-corhuila/opti-products-db/pull/13)/[#14](https://github.com/code-corhuila/opti-products-db/pull/14)/[#15](https://github.com/code-corhuila/opti-products-db/pull/15); auth-db [#10](https://github.com/code-corhuila/opti-auth-db/pull/10)–[#12](https://github.com/code-corhuila/opti-auth-db/pull/12); sales-db [#10](https://github.com/code-corhuila/opti-sales-db/pull/10)–[#12](https://github.com/code-corhuila/opti-sales-db/pull/12) |
+| Planning | Kickoff: notas cloud/IaC + cerrar taller CP0–CP9 |
+| Daily | Async: avance de checkpoints + nombres de tags |
+| Review | Estrategias cloud vs promote OptiView; Entrega 1 en clase + reflexión Entrega 2 |
+| Retro | Alertar por burn-rate de usuario, no CPU; un PR por ambiente; siguiente: runbook + reglas en `opti-infra` |
+| PRs por ambiente | Sin PRs de producto nuevos; evidencia de arrastre Semana 10 (products/auth/sales db #13–15 / #10–12) |
 
 ## 3. Bloqueadores y riesgos
 
-- El target cloud compartido (K8s gestionado vs PaaS) aún no es ADR de equipo — hoy el camino es Compose local + GHCR.
-- Secret store para qa/main sin decidir (`opti-infra`).
-- Blue-green/canary en cluster gestionado es vocabulario planificado; hoy la promoción es **ramas de ambiente + tags**, no dos clusters en vivo.
-- Hay undos Flyway para seeds; no toda migración histórica tiene `U*` pareja aún.
+- Target cloud sin ADR; secret store pendiente; SLO del taller con tráfico supuesto; módulo CP3 ≠ servicio real; coordinar campos de log con el equipo.
 
 ## 4. Plan para la próxima semana
 
-- Borrador de **runbook promote / rollback** de OptiView (orden: dbs → apis → portals → front/gateway).
-- Candidato: documentar digests GHCR + mapeo tag → ambiente en `opti-docs`.
-- Continuar emisión OTel / SLOs concretos del plan Semana 11 si hay capacidad.
+- Seguridad (authn/authz/zero trust + threat modeling) — tema Semana 13.
+- Runbook promote/rollback; llevar reglas burn-rate a `opti-infra` tras `promtool`.
+- Plan real: `traceparent` en gateway + logs JSON en los cinco servicios del place-order.
 
 ## 5. Autoverificación de cumplimiento
 
@@ -92,25 +75,11 @@
 - [x] Límites DDD / hexagonal respetados (dominio sin I/O)
 - [x] Sin secretos; config vía variables de entorno
 
-Notas: Ventana lun–dom. Semana de estudio mapeando cloud/IaC al camino MVP 2. El equipo usa `feat/*` (no `hu-xxx-dev`) por acuerdo; un PR por ambiente al shippear producto. HU-status del fork en `main`.
+Notas: Ventana lun–dom. Archivos del taller en `11-week/workshop/` (nombre de carpeta del curso); trabajo con fechas **20–21 oct** = Semana 12. `feat/*` por acuerdo. HU-status en `main`.
 
 ## 6. Enlaces de evidencia
 
-**Fork del curso (docs Semana 12):**
-
-- [`cloud-deployment-models-strategies.md`](./cloud-deployment-models-strategies.md)
-- [`cloud-deployment-models-strategies-vertical.png`](./cloud-deployment-models-strategies-vertical.png)
-- [`deployment-plan-iac-rollback.md`](./deployment-plan-iac-rollback.md)
-- [`deployment-plan-iac-rollback-vertical.png`](./deployment-plan-iac-rollback-vertical.png)
-
-**Camino de release / deploy OptiView (entregado):**
-
-- Tags: https://github.com/code-corhuila/opti-front/releases/tag/v2.0.0 · https://github.com/code-corhuila/opti-products-db/releases/tag/v2.1.0
-- Compose infra: https://github.com/code-corhuila/opti-infra
-- Progressive delivery / entornos: Semana 09 [`planning-secure-configuration-and-progressive-delivery.md`](../../09-week/hu-status/planning-secure-configuration-and-progressive-delivery.md) · [`opti-docs` 10-devops](https://github.com/code-corhuila/opti-docs/tree/main/10-devops)
-
-**Trabajo previo:**
-
+- Docs Semana 12 en esta carpeta + [`resumen-observabilidad.md`](./resumen-observabilidad.md)
+- Workshop: https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/tree/main/11-week/workshop
+- Reflexión: https://docs.google.com/document/d/1wNcQKXvOGbR3IC6YAwaY2q2N6iZZHF96EAHxq3cKygA/edit?usp=sharing
 - Semana 11: [`11-week/hu-status/README.md`](../../11-week/hu-status/README.md)
-- Semana 10: [`10-week/hu-status/README.md`](../../10-week/hu-status/README.md)
-- Repos org: https://github.com/orgs/code-corhuila/repositories?q=opti
