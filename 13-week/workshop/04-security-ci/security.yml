@@ -1,0 +1,42 @@
+name: security-gates
+# Proposal for the opti-workflow pipeline (Maven). Lives in the workshop folder, not in the team code repo.
+on:
+  pull_request:
+
+jobs:
+  secret-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Secret scan
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  dependency-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+      - name: Dependency audit (OWASP dependency-check)
+        run: mvn -B org.owasp:dependency-check-maven:check -DfailBuildOnCVSS=7
+
+  authorization-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+      - name: Start Redis WITH a password (same image as opti-infra)
+        run: |
+          docker run -d --name redis-authz -p 6379:6379 redis:7.4.9-alpine redis-server --requirepass ci-test-password
+          for i in $(seq 1 20); do docker exec redis-authz redis-cli -a ci-test-password ping | grep -q PONG && break; sleep 1; done
+      - name: Negative test - Redis rejects unauthenticated clients
+        run: java 04-security-ci/RedisNoAuthRejectedTest.java 127.0.0.1 6379
