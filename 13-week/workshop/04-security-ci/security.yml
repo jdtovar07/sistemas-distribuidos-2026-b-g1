@@ -37,6 +37,6 @@ jobs:
       - name: Start Redis WITH a password (same image as opti-infra)
         run: |
           docker run -d --name redis-authz -p 6379:6379 redis:7.4.9-alpine redis-server --requirepass ci-test-password
-          for i in $(seq 1 20); do docker exec redis-authz redis-cli -a ci-test-password ping | grep -q PONG && break; sleep 1; done
+          for _ in $(seq 1 20); do docker exec redis-authz redis-cli -a ci-test-password ping | grep -q PONG && break; sleep 1; done
       - name: Negative test - Redis rejects unauthenticated clients
         run: java 04-security-ci/RedisNoAuthRejectedTest.java 127.0.0.1 6379

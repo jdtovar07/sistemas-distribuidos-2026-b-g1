@@ -24,7 +24,20 @@ Against today's `opti-infra` Redis (no password) the same test prints `FAIL`: th
 actionlint security.yml
 ```
 
-## CP8 - real output (fill in after running it on your machine)
+## CP8 - real output (run on my machine, 2026-10-30, Docker with redis:7.4.9-alpine, JDK 25)
+
+Redis started WITH a password (`--requirepass ci-test-password`):
 ```
-TODO: paste the real console output of the test and of actionlint here
+reply to unauthenticated PING: -NOAUTH Authentication required.
+PASS  unauthenticated client is rejected (opti-workflow state store, port 6379)
 ```
+
+Redis started WITHOUT a password (the state of `opti-infra` today, threat S):
+```
+reply to unauthenticated PING: +PONG
+FAIL  Redis answered an unauthenticated client: +PONG
+```
+
+`actionlint 1.7.12` on `security.yml`: first run reported one shellcheck warning (SC2034, loop variable `i` unused in the Redis wait loop). I changed it to `_` and the second run printed nothing, exit code 0.
+
+Not run: the GitHub Actions workflow itself (the secret scan and the dependency audit); only the negative test and the YAML check were run locally.
