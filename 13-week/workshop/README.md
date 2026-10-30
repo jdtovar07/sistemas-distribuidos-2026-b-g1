@@ -9,11 +9,11 @@ Why: Redis holds the state of every saga and today it accepts any client on the 
 - TEAM: The Illusionists
 - DOCS_REPO: https://github.com/code-corhuila/opti-docs
 - BOUNDARY: opti-workflow to Redis (saga state store)
-- CLAIM_ISSUE: TODO (URL of the "Threat model:" issue once opened)
-- REFLECTION_DOC: TODO (URL of "W13 Reflection - Juan Diego Tovar Rodriguez")
+- CLAIM_ISSUE: https://github.com/code-corhuila/opti-docs/issues/53
+- REFLECTION_DOC: https://docs.google.com/document/d/1CpweMfF1q3NIK31v7BaFRtAijCozIFu8sYVDAiC_Xw4/edit?usp=sharing
 - LIBRARY_BOOK: Tanenbaum, A. S. and Van Steen, M., Sistemas distribuidos: principios y paradigmas, 2nd ed., Pearson Prentice Hall, year TODO: 2007 or 2008, read it on the copyright page of the copy, call number TODO (photos show barcode 0008588, Biblioteca Antonio Farid Campos Polanía)
 - LIBRARY_RECORD_TIME: TODO (time of the library record)
-- STORIES: TODO (three issue URLs, added in CP3)
+- STORIES: https://github.com/code-corhuila/opti-docs/issues/55, https://github.com/code-corhuila/opti-docs/issues/56, https://github.com/code-corhuila/opti-docs/issues/57
 <!-- CONFIG-END -->
 
 ## Index
