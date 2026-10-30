@@ -70,6 +70,7 @@ Individual workshop of week 13, boundary `opti-workflow` to Redis (saga state st
 | CP2 | STRIDE for the boundary (two pushes) | [PR #54](https://github.com/code-corhuila/opti-docs/pull/54) · `658fced` · `e7a8d6a` |
 | CP3 | Three security stories | [#55](https://github.com/code-corhuila/opti-docs/issues/55) · [#56](https://github.com/code-corhuila/opti-docs/issues/56) · [#57](https://github.com/code-corhuila/opti-docs/issues/57) · [`a9576ec`](https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/commit/a9576ec) |
 | CP4 | Security gates in CI and negative test | [`workshop/04-security-ci/`](../workshop/04-security-ci/) · [`fcca309`](https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/commit/fcca309) |
+| CP8 | Negative test run and real output | [`HOW-TO-RUN.md`](../workshop/04-security-ci/HOW-TO-RUN.md) · [`78ecb8d`](https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/commit/78ecb8d) |
 
 I ran the negative test locally on 2026-10-30 with Docker: PASS against a Redis with a password and FAIL against one without it. The real output is recorded in `workshop/04-security-ci/HOW-TO-RUN.md` (commit in the next row).
 
