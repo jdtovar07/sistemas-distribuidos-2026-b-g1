@@ -58,6 +58,24 @@
 | 11 | Observability / SLOs; MVP 2 classroom expo | Golden signals + auth failures as security-relevant SLIs |
 | 09–10 | Progressive delivery; MVP 2 tags | Threat model the promote path and public demo surfaces |
 
+<!-- W13-WORKSHOP-START -->
+### Workshop: threat modeling and the security backlog
+
+Individual workshop of week 13, boundary `opti-workflow` to Redis (saga state store). I was away on company work travel from 2026-10-26 to 2026-10-30 (absence excused by the program), so I did the checkpoints on 2026-10-30, outside the class window.
+
+| CP | What | Evidence |
+|---|---|---|
+| CP0 | Boundary, CONFIG and claim | [`workshop/README.md`](../workshop/README.md) · [`33d47c9`](https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/commit/33d47c9) · [claim #53](https://github.com/code-corhuila/opti-docs/issues/53) |
+| CP1 | Attack surface and trust boundaries | [`workshop/01-attack-surface.md`](../workshop/01-attack-surface.md) · [`409ff20`](https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/commit/409ff20) |
+| CP2 | STRIDE for the boundary (two pushes) | [PR #54](https://github.com/code-corhuila/opti-docs/pull/54) · `658fced` · `e7a8d6a` |
+| CP3 | Three security stories | [#55](https://github.com/code-corhuila/opti-docs/issues/55) · [#56](https://github.com/code-corhuila/opti-docs/issues/56) · [#57](https://github.com/code-corhuila/opti-docs/issues/57) · [`a9576ec`](https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/commit/a9576ec) |
+| CP4 | Security gates in CI and negative test | [`workshop/04-security-ci/`](../workshop/04-security-ci/) · [`fcca309`](https://github.com/jdtovar07/sistemas-distribuidos-2026-b-g1/commit/fcca309) |
+
+I ran the negative test locally on 2026-10-30 with Docker: PASS against a Redis with a password and FAIL against one without it. The real output is recorded in `workshop/04-security-ci/HOW-TO-RUN.md` (commit in the next row).
+
+Reflection document: https://docs.google.com/document/d/1CpweMfF1q3NIK31v7BaFRtAijCozIFu8sYVDAiC_Xw4/edit?usp=sharing
+<!-- W13-WORKSHOP-END -->
+
 ### Ceremonies & flow (this week)
 
 | Ceremony | When / evidence |
