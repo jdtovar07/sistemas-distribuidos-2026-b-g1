@@ -20,7 +20,8 @@
 |---|---|---|---|
 | 2026-10-31 | 2 | Pre-class Guidance | — |
 | 2026-11-03 | 5 | Chapters 1, 2, 3 and 4 | evidence/00-enrollment.png, evidence/02-chapter-02.png, evidence/04-chapter-04.png |
-| Total | 7 | | |
+| 2026-11-04 | 4 | Chapters 5 and 6 | evidence/05-chapter-05.png, evidence/06-chapter-06.png |
+| Total | 11 | | |
 
 ## Labs
 
