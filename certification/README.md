@@ -22,7 +22,8 @@
 | 2026-11-03 | 5 | Chapters 1, 2, 3 and 4 | evidence/00-enrollment.png, evidence/01-chapter-01.png, evidence/02-chapter-02.png, evidence/03-chapter-03.png, evidence/04-chapter-04.png |
 | 2026-11-04 | 4 | Chapters 5 and 6 | evidence/05-chapter-05.png, evidence/06-chapter-06.png |
 | 2026-11-05 | 4 | Chapters 7 and 8 | evidence/07-chapter-07.png, evidence/08-chapter-08.png |
-| Total | 15 | | |
+| 2026-11-09 | 2 | Chapter 9 | evidence/09-chapter-09.png |
+| Total | 17 | | |
 
 > Note: The chapter 1 and chapter 3 screenshots were captured later (2026-11-05) because I forgot to take them on the study day. The progress completed on 2026-11-03 is corroborated by the chapter 2 and chapter 4 screenshots taken that same day, which already show chapters 1 and 3 marked as completed in the course menu.
 
