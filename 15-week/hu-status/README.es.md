@@ -10,11 +10,11 @@
 - FULL_NAME: Juan Diego Tovar Rodriguez
 - GITHUB_USER: jdtovar07
 - TEAM: The Illusionists
-- SPRINT_GOAL: Documentar testing at scale (contract, E2E, load, chaos) y el checklist de release production-grade de MVP 3; mapear ambos a OptiView tras MVP 2 (saga place-order, CI/GHCR, observabilidad, security backlog) como análisis de brechas hacia un corte `v3.0.0`.
+- SPRINT_GOAL: Documentar testing at scale (contract, E2E, load, chaos) y el checklist de release production-grade de MVP 3; mapear a OptiView tras MVP 2; y aterrizar el slice de factura PDF / comprobantes privados en `develop` (PRs abiertos, a la espera de CI verde + merge).
 <!-- CONFIG-END -->
 
 > **Ventana de la semana:** lunes **2026-11-09** → domingo **2026-11-15** (cada semana del curso es lun–dom).  
-> **Entrega Semana 15:** (1) notas + visuales de **testing at scale**, y (2) **shipping MVP 3 / release production-grade**, con mapeo de lo que OptiView ya tiene vs lo que falta para producción.
+> **Entrega Semana 15:** (1) notas testing at scale, (2) shipping MVP 3, y (3) slice **factura PDF / comprobante privado** — commits míos, PRs abiertos a `develop`, **aún sin merge**.
 
 ## 1. Historias de usuario trabajadas esta semana
 
@@ -24,11 +24,20 @@
 | HU-OPT-160 | Elaborar resumen visual de testing at scale | done | [`testing-at-scale-contract-e2e-load-chaos-vertical.png`](./testing-at-scale-contract-e2e-load-chaos-vertical.png) |
 | HU-OPT-161 | Documentar shipping MVP 3 — release production-grade | done | [`release-shipping-mvp3-production-grade.md`](./release-shipping-mvp3-production-grade.md) |
 | HU-OPT-162 | Elaborar resumen visual del release production-grade MVP 3 | done | [`release-shipping-mvp3-production-grade-vertical.png`](./release-shipping-mvp3-production-grade-vertical.png) |
+| HU-OPT-163 | Persistencia de comprobantes privados en `opti-sales-db` (V020) | doing | [`972c2fe`](https://github.com/code-corhuila/opti-sales-db/commit/972c2fe) · PR [#20](https://github.com/code-corhuila/opti-sales-db/pull/20) → `develop` (**abierto**) |
+| HU-OPT-164 | Factura PDF + pagos simulados con evidencia privada en `opti-sales-api` | doing | [`04caffd`](https://github.com/code-corhuila/opti-sales-api/commit/04caffd) · PR [#18](https://github.com/code-corhuila/opti-sales-api/pull/18) (**abierto / CI**) |
+| HU-OPT-165 | Descargas de factura + confirmación de pago en `opti-sales-portal` | doing | [`2e161bd`](https://github.com/code-corhuila/opti-sales-portal/commit/2e161bd) · PR [#19](https://github.com/code-corhuila/opti-sales-portal/pull/19) (**abierto / CI**) |
+| HU-OPT-166 | Payloads grandes de comprobante solo al crear pago en `opti-api-gateway` | doing | [`a2b6e85`](https://github.com/code-corhuila/opti-api-gateway/commit/a2b6e85) · PR [#17](https://github.com/code-corhuila/opti-api-gateway/pull/17) (**abierto / CI**) |
+| HU-OPT-167 | Descargas autenticadas + polish shell en `opti-front` | doing | [`d330808`](https://github.com/code-corhuila/opti-front/commit/d330808) · PR [#30](https://github.com/code-corhuila/opti-front/pull/30) (**abierto / CI**) |
 
 ## 2. Mi contribución individual
 
 > **Autor:** Juan Diego Tovar Rodriguez / `jdtovar07`.  
-> **Alcance Semana 15:** notas de testing + readiness MVP 3; gap analysis sobre el MVP 2 entregado.
+> **Alcance Semana 15:** notas testing + MVP 3; slice factura/comprobantes (commits míos en PRs abiertos — merge pendiente).
+
+### Slice en vuelo (espera de merge a `develop`)
+
+Commits autoría Juan Diego; PRs a `develop` abiertos por @BackSua. Varios con CI inestable. Companion PRs de products/customers son del compañero.
 
 ### Notas y visuales
 
