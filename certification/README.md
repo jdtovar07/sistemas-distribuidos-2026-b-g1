@@ -12,7 +12,7 @@
 | Course | HCCDP-Solution Architectures Course |
 | Course link | https://e.huawei.com/en/talent/ict-academy/#/ict-courses-detail?courseId=6WtKiPd1S1YelBB0AUbE1vXlPgk |
 | Start date | 2026-10-31 |
-| Completion date | <YYYY-MM-DD> |
+| Completion date | 2026-11-12 |
 
 ## Study log
 
@@ -24,8 +24,8 @@
 | 2026-11-05 | 4 | Chapters 7 and 8 | evidence/07-chapter-07.png, evidence/08-chapter-08.png |
 | 2026-11-09 | 4 | Chapters 9 and 10 | evidence/09-chapter-09.png, evidence/10-chapter-10.png |
 | 2026-11-10 | 6 | Chapters 11, 12 and 13 | evidence/11-chapter-11.png, evidence/12-chapter-12.png, evidence/13-chapter-13.png |
-| 2026-11-11 | 2 | Chapter 14 | evidence/14-chapter-14.png |
-| Total | 27 | | |
+| 2026-11-11 | 4 | Chapter 14 and Final Exam | evidence/14-chapter-14.png, evidence/19-final-exam.png |
+| Total | 29 | | |
 
 > Note: The chapter 1 and chapter 3 screenshots were captured later (2026-11-05) because I forgot to take them on the study day. The progress completed on 2026-11-03 is corroborated by the chapter 2 and chapter 4 screenshots taken that same day, which already show chapters 1 and 3 marked as completed in the course menu.
 
@@ -40,9 +40,14 @@
 
 ## Final exam
 
-- Score: <score>
-- Date: <YYYY-MM-DD>
+- Score: 76 / 100 (Passed; passing score 70) — 23/30 questions correct
+- Date: 2026-11-12
 - Evidence: evidence/19-final-exam.png
+- Certificate: certificate.pdf (Huawei ICT Academy, Certificate of Completion, code ICT20261112000008, issued 2026-11-12)
+
+> Note: the Huawei Talent platform records exam and certificate dates in Beijing time (UTC+8). The
+> exam was taken on the evening of 2026-11-11 Colombia time (UTC-5), which the platform timestamps
+> as 2026-11-12; the certificate issue date shown on the PDF is 2026-11-12 for the same reason.
 
 ## Skills summary
 
