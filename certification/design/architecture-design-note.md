@@ -113,12 +113,12 @@ neither substitutes for the other.
 
 | Stage | Trigger | Tool or service | File in your team's repositories |
 |---|---|---|---|
-| Build | Push / merge to a service repo | CodeArts Pipeline (Maven for Java, `go build` for Go) | opti-sales-api, opti-customers-api, opti-products-api |
-| Test | After build, same pipeline | CodeArts (JUnit / `go test`) | each service repo's test suite |
-| Image | Tests pass | Docker build → push to SWR | optiview-platform/docker-compose.yml, Dockerfiles |
-| Deploy to qa | Image published | CodeArts Deploy to the staging host | 10-devops/environments.md (staging row) |
-| Deploy to production | Manual approval after qa sign-off | CodeArts Deploy to the production host | 10-devops/environments.md (production row) |
-| Rollback | Failed health check after deploy | Redeploy previous image tag (`docker compose pull` of the prior tag) | 05-architecture/deployment.md §6 |
+| Build | Push / merge to a service repo | CodeArts Pipeline (Maven for Java, npm for the frontend) | optiview-platform/backend/pom.xml, optiview-platform/frontend/package.json |
+| Test | After build, same pipeline | CodeArts (JUnit via Maven) | optiview-platform/backend/src/test/java |
+| Image | Tests pass | Docker build → push to SWR | optiview-platform/backend/Dockerfile, optiview-platform/frontend/Dockerfile |
+| Deploy to qa | Image published | CodeArts Deploy to the staging host | optiview-platform/docker-compose.yml |
+| Deploy to production | Manual approval after qa sign-off | CodeArts Deploy to the production host | optiview-platform/docker-compose.yml |
+| Rollback | Failed health check after deploy | Redeploy previous image tag (`docker compose pull` of the prior tag) | optiview-platform/docker-compose.yml |
 
 The pipeline mirrors the chapter 12 "automated deployment" model: every commit is built and
 tested, a versioned container image is produced and stored in a registry (SWR), and promotion

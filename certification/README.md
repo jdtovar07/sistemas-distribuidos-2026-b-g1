@@ -51,4 +51,13 @@
 
 ## Skills summary
 
-<5 to 7 lines in English, first person, naming at least three concrete design techniques from the course.>
+In this course I learned to design cloud systems with the five-principle method (reliability,
+security, performance, cost and operations) and I applied it to redesign my team's OptiView
+platform. I can now plan high availability with an active-standby pattern across two Availability
+Zones and justify it with concrete RTO and RPO targets. I learned to size horizontal autoscaling
+from real metrics, defining the triggering metric, its threshold and the minimum and maximum
+number of instances per service. I also designed an automated deployment pipeline with versioned
+container images, gated promotion between environments and a defined rollback path. Finally, I
+understood how centralised observability (logs, metrics and alarms) turns operations into a
+proactive activity instead of debugging by hand. These techniques let me connect the course theory
+with the real microservices architecture my team is building.
