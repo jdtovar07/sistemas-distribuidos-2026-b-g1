@@ -10,88 +10,87 @@
 - FULL_NAME: Juan Diego Tovar Rodriguez
 - GITHUB_USER: jdtovar07
 - TEAM: The Illusionists
-- SPRINT_GOAL: Documentar testing at scale (contract, E2E, load, chaos) y el checklist de release production-grade de MVP 3; mapear a OptiView tras MVP 2; y aterrizar el slice de factura PDF / comprobantes privados en `develop` (mergeado 2026-11-10).
+- SPRINT_GOAL: Documentar testing at scale y release MVP 3; aterrizar factura PDF / comprobantes en `develop`, promover a `qa` y abrir `release/3.0.0` → `main` (merge + tag pendientes).
 <!-- CONFIG-END -->
 
-> **Ventana de la semana:** lunes **2026-11-09** → domingo **2026-11-15** (cada semana del curso es lun–dom).  
-> **Entrega Semana 15:** (1) notas testing at scale, (2) shipping MVP 3, y (3) slice **factura PDF / comprobante privado** — **mergeado a `develop`** (falta promover a `qa`/`main`).
+> **Ventana de la semana:** lunes **2026-11-09** → domingo **2026-11-15**.  
+> **Entrega:** notas testing + MVP 3 + slice pagos/PDF — **`develop` mergeado → `qa` mergeado → PRs `release/3.0.0` abiertos a `main`**.
 
 ## 1. Historias de usuario trabajadas esta semana
 
-| HU ID | Título | Estado (todo/doing/done) | Evidencia (URL de PR o commit) |
+| HU ID | Título | Estado | Evidencia |
 |---|---|---|---|
-| HU-OPT-159 | Documentar testing at scale — contract, E2E, load y chaos | done | [`testing-at-scale-contract-e2e-load-chaos.md`](./testing-at-scale-contract-e2e-load-chaos.md) |
-| HU-OPT-160 | Elaborar resumen visual de testing at scale | done | [`testing-at-scale-contract-e2e-load-chaos-vertical.png`](./testing-at-scale-contract-e2e-load-chaos-vertical.png) |
-| HU-OPT-161 | Documentar shipping MVP 3 — release production-grade | done | [`release-shipping-mvp3-production-grade.md`](./release-shipping-mvp3-production-grade.md) |
-| HU-OPT-162 | Elaborar resumen visual del release production-grade MVP 3 | done | [`release-shipping-mvp3-production-grade-vertical.png`](./release-shipping-mvp3-production-grade-vertical.png) |
-| HU-OPT-163 | Persistencia de comprobantes privados en `opti-sales-db` (V020) | done | [`972c2fe`](https://github.com/code-corhuila/opti-sales-db/commit/972c2fe) · PR [#20](https://github.com/code-corhuila/opti-sales-db/pull/20) → merge [`ee42ba2`](https://github.com/code-corhuila/opti-sales-db/commit/ee42ba2) |
-| HU-OPT-164 | Factura PDF + pagos simulados con evidencia privada en `opti-sales-api` | done | [`04caffd`](https://github.com/code-corhuila/opti-sales-api/commit/04caffd) · PR [#18](https://github.com/code-corhuila/opti-sales-api/pull/18) → merge [`402a4ad`](https://github.com/code-corhuila/opti-sales-api/commit/402a4ad) |
-| HU-OPT-165 | Descargas de factura + confirmación de pago en `opti-sales-portal` | done | [`2e161bd`](https://github.com/code-corhuila/opti-sales-portal/commit/2e161bd) · PR [#19](https://github.com/code-corhuila/opti-sales-portal/pull/19) → merge [`cae999b`](https://github.com/code-corhuila/opti-sales-portal/commit/cae999b) |
-| HU-OPT-166 | Payloads grandes de comprobante solo al crear pago en `opti-api-gateway` | done | [`a2b6e85`](https://github.com/code-corhuila/opti-api-gateway/commit/a2b6e85) · PR [#17](https://github.com/code-corhuila/opti-api-gateway/pull/17) → merge [`939e0ea`](https://github.com/code-corhuila/opti-api-gateway/commit/939e0ea) |
-| HU-OPT-167 | Descargas autenticadas + polish shell en `opti-front` | done | [`d330808`](https://github.com/code-corhuila/opti-front/commit/d330808) · PR [#30](https://github.com/code-corhuila/opti-front/pull/30) → merge [`4ff44f1`](https://github.com/code-corhuila/opti-front/commit/4ff44f1) |
+| HU-OPT-159 | Documentar testing at scale | done | [`testing-at-scale-contract-e2e-load-chaos.md`](./testing-at-scale-contract-e2e-load-chaos.md) |
+| HU-OPT-160 | Visual testing at scale | done | [`testing-at-scale-contract-e2e-load-chaos-vertical.png`](./testing-at-scale-contract-e2e-load-chaos-vertical.png) |
+| HU-OPT-161 | Documentar shipping MVP 3 | done | [`release-shipping-mvp3-production-grade.md`](./release-shipping-mvp3-production-grade.md) |
+| HU-OPT-162 | Visual release MVP 3 | done | [`release-shipping-mvp3-production-grade-vertical.png`](./release-shipping-mvp3-production-grade-vertical.png) |
+| HU-OPT-163 | Comprobantes privados `opti-sales-db` V020 | done | [#20](https://github.com/code-corhuila/opti-sales-db/pull/20) → develop |
+| HU-OPT-164 | Factura PDF + pagos `opti-sales-api` | done | [#18](https://github.com/code-corhuila/opti-sales-api/pull/18) → develop |
+| HU-OPT-165 | Descargas factura `opti-sales-portal` | done | [#19](https://github.com/code-corhuila/opti-sales-portal/pull/19) → develop |
+| HU-OPT-166 | Payload comprobante en gateway | done | [#17](https://github.com/code-corhuila/opti-api-gateway/pull/17) → develop |
+| HU-OPT-167 | Descargas autenticadas `opti-front` | done | [#30](https://github.com/code-corhuila/opti-front/pull/30) → develop |
+| HU-OPT-168 | Promover slice MVP 3 a `qa` | done | sales-db [#21](https://github.com/code-corhuila/opti-sales-db/pull/21) · sales-api [#19](https://github.com/code-corhuila/opti-sales-api/pull/19) · sales-portal [#20](https://github.com/code-corhuila/opti-sales-portal/pull/20) · gateway [#18](https://github.com/code-corhuila/opti-api-gateway/pull/18) · front [#31](https://github.com/code-corhuila/opti-front/pull/31) |
+| HU-OPT-169 | Abrir `release/3.0.0` → `main` | doing | sales-db [#22](https://github.com/code-corhuila/opti-sales-db/pull/22) · sales-api [#20](https://github.com/code-corhuila/opti-sales-api/pull/20) · sales-portal [#21](https://github.com/code-corhuila/opti-sales-portal/pull/21) · gateway [#19](https://github.com/code-corhuila/opti-api-gateway/pull/19) · front [#32](https://github.com/code-corhuila/opti-front/pull/32) |
+| HU-OPT-170 | Retirar credenciales demo fijas (`auth-db` V019) | doing | [#19](https://github.com/code-corhuila/opti-auth-db/pull/19) (CI rojo) |
 
 ## 2. Mi contribución individual
 
 > **Autor:** Juan Diego Tovar Rodriguez / `jdtovar07`.  
-> **Alcance Semana 15:** notas testing + MVP 3; slice factura/comprobantes **mergeado a `develop`** (2026-11-10).
+> Commits del slice PDF/pagos: míos. Promoción Git Flow: develop → qa hechos; release/3.0.0 → main abiertos.
 
-### Slice en `develop` (pendiente promover a qa/main)
+### Estado Git Flow (2026-11-10)
 
-Commits autoría Juan Diego; PRs mergeados por el equipo. Companions de products/customers del compañero.
+| Repo | develop | qa | main (`release/3.0.0`) |
+|------|---------|-----|------------------------|
+| sales-db / sales-api / sales-portal / gateway / front | mergeado | mergeado | **OPEN** |
+| products-* / customers-* (compañero) | mergeado | mergeado | **OPEN** |
 
-### Notas y visuales
+### Follow-up seguridad
+
+- `opti-auth-db` [#19](https://github.com/code-corhuila/opti-auth-db/pull/19) + `opti-infra` [#7](https://github.com/code-corhuila/opti-infra/pull/7) — abiertos; sin mergear para no romper demo `OptiView2026`.
+
+### Notas
 
 | Artefacto | Qué cubre |
 |-----------|-----------|
-| [`testing-at-scale-contract-e2e-load-chaos.md`](./testing-at-scale-contract-e2e-load-chaos.md) | Pirámide distribuida; Pact/contratos; integración; E2E; load; chaos |
-| [`testing-at-scale-contract-e2e-load-chaos-vertical.png`](./testing-at-scale-contract-e2e-load-chaos-vertical.png) | Resumen visual |
-| [`release-shipping-mvp3-production-grade.md`](./release-shipping-mvp3-production-grade.md) | Production-grade; MVP 1→2→3; checklist; tag → deploy → smoke → señales → keep/rollback |
-| [`release-shipping-mvp3-production-grade-vertical.png`](./release-shipping-mvp3-production-grade-vertical.png) | Resumen visual |
+| testing-at-scale *.md/.png | Pirámide, contratos, E2E, load, chaos |
+| release-shipping-mvp3 *.md/.png | Checklist production-grade MVP 3 |
 
-### Gap map OptiView (MVP 2 → MVP 3)
+### Ceremonias
 
-| Ítem | Estado hoy |
-|------|------------|
-| CI / unit | Presente en varios repos |
-| Contract tests | Documentados; aún no gate bloqueante |
-| E2E | Demos manuales; path PDF en `develop` |
-| Load / chaos | Sin corridas sistemáticas |
-| Observabilidad | Stack en `opti-infra`; SDK progresivo |
-| Seguridad | JWT + taller Redis; PR abierto auth-db #19 (no mergear antes de demo) |
-| Release versionado | Tags `v2.0.0` / `v2.1.0`; slice PDF aún sin tag |
-
-Journey crítico a probar: login → place-order → pago → PDF.
-
-### Ceremonias y flujo
-
-| Ceremonia | Cuándo / evidencia |
-|-----------|--------------------|
-| Planning | Kickoff: testing + MVP 3; track PRs PDF |
-| Daily | Async: CI → merge 2026-11-10 |
-| Review | Demo en vivo desde `develop` |
-| Retro | Slice en `develop`; falta contratos + E2E + load antes de `v3.0.0` |
-| PRs por ambiente | feat → develop **hecho**; falta qa/main |
+| Ceremonia | Evidencia |
+|-----------|-----------|
+| Planning | Kickoff testing + MVP 3 + track PDF |
+| Daily | develop → qa → abrir release/3.0.0 |
+| Review | Demo local desde develop |
+| Retro | develop+qa listos; falta main/tag + contratos/E2E |
+| PRs por ambiente | feat→develop done · qa done · release→main open |
 
 ## 3. Bloqueadores y riesgos
 
-- Slice aún no en `qa`/`main`/tag; sin suite de contratos ni baseline de load; secret store / Redis; branch protection desigual; OTel incompleto.
+- PRs `release/3.0.0` → `main` aún abiertos (sin tag `v3.0.0`).
+- auth-db #19 CI fallido.
+- Sin suite de contratos / E2E / load sistemáticos.
 
 ## 4. Plan para la próxima semana
 
-- Promover HU-OPT-163…167 a qa → main + tag.
-- Plan mínimo de contract tests en place-order.
-- Candidato: E2E smoke (login + place-order + descarga factura) en CI.
+- Merge a `main` + tag `v3.0.0`.
+- Resolver CI auth-db #19 tras la ventana de demo.
+- Plan mínimo contract + E2E smoke del journey de pago/PDF.
 
-## 5. Autochequeo de cumplimiento
+## 5. Autochequeo
 
 - [x] Conventional Commits
 - [x] PR por ambiente
-- [x] Criterios de aceptación testeables
+- [x] Criterios testeables
 - [x] Tests
 - [x] DDD / hexagonal
-- [x] Sin secretos en repo
+- [x] Sin secretos
 
-## 6. Enlaces de evidencia
+## 6. Evidencia
 
-- Notas week-15 (mismo directorio)
-- Merges develop: sales-db #20, sales-api #18, sales-portal #19, gateway #17, front #30
+- Notas week-15 (este directorio)
+- develop: sales-db #20, sales-api #18, sales-portal #19, gateway #17, front #30
+- qa: sales-db #21, sales-api #19, sales-portal #20, gateway #18, front #31
+- release→main OPEN: sales-db #22, sales-api #20, sales-portal #21, gateway #19, front #32
+- auth-db #19 (open)
