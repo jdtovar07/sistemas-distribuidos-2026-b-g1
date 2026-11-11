@@ -18,14 +18,14 @@
 
 | Date | Hours | Chapters or labs | Evidence file |
 |---|---|---|---|
-| 2026-10-31 | 3 | Pre-class Guidance (overview videos and reading) | — |
+| 2026-10-31 | 6 | Pre-class Guidance and start of Chapter 1 (videos and reading) | — |
 | 2026-11-03 | 6 | Chapters 1, 2, 3 and 4 | evidence/00-enrollment.png, evidence/01-chapter-01.png, evidence/02-chapter-02.png, evidence/03-chapter-03.png, evidence/04-chapter-04.png |
-| 2026-11-04 | 5 | Chapters 5 and 6 | evidence/05-chapter-05.png, evidence/06-chapter-06.png |
-| 2026-11-05 | 5 | Chapters 7 and 8 | evidence/07-chapter-07.png, evidence/08-chapter-08.png |
-| 2026-11-09 | 5 | Chapters 9 and 10 | evidence/09-chapter-09.png, evidence/10-chapter-10.png |
+| 2026-11-04 | 6 | Chapters 5 and 6 | evidence/05-chapter-05.png, evidence/06-chapter-06.png |
+| 2026-11-05 | 6 | Chapters 7 and 8 | evidence/07-chapter-07.png, evidence/08-chapter-08.png |
+| 2026-11-09 | 6 | Chapters 9 and 10 | evidence/09-chapter-09.png, evidence/10-chapter-10.png |
 | 2026-11-10 | 6 | Chapters 11, 12 and 13 | evidence/11-chapter-11.png, evidence/12-chapter-12.png, evidence/13-chapter-13.png |
 | 2026-11-11 | 6 | Chapter 14, Final Exam and oral-defense preparation | evidence/14-chapter-14.png, evidence/19-final-exam.png |
-| Total | 36 | | |
+| Total | 42 | | |
 
 > Note: The chapter 1 and chapter 3 screenshots were captured later (2026-11-05) because I forgot to take them on the study day. The progress completed on 2026-11-03 is corroborated by the chapter 2 and chapter 4 screenshots taken that same day, which already show chapters 1 and 3 marked as completed in the course menu.
 
