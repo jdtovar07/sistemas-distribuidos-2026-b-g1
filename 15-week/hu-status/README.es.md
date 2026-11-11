@@ -10,7 +10,7 @@
 - FULL_NAME: Juan Diego Tovar Rodriguez
 - GITHUB_USER: jdtovar07
 - TEAM: The Illusionists
-- SPRINT_GOAL: Documentar testing at scale y release MVP 3; aterrizar factura PDF / comprobantes en `develop`, promover a `qa` y abrir `release/3.0.0` → `main` (merge + tag pendientes).
+- SPRINT_GOAL: Documentar testing at scale y release MVP 3; aterrizar factura PDF en `develop` → `qa` → `release/3.0.0` → `main`; sincronizar opti-board / Opti View backlog.
 <!-- CONFIG-END -->
 
 > **Ventana de la semana:** lunes **2026-11-09** → domingo **2026-11-15**.  
@@ -29,9 +29,11 @@
 | HU-OPT-165 | Descargas factura `opti-sales-portal` | done | [#19](https://github.com/code-corhuila/opti-sales-portal/pull/19) → develop |
 | HU-OPT-166 | Payload comprobante en gateway | done | [#17](https://github.com/code-corhuila/opti-api-gateway/pull/17) → develop |
 | HU-OPT-167 | Descargas autenticadas `opti-front` | done | [#30](https://github.com/code-corhuila/opti-front/pull/30) → develop |
-| HU-OPT-168 | Promover slice MVP 3 a `qa` | done | sales-db [#21](https://github.com/code-corhuila/opti-sales-db/pull/21) · sales-api [#19](https://github.com/code-corhuila/opti-sales-api/pull/19) · sales-portal [#20](https://github.com/code-corhuila/opti-sales-portal/pull/20) · gateway [#18](https://github.com/code-corhuila/opti-api-gateway/pull/18) · front [#31](https://github.com/code-corhuila/opti-front/pull/31) |
-| HU-OPT-169 | Abrir `release/3.0.0` → `main` | doing | sales-db [#22](https://github.com/code-corhuila/opti-sales-db/pull/22) · sales-api [#20](https://github.com/code-corhuila/opti-sales-api/pull/20) · sales-portal [#21](https://github.com/code-corhuila/opti-sales-portal/pull/21) · gateway [#19](https://github.com/code-corhuila/opti-api-gateway/pull/19) · front [#32](https://github.com/code-corhuila/opti-front/pull/32) |
-| HU-OPT-170 | Retirar credenciales demo fijas (`auth-db` V019) | doing | [#19](https://github.com/code-corhuila/opti-auth-db/pull/19) (CI rojo) |
+| HU-OPT-168 | Promover slice MVP 3 a `qa` | done | PRs qa + tablero [#76](https://github.com/code-corhuila/opti-docs/issues/76) |
+| HU-OPT-169 | Abrir `release/3.0.0` → `main` | doing | PRs release + tablero [#77](https://github.com/code-corhuila/opti-docs/issues/77) |
+| HU-OPT-170 | Retirar credenciales demo fijas (`auth-db` V019) | doing | auth-db [#19](https://github.com/code-corhuila/opti-auth-db/pull/19) + tablero [#78](https://github.com/code-corhuila/opti-docs/issues/78) |
+| HU-OPT-171 | [backlog] Plan contract-tests place-order + PDF | todo | [#79](https://github.com/code-corhuila/opti-docs/issues/79) |
+| HU-OPT-172 | [backlog] E2E smoke login → PDF | todo | [#80](https://github.com/code-corhuila/opti-docs/issues/80) |
 
 ## 2. Mi contribución individual
 
@@ -56,15 +58,30 @@
 | testing-at-scale *.md/.png | Pirámide, contratos, E2E, load, chaos |
 | release-shipping-mvp3 *.md/.png | Checklist production-grade MVP 3 |
 
+### Tablero y backlog
+
+| Tablero | URL |
+|---------|-----|
+| opti-board | https://github.com/orgs/code-corhuila/projects/3 |
+| Opti View — Backlog | https://github.com/orgs/code-corhuila/projects/15 |
+
+| Status | Cards semana 15 |
+|--------|-----------------|
+| Done | Producto [#65](https://github.com/code-corhuila/opti-docs/issues/65)–[#70](https://github.com/code-corhuila/opti-docs/issues/70) · estudio/qa [#72](https://github.com/code-corhuila/opti-docs/issues/72)–[#76](https://github.com/code-corhuila/opti-docs/issues/76) |
+| In review | [#77](https://github.com/code-corhuila/opti-docs/issues/77) release/3.0.0 → main |
+| Blocked | [#78](https://github.com/code-corhuila/opti-docs/issues/78) auth-db V019 |
+| Backlog | [#79](https://github.com/code-corhuila/opti-docs/issues/79) contratos · [#80](https://github.com/code-corhuila/opti-docs/issues/80) E2E |
+
 ### Ceremonias
 
 | Ceremonia | Evidencia |
 |-----------|-----------|
-| Planning | Kickoff testing + MVP 3 + track PDF |
-| Daily | develop → qa → abrir release/3.0.0 |
-| Review | Demo local desde develop |
-| Retro | develop+qa listos; falta main/tag + contratos/E2E |
+| Planning | Kickoff testing + MVP 3 + sincronizar tablero |
+| Daily | develop → qa → release/3.0.0; mover Status en board |
+| Review | Demo local; cards Done vs In review |
+| Retro | develop+qa listos; #77 abierto; #79/#80 en backlog |
 | PRs por ambiente | feat→develop done · qa done · release→main open |
+| Board sync | Issues en `opti-docs` + projects/3 y /15 |
 
 ## 3. Bloqueadores y riesgos
 
@@ -90,7 +107,6 @@
 ## 6. Evidencia
 
 - Notas week-15 (este directorio)
-- develop: sales-db #20, sales-api #18, sales-portal #19, gateway #17, front #30
-- qa: sales-db #21, sales-api #19, sales-portal #20, gateway #18, front #31
-- release→main OPEN: sales-db #22, sales-api #20, sales-portal #21, gateway #19, front #32
-- auth-db #19 (open)
+- develop / qa / release PRs (ver README.md EN)
+- Tableros: [projects/3](https://github.com/orgs/code-corhuila/projects/3) · [projects/15](https://github.com/orgs/code-corhuila/projects/15)
+- Cards: [#72](https://github.com/code-corhuila/opti-docs/issues/72)–[#80](https://github.com/code-corhuila/opti-docs/issues/80) + producto [#65](https://github.com/code-corhuila/opti-docs/issues/65)–[#70](https://github.com/code-corhuila/opti-docs/issues/70)

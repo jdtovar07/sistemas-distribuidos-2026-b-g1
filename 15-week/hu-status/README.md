@@ -8,7 +8,7 @@
 - FULL_NAME: Juan Diego Tovar Rodriguez
 - GITHUB_USER: jdtovar07
 - TEAM: The Illusionists
-- SPRINT_GOAL: Document testing at scale and MVP 3 production-grade release; land invoice-PDF / private payment-evidence on `develop`, promote to `qa`, and open `release/3.0.0` → `main` (awaiting merge + tag).
+- SPRINT_GOAL: Document testing at scale and MVP 3 production-grade release; land invoice-PDF / private payment-evidence on `develop` → `qa` → open `release/3.0.0` → `main`; sync opti-board / Opti View backlog.
 <!-- CONFIG-END -->
 
 > **Week window:** Monday **2026-11-09** → Sunday **2026-11-15** (each course week is Mon–Sun).  
@@ -18,18 +18,20 @@
 
 | HU ID | Title | Status (todo/doing/done) | Evidence (PR or commit URL) |
 |---|---|---|---|
-| HU-OPT-159 | Document testing at scale — contract, E2E, load and chaos | done | [`testing-at-scale-contract-e2e-load-chaos.md`](./testing-at-scale-contract-e2e-load-chaos.md) |
-| HU-OPT-160 | Produce visual summary of testing at scale | done | [`testing-at-scale-contract-e2e-load-chaos-vertical.png`](./testing-at-scale-contract-e2e-load-chaos-vertical.png) |
-| HU-OPT-161 | Document shipping MVP 3 — production-grade release | done | [`release-shipping-mvp3-production-grade.md`](./release-shipping-mvp3-production-grade.md) |
-| HU-OPT-162 | Produce visual summary of MVP 3 production-grade release | done | [`release-shipping-mvp3-production-grade-vertical.png`](./release-shipping-mvp3-production-grade-vertical.png) |
-| HU-OPT-163 | Persist private payment receipts in `opti-sales-db` (V020) | done | [`972c2fe`](https://github.com/code-corhuila/opti-sales-db/commit/972c2fe) · develop [#20](https://github.com/code-corhuila/opti-sales-db/pull/20) → [`ee42ba2`](https://github.com/code-corhuila/opti-sales-db/commit/ee42ba2) |
-| HU-OPT-164 | Invoice PDFs + protected simulated payments in `opti-sales-api` | done | [`04caffd`](https://github.com/code-corhuila/opti-sales-api/commit/04caffd) · develop [#18](https://github.com/code-corhuila/opti-sales-api/pull/18) → [`402a4ad`](https://github.com/code-corhuila/opti-sales-api/commit/402a4ad) |
-| HU-OPT-165 | Invoice downloads + payment confirmation in `opti-sales-portal` | done | [`2e161bd`](https://github.com/code-corhuila/opti-sales-portal/commit/2e161bd) · develop [#19](https://github.com/code-corhuila/opti-sales-portal/pull/19) → [`cae999b`](https://github.com/code-corhuila/opti-sales-portal/commit/cae999b) |
-| HU-OPT-166 | Large private receipt payloads only on payment create (`opti-api-gateway`) | done | [`a2b6e85`](https://github.com/code-corhuila/opti-api-gateway/commit/a2b6e85) · develop [#17](https://github.com/code-corhuila/opti-api-gateway/pull/17) → [`939e0ea`](https://github.com/code-corhuila/opti-api-gateway/commit/939e0ea) |
-| HU-OPT-167 | Authenticated downloads + shell polish in `opti-front` | done | [`d330808`](https://github.com/code-corhuila/opti-front/commit/d330808) · develop [#30](https://github.com/code-corhuila/opti-front/pull/30) → [`4ff44f1`](https://github.com/code-corhuila/opti-front/commit/4ff44f1) |
-| HU-OPT-168 | Promote MVP 3 payments/PDF slice to `qa` (cherry-pick per env) | done | qa merges 2026-11-10: sales-db [#21](https://github.com/code-corhuila/opti-sales-db/pull/21) · sales-api [#19](https://github.com/code-corhuila/opti-sales-api/pull/19) · sales-portal [#20](https://github.com/code-corhuila/opti-sales-portal/pull/20) · gateway [#18](https://github.com/code-corhuila/opti-api-gateway/pull/18) · front [#31](https://github.com/code-corhuila/opti-front/pull/31) |
-| HU-OPT-169 | Open `release/3.0.0` → `main` for MVP 3 cut | doing | open PRs: sales-db [#22](https://github.com/code-corhuila/opti-sales-db/pull/22) · sales-api [#20](https://github.com/code-corhuila/opti-sales-api/pull/20) · sales-portal [#21](https://github.com/code-corhuila/opti-sales-portal/pull/21) · gateway [#19](https://github.com/code-corhuila/opti-api-gateway/pull/19) · front [#32](https://github.com/code-corhuila/opti-front/pull/32) |
-| HU-OPT-170 | Retire fixed demo credentials (`opti-auth-db` V019) | doing | [`764ed45`](https://github.com/code-corhuila/opti-auth-db/commit/764ed45) · PR [#19](https://github.com/code-corhuila/opti-auth-db/pull/19) → `develop` (open; CI `rebuild` red) |
+| HU-OPT-159 | Document testing at scale — contract, E2E, load and chaos | done | notes + board [#72](https://github.com/code-corhuila/opti-docs/issues/72) |
+| HU-OPT-160 | Produce visual summary of testing at scale | done | visual + board [#73](https://github.com/code-corhuila/opti-docs/issues/73) |
+| HU-OPT-161 | Document shipping MVP 3 — production-grade release | done | notes + board [#74](https://github.com/code-corhuila/opti-docs/issues/74) |
+| HU-OPT-162 | Produce visual summary of MVP 3 production-grade release | done | visual + board [#75](https://github.com/code-corhuila/opti-docs/issues/75) |
+| HU-OPT-163 | Persist private payment receipts in `opti-sales-db` (V020) | done | [`972c2fe`](https://github.com/code-corhuila/opti-sales-db/commit/972c2fe) · develop [#20](https://github.com/code-corhuila/opti-sales-db/pull/20) · board product [#67](https://github.com/code-corhuila/opti-docs/issues/67) (HU-140) |
+| HU-OPT-164 | Invoice PDFs + protected simulated payments in `opti-sales-api` | done | [`04caffd`](https://github.com/code-corhuila/opti-sales-api/commit/04caffd) · develop [#18](https://github.com/code-corhuila/opti-sales-api/pull/18) · board [#65](https://github.com/code-corhuila/opti-docs/issues/65)/[#66](https://github.com/code-corhuila/opti-docs/issues/66) (HU-138/139) |
+| HU-OPT-165 | Invoice downloads + payment confirmation in `opti-sales-portal` | done | [`2e161bd`](https://github.com/code-corhuila/opti-sales-portal/commit/2e161bd) · develop [#19](https://github.com/code-corhuila/opti-sales-portal/pull/19) · board [#65](https://github.com/code-corhuila/opti-docs/issues/65)/[#66](https://github.com/code-corhuila/opti-docs/issues/66) |
+| HU-OPT-166 | Large private receipt payloads only on payment create (`opti-api-gateway`) | done | [`a2b6e85`](https://github.com/code-corhuila/opti-api-gateway/commit/a2b6e85) · develop [#17](https://github.com/code-corhuila/opti-api-gateway/pull/17) · board [#67](https://github.com/code-corhuila/opti-docs/issues/67) |
+| HU-OPT-167 | Authenticated downloads + shell polish in `opti-front` | done | [`d330808`](https://github.com/code-corhuila/opti-front/commit/d330808) · develop [#30](https://github.com/code-corhuila/opti-front/pull/30) · board [#69](https://github.com/code-corhuila/opti-docs/issues/69) (HU-142) |
+| HU-OPT-168 | Promote MVP 3 payments/PDF slice to `qa` (cherry-pick per env) | done | qa PRs + board [#76](https://github.com/code-corhuila/opti-docs/issues/76) |
+| HU-OPT-169 | Open `release/3.0.0` → `main` for MVP 3 cut | doing | release PRs + board [#77](https://github.com/code-corhuila/opti-docs/issues/77) (In review) |
+| HU-OPT-170 | Retire fixed demo credentials (`opti-auth-db` V019) | doing | PR [#19](https://github.com/code-corhuila/opti-auth-db/pull/19) + board [#78](https://github.com/code-corhuila/opti-docs/issues/78) (Blocked/CI) |
+| HU-OPT-171 | [backlog] Contract-test plan for place-order + payment PDF | todo | board [#79](https://github.com/code-corhuila/opti-docs/issues/79) |
+| HU-OPT-172 | [backlog] E2E smoke: login → place-order → invoice PDF | todo | board [#80](https://github.com/code-corhuila/opti-docs/issues/80) |
 
 ## 2. My individual contribution
 
@@ -97,15 +99,34 @@ Left unmerged on purpose for classroom demo (`admin` / `OptiView2026` still work
 | 11–12 | Observability + rollback | Keep/Rollback language for MVP 3 release notes |
 | 10 | MVP 2 `v2.0.0` | Baseline; MVP 3 adds PDF/payments evidence |
 
+### Board & backlog (synced this week)
+
+| Board | URL |
+|-------|-----|
+| **opti-board** (Kanban) | https://github.com/orgs/code-corhuila/projects/3 |
+| **Opti View — Backlog** | https://github.com/orgs/code-corhuila/projects/15 |
+
+Issues live in [`code-corhuila/opti-docs`](https://github.com/code-corhuila/opti-docs/issues) (team SSOT for epics/HUs; `board-sync` workflow moves Status on open/close).
+
+| Board Status | Items (Week 15) |
+|--------------|-----------------|
+| **Done** | Product slice already on board: [#65](https://github.com/code-corhuila/opti-docs/issues/65)–[#70](https://github.com/code-corhuila/opti-docs/issues/70) (HU-138…143). Study + qa: [#72](https://github.com/code-corhuila/opti-docs/issues/72)–[#76](https://github.com/code-corhuila/opti-docs/issues/76) (HU-159…162, 168). |
+| **In review** | [#77](https://github.com/code-corhuila/opti-docs/issues/77) HU-169 — `release/3.0.0` → `main` |
+| **In progress / Blocked** | [#78](https://github.com/code-corhuila/opti-docs/issues/78) HU-170 — auth-db V019 (CI red; hold for demo) |
+| **Backlog** | [#79](https://github.com/code-corhuila/opti-docs/issues/79) contract-test plan · [#80](https://github.com/code-corhuila/opti-docs/issues/80) E2E smoke · prior security backlog still open (e.g. Redis [#55](https://github.com/code-corhuila/opti-docs/issues/55)–[#57](https://github.com/code-corhuila/opti-docs/issues/57), Wompi [#61](https://github.com/code-corhuila/opti-docs/issues/61)–[#63](https://github.com/code-corhuila/opti-docs/issues/63)) |
+
+Mapping note: fork HUs **163–167** are the personal evidence of commits that implement board product HUs **138–142** (same vertical slice).
+
 ### Ceremonies & flow (this week)
 
 | Ceremony | When / evidence |
 |----------|-----------------|
-| Planning | Mon: testing-at-scale + MVP 3 notes; track payment-PDF Git Flow |
-| Daily | Async: develop merges → qa promotion → open `release/3.0.0` |
-| Review | Live demo from `develop` (payment PDF path); qa ready |
-| Retro | Slice on develop+qa; main/tag still open; contracts/E2E/load still backlog |
+| Planning | Mon: testing-at-scale + MVP 3 notes; pull PDF slice + Git Flow onto board/backlog |
+| Daily | Async: develop → qa → open `release/3.0.0`; sync card Status on opti-board / Opti View backlog |
+| Review | Live demo from `develop`; qa ready; board shows Done vs In review |
+| Retro | Slice on develop+qa; main/tag open on board (#77); contracts/E2E parked as backlog (#79/#80) |
 | Per-env PRs | feat→develop **done** · qa-* **done** · release/3.0.0→main **open** |
+| Board sync | Created/closed Week 15 issues on `opti-docs`; Status set on [projects/3](https://github.com/orgs/code-corhuila/projects/3) + [projects/15](https://github.com/orgs/code-corhuila/projects/15) |
 
 ## 3. Blockers and risks
 
@@ -168,6 +189,14 @@ Notes: Week window Mon–Sun. Cherry-pick promotion (`-x`) used for qa/release p
 
 - https://github.com/code-corhuila/opti-auth-db/pull/19
 - https://github.com/code-corhuila/opti-infra/pull/7
+
+**Board / backlog (Week 15 cards):**
+
+- Boards: https://github.com/orgs/code-corhuila/projects/3 · https://github.com/orgs/code-corhuila/projects/15
+- Done: https://github.com/code-corhuila/opti-docs/issues/72 … https://github.com/code-corhuila/opti-docs/issues/76 (+ product [#65](https://github.com/code-corhuila/opti-docs/issues/65)–[#70](https://github.com/code-corhuila/opti-docs/issues/70))
+- In review: https://github.com/code-corhuila/opti-docs/issues/77
+- Blocked: https://github.com/code-corhuila/opti-docs/issues/78
+- Backlog: https://github.com/code-corhuila/opti-docs/issues/79 · https://github.com/code-corhuila/opti-docs/issues/80
 
 **Prior baseline:**
 
