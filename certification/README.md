@@ -24,8 +24,8 @@
 | 2026-11-05 | 4 | Chapters 7 and 8 | evidence/07-chapter-07.png, evidence/08-chapter-08.png |
 | 2026-11-09 | 4 | Chapters 9 and 10 | evidence/09-chapter-09.png, evidence/10-chapter-10.png |
 | 2026-11-10 | 6 | Chapters 11, 12 and 13 | evidence/11-chapter-11.png, evidence/12-chapter-12.png, evidence/13-chapter-13.png |
-| 2026-11-11 | 4 | Chapter 14 and Final Exam | evidence/14-chapter-14.png, evidence/19-final-exam.png |
-| Total | 29 | | |
+| 2026-11-11 | 6 | Chapter 14, Final Exam and oral-defense preparation | evidence/14-chapter-14.png, evidence/19-final-exam.png |
+| Total | 31 | | |
 
 > Note: The chapter 1 and chapter 3 screenshots were captured later (2026-11-05) because I forgot to take them on the study day. The progress completed on 2026-11-03 is corroborated by the chapter 2 and chapter 4 screenshots taken that same day, which already show chapters 1 and 3 marked as completed in the course menu.
 
