@@ -8,13 +8,15 @@
 - FULL_NAME: Juan Diego Tovar Rodriguez
 - GITHUB_USER: jdtovar07
 - TEAM: The Illusionists
-- SPRINT_GOAL: Document testing at scale and MVP 3 production-grade release; land invoice-PDF / private payment-evidence on `develop` → `qa` → open `release/3.0.0` → `main`; sync opti-board / Opti View backlog; present the full OptiView project to the professor; complete Huawei ICT Academy Solution Architectures certification (chapters, exam, design note, certificate).
+- SPRINT_GOAL: Document testing at scale and MVP 3 production-grade release; land invoice-PDF / private payment-evidence on `develop` → `qa` → open `release/3.0.0` → `main`; sync opti-board / Opti View backlog; present the full OptiView project to the professor; complete Huawei ICT Academy C3 certification; late-report early C3 study (Weeks 13–14) that was never listed in those HU-status files.
 <!-- CONFIG-END -->
 
 > **Week window:** Monday **2026-11-09** → Sunday **2026-11-15** (each course week is Mon–Sun).  
-> **Week 15 deliverable:** (1) testing-at-scale notes, (2) MVP 3 shipping notes, (3) payment PDF slice on `develop`/`qa` + open `release/3.0.0` → `main`, (4) classroom presentation of the complete project, (5) **certification C3 completed** (exam + certificate + architecture design).
+> **Week 15 deliverable:** (1) testing-at-scale notes, (2) MVP 3 shipping notes, (3) payment PDF slice on `develop`/`qa` + open `release/3.0.0` → `main`, (4) classroom presentation, (5) **C3 certification completed this week**, (6) **late-report** of C3 progress from Weeks 13–14 that did **not** appear in those weeks’ HU-status.
 
 ## 1. User stories worked this week
+
+### A. This week (Mon 2026-11-09 → Sun 2026-11-15)
 
 | HU ID | Title | Status (todo/doing/done) | Evidence (PR or commit URL) |
 |---|---|---|---|
@@ -37,6 +39,15 @@
 | HU-OPT-175 | Pass final exam and obtain Certificate of Completion (C3) | done | score 76/100 · [`evidence/19-final-exam.png`](../../certification/evidence/19-final-exam.png) · [`certificate.pdf`](../../certification/certificate.pdf) |
 | HU-OPT-176 | Write architecture design note + ADRs mapping course → OptiView | done | [`architecture-design-note.md`](../../certification/design/architecture-design-note.md) · [`ADR-C3-01.md`](../../certification/design/ADR-C3-01.md) · [`ADR-C3-02.md`](../../certification/design/ADR-C3-02.md) · [`target-architecture.png`](../../certification/design/target-architecture.png) |
 
+### B. Late-reported from Weeks 13–14 (never listed in those HU-status files)
+
+> **Note:** Certification study **started in Week 13** (enrollment / Chapter 1 on **2026-10-31**) and continued through **Week 14** (Chapters 1–8 on **2026-11-03 → 2026-11-05**). Those HU-status files ([`13-week`](../../13-week/hu-status/README.md), [`14-week`](../../14-week/hu-status/README.md)) do **not** mention C3 at all. Work dates stay in Weeks 13–14; this section only makes the missing rows visible. **Completion** (chs 9–14, exam, certificate, design note) is genuine Week 15 work in §A above.
+
+| HU ID | Title | Status | When it happened | Evidence |
+|---|---|---|---|---|
+| HU-OPT-177 | [late W13] Enroll + start Huawei ICT Academy C3 (pre-class / Ch.1) | done | Week 13 — **2026-10-31** | [`00-enrollment.png`](../../certification/evidence/00-enrollment.png) · study log in [`certification/README.md`](../../certification/README.md) |
+| HU-OPT-178 | [late W14] Complete C3 chapters 1–8 + evidence screenshots | done | Week 14 — **2026-11-03 → 2026-11-05** | [`01`](../../certification/evidence/01-chapter-01.png)…[`08`](../../certification/evidence/08-chapter-08.png) |
+
 ## 2. My individual contribution
 
 > **Author:** Juan Diego Tovar Rodriguez / `jdtovar07` (`jdtovar-2021a@corhuila.edu.co`).  
@@ -52,20 +63,29 @@ The Illusionists presented the **complete OptiView project** to the professor in
 
 I participated in the team presentation and answered the two individual questions from the professor.
 
-### Certification C3 — Huawei ICT Academy (this week)
+### Certification C3 — Huawei ICT Academy
 
-Completed the **HCCDP Solution Architectures** course track under [`certification/`](../../certification/) (cover: start 2026-10-31 → completion **2026-11-12**; **42 h** study log).
+Completed the **HCCDP Solution Architectures** track under [`certification/`](../../certification/) (start **2026-10-31** → completion **2026-11-12**; **42 h**).
 
-| This week | Evidence |
-|-----------|----------|
-| Chapters 9–10 (Mon 9 Nov) | [`09-chapter-09.png`](../../certification/evidence/09-chapter-09.png) · [`10-chapter-10.png`](../../certification/evidence/10-chapter-10.png) |
-| Chapters 11–13 (Tue 10 Nov) | [`11`](../../certification/evidence/11-chapter-11.png)–[`13`](../../certification/evidence/13-chapter-13.png) |
-| Chapter 14 + exam prep (Wed 11 Nov) | [`14-chapter-14.png`](../../certification/evidence/14-chapter-14.png) · final-exam prep |
-| Final exam **76/100** (passed) + Certificate of Completion | [`19-final-exam.png`](../../certification/evidence/19-final-exam.png) · [`certificate.pdf`](../../certification/certificate.pdf) (code `ICT20261112000008`) |
-| Architecture design note + 2 ADRs + target diagram (OptiView mapping) | [`design/`](../../certification/design/) |
-| Skills summary (HA, autoscaling, gated deploy, observability) | [`certification/README.md`](../../certification/README.md) |
+**Earlier weeks (not in those HU-status files — late-reported in §B):**
 
-> Platform timestamps exam/certificate as 2026-11-12 (Beijing UTC+8); taken evening 2026-11-11 Colombia (UTC-5).
+| Window | What | Evidence |
+|--------|------|----------|
+| Week 13 (31 Oct) | Enrollment + start Ch.1 | [`00-enrollment.png`](../../certification/evidence/00-enrollment.png) |
+| Week 14 (3–5 Nov) | Chapters 1–8 | [`01`](../../certification/evidence/01-chapter-01.png)…[`08`](../../certification/evidence/08-chapter-08.png) |
+
+**This week (Week 15 — §A):**
+
+| When | What | Evidence |
+|------|------|----------|
+| Mon 9 Nov | Chapters 9–10 | [`09`](../../certification/evidence/09-chapter-09.png)·[`10`](../../certification/evidence/10-chapter-10.png) |
+| Tue 10 Nov | Chapters 11–13 | [`11`](../../certification/evidence/11-chapter-11.png)–[`13`](../../certification/evidence/13-chapter-13.png) |
+| Wed 11 Nov | Chapter 14 + exam prep | [`14`](../../certification/evidence/14-chapter-14.png) |
+| Wed/Thu 11–12 Nov | Final exam **76/100** + Certificate of Completion | [`19-final-exam.png`](../../certification/evidence/19-final-exam.png) · [`certificate.pdf`](../../certification/certificate.pdf) (`ICT20261112000008`) |
+| This week | Architecture design note + 2 ADRs + target diagram | [`design/`](../../certification/design/) |
+| This week | Skills summary | [`certification/README.md`](../../certification/README.md) |
+
+> Exam/certificate platform date 2026-11-12 (Beijing UTC+8) = evening 2026-11-11 Colombia (UTC-5).
 
 ### Vertical slice — Git Flow status (2026-11-10)
 
@@ -179,7 +199,7 @@ Mapping note: fork HUs **163–167** are the personal evidence of commits that i
 - [x] DDD / hexagonal boundaries respected (domain has no I/O)
 - [x] No secrets; config via environment variables
 
-Notes: Week window Mon–Sun. Cherry-pick promotion (`-x`) used for qa/release per team Git Flow. Course-fork HU-status commits on `main`.
+Notes: Week window Mon–Sun. Section B late-reports C3 enrollment/chs 1–8 that were **missing** from Weeks 13–14 HU-status (dates stay in those windows). Cherry-pick promotion (`-x`) for qa/release. Course-fork HU-status on `main`.
 
 ## 6. Evidence links
 
@@ -227,12 +247,12 @@ Notes: Week window Mon–Sun. Cherry-pick promotion (`-x`) used for qa/release p
 - Blocked: https://github.com/code-corhuila/opti-docs/issues/78
 - Backlog: https://github.com/code-corhuila/opti-docs/issues/79 · https://github.com/code-corhuila/opti-docs/issues/80
 
-**Certification C3:**
+**Certification C3 (this week + late-report W13/W14):**
 
-- [`certification/README.md`](../../certification/README.md)
-- [`certification/certificate.pdf`](../../certification/certificate.pdf)
-- [`certification/evidence/19-final-exam.png`](../../certification/evidence/19-final-exam.png)
-- [`certification/design/architecture-design-note.md`](../../certification/design/architecture-design-note.md)
+- [`certification/README.md`](../../certification/README.md) (study log 42 h)
+- Week 13 enrollment: [`evidence/00-enrollment.png`](../../certification/evidence/00-enrollment.png) — **not** listed in [`13-week/hu-status`](../../13-week/hu-status/README.md)
+- Week 14 chs 1–8: [`evidence/01`](../../certification/evidence/01-chapter-01.png)…[`08`](../../certification/evidence/08-chapter-08.png) — **not** listed in [`14-week/hu-status`](../../14-week/hu-status/README.md)
+- Week 15 close: [`certificate.pdf`](../../certification/certificate.pdf) · [`19-final-exam.png`](../../certification/evidence/19-final-exam.png) · [`design/architecture-design-note.md`](../../certification/design/architecture-design-note.md)
 
 **Prior baseline:**
 

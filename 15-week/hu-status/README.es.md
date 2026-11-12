@@ -10,13 +10,15 @@
 - FULL_NAME: Juan Diego Tovar Rodriguez
 - GITHUB_USER: jdtovar07
 - TEAM: The Illusionists
-- SPRINT_GOAL: Documentar testing at scale y release MVP 3; aterrizar factura PDF en `develop` → `qa` → `release/3.0.0` → `main`; sincronizar tablero; exponer el proyecto al profesor; completar certificación Huawei ICT Academy C3 (capítulos, examen, nota de diseño, certificado).
+- SPRINT_GOAL: Documentar testing at scale y release MVP 3; aterrizar factura PDF; sincronizar tablero; exponer el proyecto; completar certificación C3; reportar tarde el avance C3 de Semanas 13–14 que no quedó en esos HU-status.
 <!-- CONFIG-END -->
 
 > **Ventana de la semana:** lunes **2026-11-09** → domingo **2026-11-15**.  
-> **Entrega:** notas testing + MVP 3 + slice pagos/PDF + exposición en clase + **certificación C3 completada**.
+> **Entrega:** notas + MVP 3 + slice PDF + exposición + **C3 cerrada esta semana** + **reporte tardío** del avance C3 de Semanas 13–14 (no figuró en esos HU-status).
 
 ## 1. Historias de usuario trabajadas esta semana
+
+### A. Esta semana (lun 2026-11-09 → dom 2026-11-15)
 
 | HU ID | Título | Estado | Evidencia |
 |---|---|---|---|
@@ -39,6 +41,15 @@
 | HU-OPT-175 | Aprobar examen final y obtener certificado C3 | done | 76/100 · [`19-final-exam.png`](../../certification/evidence/19-final-exam.png) · [`certificate.pdf`](../../certification/certificate.pdf) |
 | HU-OPT-176 | Nota de diseño + ADRs mapeando curso → OptiView | done | [`architecture-design-note.md`](../../certification/design/architecture-design-note.md) · ADR-C3-01/02 · diagrama |
 
+### B. Reporte tardío Semanas 13–14 (no figuró en esos HU-status)
+
+> La certificación **empezó en Semana 13** (31-oct) y siguió en **Semana 14** (caps. 1–8, 3–5 nov). Los HU-status de [`13-week`](../../13-week/hu-status/README.md) y [`14-week`](../../14-week/hu-status/README.md) **no mencionan C3**. Aquí solo se hace visible; el cierre (9–14, examen, certificado) es trabajo real de Semana 15 (§A).
+
+| HU ID | Título | Estado | Cuándo | Evidencia |
+|---|---|---|---|---|
+| HU-OPT-177 | [tarde W13] Inscripción + inicio C3 | done | Semana 13 — **2026-10-31** | [`00-enrollment.png`](../../certification/evidence/00-enrollment.png) |
+| HU-OPT-178 | [tarde W14] Capítulos 1–8 C3 | done | Semana 14 — **2026-11-03 → 05** | [`01`](../../certification/evidence/01-chapter-01.png)…[`08`](../../certification/evidence/08-chapter-08.png) |
+
 ## 2. Mi contribución individual
 
 > **Autor:** Juan Diego Tovar Rodriguez / `jdtovar07`.  
@@ -54,16 +65,12 @@ The Illusionists presentó el **proyecto OptiView completo** ante el profesor:
 
 Participé en la presentación del equipo y respondí las dos preguntas individuales.
 
-### Certificación C3 — Huawei ICT Academy (esta semana)
+### Certificación C3 — Huawei ICT Academy
 
-Track **HCCDP Solution Architectures** en [`certification/`](../../certification/) (inicio 2026-10-31 → cierre **2026-11-12**; **42 h**).
+Track **HCCDP Solution Architectures** en [`certification/`](../../certification/) (inicio **2026-10-31** → cierre **2026-11-12**; **42 h**).
 
-| Esta semana | Evidencia |
-|-------------|-----------|
-| Cap. 9–14 | `evidence/09`…`14` |
-| Examen final **76/100** + Certificate of Completion | [`19-final-exam.png`](../../certification/evidence/19-final-exam.png) · [`certificate.pdf`](../../certification/certificate.pdf) (`ICT20261112000008`) |
-| Nota de arquitectura + 2 ADRs + diagrama objetivo | [`design/`](../../certification/design/) |
-| Skills summary (HA, autoscaling, deploy gated, observabilidad) | [`README.md`](../../certification/README.md) |
+- **Semanas 13–14 (no estaban en esos HU-status → §B):** inscripción + caps. 1–8.
+- **Semana 15 (§A):** caps. 9–14, examen **76/100**, [`certificate.pdf`](../../certification/certificate.pdf), nota de diseño + ADRs.
 
 ### Estado Git Flow (2026-11-10)
 
@@ -135,4 +142,5 @@ Track **HCCDP Solution Architectures** en [`certification/`](../../certification
 - develop / qa / release PRs (ver README.md EN)
 - Tableros: [projects/3](https://github.com/orgs/code-corhuila/projects/3) · [projects/15](https://github.com/orgs/code-corhuila/projects/15)
 - Cards: [#72](https://github.com/code-corhuila/opti-docs/issues/72)–[#80](https://github.com/code-corhuila/opti-docs/issues/80) + producto [#65](https://github.com/code-corhuila/opti-docs/issues/65)–[#70](https://github.com/code-corhuila/opti-docs/issues/70)
-- Certificación: [`certification/README.md`](../../certification/README.md) · [`certificate.pdf`](../../certification/certificate.pdf) · [`design/architecture-design-note.md`](../../certification/design/architecture-design-note.md)
+- Certificación C3: [`certification/README.md`](../../certification/README.md) · certificado + diseño (Semana 15)
+- Late-report: inscripción/caps. 1–8 **no** estaban en [`13-week`](../../13-week/hu-status/README.md) ni [`14-week`](../../14-week/hu-status/README.md) — declarados aquí (§B)
