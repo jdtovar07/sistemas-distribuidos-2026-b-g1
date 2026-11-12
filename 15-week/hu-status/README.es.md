@@ -10,11 +10,11 @@
 - FULL_NAME: Juan Diego Tovar Rodriguez
 - GITHUB_USER: jdtovar07
 - TEAM: The Illusionists
-- SPRINT_GOAL: Documentar testing at scale y release MVP 3; aterrizar factura PDF en `develop` → `qa` → `release/3.0.0` → `main`; sincronizar tablero; exponer el proyecto completo al profesor (video + exposición + preguntas).
+- SPRINT_GOAL: Documentar testing at scale y release MVP 3; aterrizar factura PDF en `develop` → `qa` → `release/3.0.0` → `main`; sincronizar tablero; exponer el proyecto al profesor; completar certificación Huawei ICT Academy C3 (capítulos, examen, nota de diseño, certificado).
 <!-- CONFIG-END -->
 
 > **Ventana de la semana:** lunes **2026-11-09** → domingo **2026-11-15**.  
-> **Entrega:** notas testing + MVP 3 + slice pagos/PDF + **exposición en clase del proyecto completo** al profesor.
+> **Entrega:** notas testing + MVP 3 + slice pagos/PDF + exposición en clase + **certificación C3 completada**.
 
 ## 1. Historias de usuario trabajadas esta semana
 
@@ -34,12 +34,15 @@
 | HU-OPT-170 | Retirar credenciales demo fijas (`auth-db` V019) | doing | auth-db [#19](https://github.com/code-corhuila/opti-auth-db/pull/19) + tablero [#78](https://github.com/code-corhuila/opti-docs/issues/78) |
 | HU-OPT-171 | [backlog] Plan contract-tests place-order + PDF | todo | [#79](https://github.com/code-corhuila/opti-docs/issues/79) |
 | HU-OPT-172 | [backlog] E2E smoke login → PDF | todo | [#80](https://github.com/code-corhuila/opti-docs/issues/80) |
-| HU-OPT-173 | Exponer el proyecto OptiView completo al profesor (video + expo + Q&A) | done | Sesión en clase esta semana — ver § Exposición |
+| HU-OPT-173 | Exponer el proyecto OptiView completo al profesor (video + expo + Q&A) | done | Sesión en clase — ver § Exposición |
+| HU-OPT-174 | Completar capítulos 9–14 + bitácora C3 | done | [`certification/`](../../certification/) evidencia `09`…`14` |
+| HU-OPT-175 | Aprobar examen final y obtener certificado C3 | done | 76/100 · [`19-final-exam.png`](../../certification/evidence/19-final-exam.png) · [`certificate.pdf`](../../certification/certificate.pdf) |
+| HU-OPT-176 | Nota de diseño + ADRs mapeando curso → OptiView | done | [`architecture-design-note.md`](../../certification/design/architecture-design-note.md) · ADR-C3-01/02 · diagrama |
 
 ## 2. Mi contribución individual
 
 > **Autor:** Juan Diego Tovar Rodriguez / `jdtovar07`.  
-> Commits del slice PDF/pagos: míos. Promoción Git Flow: develop → qa hechos; release/3.0.0 → main abiertos. **Exposición del proyecto completo** al profesor.
+> Slice PDF/pagos; Git Flow develop→qa + release abierto; exposición; **certificación C3 Huawei completada** esta semana.
 
 ### Exposición en clase (esta semana)
 
@@ -50,6 +53,17 @@ The Illusionists presentó el **proyecto OptiView completo** ante el profesor:
 3. **Preguntas** — el profesor lanzó **dos preguntas a cada integrante** (defensa individual tras la expo de equipo).
 
 Participé en la presentación del equipo y respondí las dos preguntas individuales.
+
+### Certificación C3 — Huawei ICT Academy (esta semana)
+
+Track **HCCDP Solution Architectures** en [`certification/`](../../certification/) (inicio 2026-10-31 → cierre **2026-11-12**; **42 h**).
+
+| Esta semana | Evidencia |
+|-------------|-----------|
+| Cap. 9–14 | `evidence/09`…`14` |
+| Examen final **76/100** + Certificate of Completion | [`19-final-exam.png`](../../certification/evidence/19-final-exam.png) · [`certificate.pdf`](../../certification/certificate.pdf) (`ICT20261112000008`) |
+| Nota de arquitectura + 2 ADRs + diagrama objetivo | [`design/`](../../certification/design/) |
+| Skills summary (HA, autoscaling, deploy gated, observabilidad) | [`README.md`](../../certification/README.md) |
 
 ### Estado Git Flow (2026-11-10)
 
@@ -121,3 +135,4 @@ Participé en la presentación del equipo y respondí las dos preguntas individu
 - develop / qa / release PRs (ver README.md EN)
 - Tableros: [projects/3](https://github.com/orgs/code-corhuila/projects/3) · [projects/15](https://github.com/orgs/code-corhuila/projects/15)
 - Cards: [#72](https://github.com/code-corhuila/opti-docs/issues/72)–[#80](https://github.com/code-corhuila/opti-docs/issues/80) + producto [#65](https://github.com/code-corhuila/opti-docs/issues/65)–[#70](https://github.com/code-corhuila/opti-docs/issues/70)
+- Certificación: [`certification/README.md`](../../certification/README.md) · [`certificate.pdf`](../../certification/certificate.pdf) · [`design/architecture-design-note.md`](../../certification/design/architecture-design-note.md)

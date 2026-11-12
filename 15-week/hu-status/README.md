@@ -8,11 +8,11 @@
 - FULL_NAME: Juan Diego Tovar Rodriguez
 - GITHUB_USER: jdtovar07
 - TEAM: The Illusionists
-- SPRINT_GOAL: Document testing at scale and MVP 3 production-grade release; land invoice-PDF / private payment-evidence on `develop` → `qa` → open `release/3.0.0` → `main`; sync opti-board / Opti View backlog; present the full OptiView project to the professor (video + live expo + Q&A).
+- SPRINT_GOAL: Document testing at scale and MVP 3 production-grade release; land invoice-PDF / private payment-evidence on `develop` → `qa` → open `release/3.0.0` → `main`; sync opti-board / Opti View backlog; present the full OptiView project to the professor; complete Huawei ICT Academy Solution Architectures certification (chapters, exam, design note, certificate).
 <!-- CONFIG-END -->
 
 > **Week window:** Monday **2026-11-09** → Sunday **2026-11-15** (each course week is Mon–Sun).  
-> **Week 15 deliverable:** (1) testing-at-scale notes, (2) MVP 3 shipping notes, (3) payment PDF slice on `develop`/`qa` + open `release/3.0.0` → `main`, (4) **classroom presentation of the complete project** to the professor.
+> **Week 15 deliverable:** (1) testing-at-scale notes, (2) MVP 3 shipping notes, (3) payment PDF slice on `develop`/`qa` + open `release/3.0.0` → `main`, (4) classroom presentation of the complete project, (5) **certification C3 completed** (exam + certificate + architecture design).
 
 ## 1. User stories worked this week
 
@@ -33,11 +33,14 @@
 | HU-OPT-171 | [backlog] Contract-test plan for place-order + payment PDF | todo | board [#79](https://github.com/code-corhuila/opti-docs/issues/79) |
 | HU-OPT-172 | [backlog] E2E smoke: login → place-order → invoice PDF | todo | board [#80](https://github.com/code-corhuila/opti-docs/issues/80) |
 | HU-OPT-173 | Present the complete OptiView project to the professor (video + expo + Q&A) | done | Classroom session this week — see § Classroom presentation |
+| HU-OPT-174 | Complete Huawei ICT Academy chapters 9–14 + study log (C3) | done | [`certification/`](../../certification/) evidence `09`…`14` + [`README.md`](../../certification/README.md) study log |
+| HU-OPT-175 | Pass final exam and obtain Certificate of Completion (C3) | done | score 76/100 · [`evidence/19-final-exam.png`](../../certification/evidence/19-final-exam.png) · [`certificate.pdf`](../../certification/certificate.pdf) |
+| HU-OPT-176 | Write architecture design note + ADRs mapping course → OptiView | done | [`architecture-design-note.md`](../../certification/design/architecture-design-note.md) · [`ADR-C3-01.md`](../../certification/design/ADR-C3-01.md) · [`ADR-C3-02.md`](../../certification/design/ADR-C3-02.md) · [`target-architecture.png`](../../certification/design/target-architecture.png) |
 
 ## 2. My individual contribution
 
 > **Author:** Juan Diego Tovar Rodriguez / `jdtovar07` (`jdtovar-2021a@corhuila.edu.co`).  
-> **Week 15 scope:** testing-at-scale + MVP 3 notes; payment PDF / private-evidence vertical slice authored by me; Git Flow promotion through `develop` → `qa`; `release/3.0.0` opened to `main`; **full project presentation** to the professor.
+> **Week 15 scope:** testing-at-scale + MVP 3 notes; payment PDF / private-evidence vertical slice; Git Flow `develop` → `qa` + open `release/3.0.0`; classroom expo; **Huawei ICT Academy C3 certification completed** this week.
 
 ### Classroom presentation (this week)
 
@@ -48,6 +51,21 @@ The Illusionists presented the **complete OptiView project** to the professor in
 3. **Q&A** — the professor asked **two questions to each teammate** (individual defense after the team expo).
 
 I participated in the team presentation and answered the two individual questions from the professor.
+
+### Certification C3 — Huawei ICT Academy (this week)
+
+Completed the **HCCDP Solution Architectures** course track under [`certification/`](../../certification/) (cover: start 2026-10-31 → completion **2026-11-12**; **42 h** study log).
+
+| This week | Evidence |
+|-----------|----------|
+| Chapters 9–10 (Mon 9 Nov) | [`09-chapter-09.png`](../../certification/evidence/09-chapter-09.png) · [`10-chapter-10.png`](../../certification/evidence/10-chapter-10.png) |
+| Chapters 11–13 (Tue 10 Nov) | [`11`](../../certification/evidence/11-chapter-11.png)–[`13`](../../certification/evidence/13-chapter-13.png) |
+| Chapter 14 + exam prep (Wed 11 Nov) | [`14-chapter-14.png`](../../certification/evidence/14-chapter-14.png) · final-exam prep |
+| Final exam **76/100** (passed) + Certificate of Completion | [`19-final-exam.png`](../../certification/evidence/19-final-exam.png) · [`certificate.pdf`](../../certification/certificate.pdf) (code `ICT20261112000008`) |
+| Architecture design note + 2 ADRs + target diagram (OptiView mapping) | [`design/`](../../certification/design/) |
+| Skills summary (HA, autoscaling, gated deploy, observability) | [`certification/README.md`](../../certification/README.md) |
+
+> Platform timestamps exam/certificate as 2026-11-12 (Beijing UTC+8); taken evening 2026-11-11 Colombia (UTC-5).
 
 ### Vertical slice — Git Flow status (2026-11-10)
 
@@ -208,6 +226,13 @@ Notes: Week window Mon–Sun. Cherry-pick promotion (`-x`) used for qa/release p
 - In review: https://github.com/code-corhuila/opti-docs/issues/77
 - Blocked: https://github.com/code-corhuila/opti-docs/issues/78
 - Backlog: https://github.com/code-corhuila/opti-docs/issues/79 · https://github.com/code-corhuila/opti-docs/issues/80
+
+**Certification C3:**
+
+- [`certification/README.md`](../../certification/README.md)
+- [`certification/certificate.pdf`](../../certification/certificate.pdf)
+- [`certification/evidence/19-final-exam.png`](../../certification/evidence/19-final-exam.png)
+- [`certification/design/architecture-design-note.md`](../../certification/design/architecture-design-note.md)
 
 **Prior baseline:**
 
