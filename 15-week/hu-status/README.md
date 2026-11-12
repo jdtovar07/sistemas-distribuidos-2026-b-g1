@@ -8,11 +8,11 @@
 - FULL_NAME: Juan Diego Tovar Rodriguez
 - GITHUB_USER: jdtovar07
 - TEAM: The Illusionists
-- SPRINT_GOAL: Document testing at scale and MVP 3 production-grade release; land invoice-PDF / private payment-evidence on `develop` → `qa` → open `release/3.0.0` → `main`; sync opti-board / Opti View backlog.
+- SPRINT_GOAL: Document testing at scale and MVP 3 production-grade release; land invoice-PDF / private payment-evidence on `develop` → `qa` → open `release/3.0.0` → `main`; sync opti-board / Opti View backlog; present the full OptiView project to the professor (video + live expo + Q&A).
 <!-- CONFIG-END -->
 
 > **Week window:** Monday **2026-11-09** → Sunday **2026-11-15** (each course week is Mon–Sun).  
-> **Week 15 deliverable:** (1) testing-at-scale notes, (2) MVP 3 shipping notes, (3) payment PDF slice — **`develop` merged → `qa` merged → `release/3.0.0` PRs open to `main`** (tag `v3.0.0` pending merge).
+> **Week 15 deliverable:** (1) testing-at-scale notes, (2) MVP 3 shipping notes, (3) payment PDF slice on `develop`/`qa` + open `release/3.0.0` → `main`, (4) **classroom presentation of the complete project** to the professor.
 
 ## 1. User stories worked this week
 
@@ -32,11 +32,22 @@
 | HU-OPT-170 | Retire fixed demo credentials (`opti-auth-db` V019) | doing | PR [#19](https://github.com/code-corhuila/opti-auth-db/pull/19) + board [#78](https://github.com/code-corhuila/opti-docs/issues/78) (Blocked/CI) |
 | HU-OPT-171 | [backlog] Contract-test plan for place-order + payment PDF | todo | board [#79](https://github.com/code-corhuila/opti-docs/issues/79) |
 | HU-OPT-172 | [backlog] E2E smoke: login → place-order → invoice PDF | todo | board [#80](https://github.com/code-corhuila/opti-docs/issues/80) |
+| HU-OPT-173 | Present the complete OptiView project to the professor (video + expo + Q&A) | done | Classroom session this week — see § Classroom presentation |
 
 ## 2. My individual contribution
 
 > **Author:** Juan Diego Tovar Rodriguez / `jdtovar07` (`jdtovar-2021a@corhuila.edu.co`).  
-> **Week 15 scope:** testing-at-scale + MVP 3 notes; payment PDF / private-evidence vertical slice authored by me; Git Flow promotion through `develop` → `qa`; `release/3.0.0` opened to `main`.
+> **Week 15 scope:** testing-at-scale + MVP 3 notes; payment PDF / private-evidence vertical slice authored by me; Git Flow promotion through `develop` → `qa`; `release/3.0.0` opened to `main`; **full project presentation** to the professor.
+
+### Classroom presentation (this week)
+
+The Illusionists presented the **complete OptiView project** to the professor in class:
+
+1. **Video** — opening demo of the integrated platform / journey.
+2. **Live exposition** — walkthrough of the system (architecture, Git Flow, MVP 2→3 slice including invoice PDF / payments).
+3. **Q&A** — the professor asked **two questions to each teammate** (individual defense after the team expo).
+
+I participated in the team presentation and answered the two individual questions from the professor.
 
 ### Vertical slice — Git Flow status (2026-11-10)
 
@@ -121,10 +132,10 @@ Mapping note: fork HUs **163–167** are the personal evidence of commits that i
 
 | Ceremony | When / evidence |
 |----------|-----------------|
-| Planning | Mon: testing-at-scale + MVP 3 notes; pull PDF slice + Git Flow onto board/backlog |
+| Planning | Mon: testing-at-scale + MVP 3 notes; pull PDF slice + Git Flow onto board/backlog; prep classroom expo |
 | Daily | Async: develop → qa → open `release/3.0.0`; sync card Status on opti-board / Opti View backlog |
-| Review | Live demo from `develop`; qa ready; board shows Done vs In review |
-| Retro | Slice on develop+qa; main/tag open on board (#77); contracts/E2E parked as backlog (#79/#80) |
+| Review | **Classroom expo to the professor:** video → live presentation of the full project → two questions per teammate |
+| Retro | Slice on develop+qa; main/tag open on board (#77); contracts/E2E parked as backlog (#79/#80); expo feedback taken for next cut |
 | Per-env PRs | feat→develop **done** · qa-* **done** · release/3.0.0→main **open** |
 | Board sync | Created/closed Week 15 issues on `opti-docs`; Status set on [projects/3](https://github.com/orgs/code-corhuila/projects/3) + [projects/15](https://github.com/orgs/code-corhuila/projects/15) |
 

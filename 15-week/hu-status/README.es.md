@@ -10,11 +10,11 @@
 - FULL_NAME: Juan Diego Tovar Rodriguez
 - GITHUB_USER: jdtovar07
 - TEAM: The Illusionists
-- SPRINT_GOAL: Documentar testing at scale y release MVP 3; aterrizar factura PDF en `develop` → `qa` → `release/3.0.0` → `main`; sincronizar opti-board / Opti View backlog.
+- SPRINT_GOAL: Documentar testing at scale y release MVP 3; aterrizar factura PDF en `develop` → `qa` → `release/3.0.0` → `main`; sincronizar tablero; exponer el proyecto completo al profesor (video + exposición + preguntas).
 <!-- CONFIG-END -->
 
 > **Ventana de la semana:** lunes **2026-11-09** → domingo **2026-11-15**.  
-> **Entrega:** notas testing + MVP 3 + slice pagos/PDF — **`develop` mergeado → `qa` mergeado → PRs `release/3.0.0` abiertos a `main`**.
+> **Entrega:** notas testing + MVP 3 + slice pagos/PDF + **exposición en clase del proyecto completo** al profesor.
 
 ## 1. Historias de usuario trabajadas esta semana
 
@@ -34,11 +34,22 @@
 | HU-OPT-170 | Retirar credenciales demo fijas (`auth-db` V019) | doing | auth-db [#19](https://github.com/code-corhuila/opti-auth-db/pull/19) + tablero [#78](https://github.com/code-corhuila/opti-docs/issues/78) |
 | HU-OPT-171 | [backlog] Plan contract-tests place-order + PDF | todo | [#79](https://github.com/code-corhuila/opti-docs/issues/79) |
 | HU-OPT-172 | [backlog] E2E smoke login → PDF | todo | [#80](https://github.com/code-corhuila/opti-docs/issues/80) |
+| HU-OPT-173 | Exponer el proyecto OptiView completo al profesor (video + expo + Q&A) | done | Sesión en clase esta semana — ver § Exposición |
 
 ## 2. Mi contribución individual
 
 > **Autor:** Juan Diego Tovar Rodriguez / `jdtovar07`.  
-> Commits del slice PDF/pagos: míos. Promoción Git Flow: develop → qa hechos; release/3.0.0 → main abiertos.
+> Commits del slice PDF/pagos: míos. Promoción Git Flow: develop → qa hechos; release/3.0.0 → main abiertos. **Exposición del proyecto completo** al profesor.
+
+### Exposición en clase (esta semana)
+
+The Illusionists presentó el **proyecto OptiView completo** ante el profesor:
+
+1. **Video** — apertura con demo del sistema integrado.
+2. **Exposición en vivo** — recorrido del sistema (arquitectura, Git Flow, MVP 2→3 con factura PDF / pagos).
+3. **Preguntas** — el profesor lanzó **dos preguntas a cada integrante** (defensa individual tras la expo de equipo).
+
+Participé en la presentación del equipo y respondí las dos preguntas individuales.
 
 ### Estado Git Flow (2026-11-10)
 
@@ -76,10 +87,10 @@
 
 | Ceremonia | Evidencia |
 |-----------|-----------|
-| Planning | Kickoff testing + MVP 3 + sincronizar tablero |
+| Planning | Kickoff testing + MVP 3 + tablero + prep expo |
 | Daily | develop → qa → release/3.0.0; mover Status en board |
-| Review | Demo local; cards Done vs In review |
-| Retro | develop+qa listos; #77 abierto; #79/#80 en backlog |
+| Review | **Expo al profesor:** video → exposición del proyecto completo → dos preguntas por integrante |
+| Retro | develop+qa listos; #77 abierto; #79/#80 en backlog; feedback de la expo |
 | PRs por ambiente | feat→develop done · qa done · release→main open |
 | Board sync | Issues en `opti-docs` + projects/3 y /15 |
 
