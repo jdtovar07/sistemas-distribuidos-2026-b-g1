@@ -14,7 +14,7 @@
 <!-- CONFIG-END -->
 
 > **Ventana de la semana:** lunes **2026-11-09** → domingo **2026-11-15**.  
-> **Entrega:** notas + MVP 3 + slice PDF **`main` + `v3.0.0` (2026-11-15)** + exposición + C3 cerrada + late-report W13/W14.
+> **Entrega:** notas + MVP 3 + slice PDF **`main` + `v3.0.0` (2026-11-15)** + exposición + C3 + late-report W13/W14 + **entrega Moodle (dom 15-nov)**.
 
 ## 1. Historias de usuario trabajadas esta semana
 
@@ -40,6 +40,7 @@
 | HU-OPT-174 | Completar capítulos 9–14 + bitácora C3 | done | [`certification/`](../../certification/) evidencia `09`…`14` |
 | HU-OPT-175 | Aprobar examen final y obtener certificado C3 | done | 76/100 · [`19-final-exam.png`](../../certification/evidence/19-final-exam.png) · [`certificate.pdf`](../../certification/certificate.pdf) |
 | HU-OPT-176 | Nota de diseño + ADRs mapeando curso → OptiView | done | [`architecture-design-note.md`](../../certification/design/architecture-design-note.md) · ADR-C3-01/02 · diagrama |
+| HU-OPT-179 | Entregar Semana 15 / Corte en Moodle | done | Entregado en Moodle **2026-11-15** — fork + `v3.0.0` + C3 |
 
 ### B. Reporte tardío Semanas 13–14 (no figuró en esos HU-status)
 
@@ -64,6 +65,10 @@ The Illusionists presentó el **proyecto OptiView completo** ante el profesor:
 3. **Preguntas** — el profesor lanzó **dos preguntas a cada integrante** (defensa individual tras la expo de equipo).
 
 Participé en la presentación del equipo y respondí las dos preguntas individuales.
+
+### Entrega Moodle (2026-11-15)
+
+Materiales de Semana 15 / Corte **entregados en Moodle** el domingo **2026-11-15**. Evidencia durable: fork (`15-week/hu-status`, `certification/`) y tags **`v3.0.0`** en `opti-*`.
 
 ### Certificación C3 — Huawei ICT Academy
 
@@ -110,7 +115,8 @@ Track **HCCDP Solution Architectures** en [`certification/`](../../certification
 | Planning | Kickoff testing + MVP 3 + tablero + prep expo |
 | Daily | develop → qa → merge release + tag `v3.0.0` (dom 15-nov) |
 | Review | **Expo al profesor:** video → exposición → dos preguntas por integrante |
-| Retro | MVP 3 en `main`/`v3.0.0`; #79/#80 backlog; auth-db #19 abierto |
+| Entrega | **Moodle** completada **2026-11-15** (HU-OPT-179) |
+| Retro | MVP 3 en `main`/`v3.0.0`; Moodle ok; #79/#80 backlog; auth-db #19 abierto |
 | PRs por ambiente | feat→develop done · qa done · release→main **done** + tag |
 | Board sync | Issues en `opti-docs` + projects/3 y /15 |
 
@@ -123,7 +129,7 @@ Track **HCCDP Solution Architectures** en [`certification/`](../../certification
 
 - Resolver CI auth-db #19 / infra #7.
 - Plan mínimo contract + E2E smoke (#79/#80).
-- Opcional: zips/`release notes` de `v3.0.0` si el curso pide paquete Corte-3.
+- Paquete Moodle Semana 15 / Corte ya entregado (15-nov).
 
 ## 5. Autochequeo
 
@@ -142,3 +148,4 @@ Track **HCCDP Solution Architectures** en [`certification/`](../../certification
 - Cards Done hasta [#77](https://github.com/code-corhuila/opti-docs/issues/77); blocked [#78](https://github.com/code-corhuila/opti-docs/issues/78); backlog [#79](https://github.com/code-corhuila/opti-docs/issues/79)/[#80](https://github.com/code-corhuila/opti-docs/issues/80)
 - Certificación C3: [`certification/README.md`](../../certification/README.md) · certificado + diseño (Semana 15)
 - Late-report: inscripción/caps. 1–8 **no** estaban en [`13-week`](../../13-week/hu-status/README.md) ni [`14-week`](../../14-week/hu-status/README.md) — declarados aquí (§B)
+- Moodle: entregado **2026-11-15** (HU-OPT-179)

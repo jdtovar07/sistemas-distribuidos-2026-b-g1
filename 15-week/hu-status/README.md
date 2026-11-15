@@ -12,7 +12,7 @@
 <!-- CONFIG-END -->
 
 > **Week window:** Monday **2026-11-09** → Sunday **2026-11-15** (each course week is Mon–Sun).  
-> **Week 15 deliverable:** (1) testing-at-scale notes, (2) MVP 3 shipping notes, (3) payment PDF slice **`develop` → `qa` → `main` + tag `v3.0.0`** (merged **2026-11-15**), (4) classroom presentation, (5) **C3 certification completed**, (6) late-report of C3 progress from Weeks 13–14.
+> **Week 15 deliverable:** (1) testing-at-scale notes, (2) MVP 3 shipping notes, (3) payment PDF slice **`develop` → `qa` → `main` + tag `v3.0.0`** (merged **2026-11-15**), (4) classroom presentation, (5) **C3 certification completed**, (6) late-report of C3 progress from Weeks 13–14, (7) **Moodle submission completed** (Sun 15 Nov).
 
 ## 1. User stories worked this week
 
@@ -38,6 +38,7 @@
 | HU-OPT-174 | Complete Huawei ICT Academy chapters 9–14 + study log (C3) | done | [`certification/`](../../certification/) evidence `09`…`14` + [`README.md`](../../certification/README.md) study log |
 | HU-OPT-175 | Pass final exam and obtain Certificate of Completion (C3) | done | score 76/100 · [`evidence/19-final-exam.png`](../../certification/evidence/19-final-exam.png) · [`certificate.pdf`](../../certification/certificate.pdf) |
 | HU-OPT-176 | Write architecture design note + ADRs mapping course → OptiView | done | [`architecture-design-note.md`](../../certification/design/architecture-design-note.md) · [`ADR-C3-01.md`](../../certification/design/ADR-C3-01.md) · [`ADR-C3-02.md`](../../certification/design/ADR-C3-02.md) · [`target-architecture.png`](../../certification/design/target-architecture.png) |
+| HU-OPT-179 | Submit Week 15 / Corte deliverables on Moodle | done | Submitted on Moodle **2026-11-15** (course LMS) — fork HU-status + OptiView `v3.0.0` evidence + C3 package as required by the activity |
 
 ### B. Late-reported from Weeks 13–14 (never listed in those HU-status files)
 
@@ -62,6 +63,10 @@ The Illusionists presented the **complete OptiView project** to the professor in
 3. **Q&A** — the professor asked **two questions to each teammate** (individual defense after the team expo).
 
 I participated in the team presentation and answered the two individual questions from the professor.
+
+### Moodle delivery (2026-11-15)
+
+All required Week 15 / Corte materials were **submitted on Moodle** on Sunday **2026-11-15** (inside the Mon–Sun week window). Evidence for graders remains on the course fork (`15-week/hu-status`, `certification/`) and on `code-corhuila/opti-*` at tag **`v3.0.0`**.
 
 ### Certification C3 — Huawei ICT Academy
 
@@ -172,7 +177,8 @@ Mapping note: fork HUs **163–167** are the personal evidence of commits that i
 | Planning | Mon: testing-at-scale + MVP 3 notes; pull PDF slice + Git Flow onto board/backlog; prep classroom expo |
 | Daily | Async: develop → qa → merge `release/3.0.0` + tag `v3.0.0` (Sun 15 Nov); sync board Status |
 | Review | **Classroom expo to the professor:** video → live presentation of the full project → two questions per teammate |
-| Retro | MVP 3 on `main`/`v3.0.0`; contracts/E2E still backlog (#79/#80); auth-db V019 still open |
+| Delivery | **Moodle** submission completed **2026-11-15** (HU-OPT-179) |
+| Retro | MVP 3 on `main`/`v3.0.0`; Moodle delivered; contracts/E2E still backlog (#79/#80); auth-db V019 still open |
 | Per-env PRs | feat→develop **done** · qa-* **done** · release/3.0.0→main **done** + tag |
 | Board sync | Created/closed Week 15 issues on `opti-docs`; Status set on [projects/3](https://github.com/orgs/code-corhuila/projects/3) + [projects/15](https://github.com/orgs/code-corhuila/projects/15) |
 
@@ -186,7 +192,7 @@ Mapping note: fork HUs **163–167** are the personal evidence of commits that i
 
 - Fix CI on auth-db #19 (and infra #7); decide when to retire fixed demo passwords post-classroom.
 - Draft minimal contract-test + one E2E smoke for login → place-order → invoice PDF (`#79`/`#80`).
-- Optional: package `v3.0.0` zips / release notes if the course asks for a Corte-3 delivery bundle.
+- Week 15 / Corte Moodle package already submitted — keep fork + `v3.0.0` tags as the durable evidence.
 
 ## 5. Compliance self-check
 
@@ -250,6 +256,10 @@ Notes: Week window Mon–Sun. Section B late-reports C3 enrollment/chs 1–8 tha
 - Week 13 enrollment: [`evidence/00-enrollment.png`](../../certification/evidence/00-enrollment.png) — **not** listed in [`13-week/hu-status`](../../13-week/hu-status/README.md)
 - Week 14 chs 1–8: [`evidence/01`](../../certification/evidence/01-chapter-01.png)…[`08`](../../certification/evidence/08-chapter-08.png) — **not** listed in [`14-week/hu-status`](../../14-week/hu-status/README.md)
 - Week 15 close: [`certificate.pdf`](../../certification/certificate.pdf) · [`19-final-exam.png`](../../certification/evidence/19-final-exam.png) · [`design/architecture-design-note.md`](../../certification/design/architecture-design-note.md)
+
+**Moodle:**
+
+- Submitted **2026-11-15** (HU-OPT-179) — LMS activity for Week 15 / Corte; durable links above (`v3.0.0`, this HU-status, `certification/`).
 
 **Prior baseline:**
 
