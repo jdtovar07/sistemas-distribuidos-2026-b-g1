@@ -10,11 +10,11 @@
 - FULL_NAME: Juan Diego Tovar Rodriguez
 - GITHUB_USER: jdtovar07
 - TEAM: The Illusionists
-- SPRINT_GOAL: Documentar testing at scale y release MVP 3; aterrizar factura PDF; sincronizar tablero; exponer el proyecto; completar certificación C3; reportar tarde el avance C3 de Semanas 13–14 que no quedó en esos HU-status.
+- SPRINT_GOAL: Documentar testing at scale y release MVP 3; aterrizar factura PDF en `develop` → `qa` → `main` con tag `v3.0.0`; sincronizar tablero; exponer el proyecto; completar certificación C3; reportar tarde el avance C3 de Semanas 13–14.
 <!-- CONFIG-END -->
 
 > **Ventana de la semana:** lunes **2026-11-09** → domingo **2026-11-15**.  
-> **Entrega:** notas + MVP 3 + slice PDF + exposición + **C3 cerrada esta semana** + **reporte tardío** del avance C3 de Semanas 13–14 (no figuró en esos HU-status).
+> **Entrega:** notas + MVP 3 + slice PDF **`main` + `v3.0.0` (2026-11-15)** + exposición + C3 cerrada + late-report W13/W14.
 
 ## 1. Historias de usuario trabajadas esta semana
 
@@ -32,7 +32,7 @@
 | HU-OPT-166 | Payload comprobante en gateway | done | [#17](https://github.com/code-corhuila/opti-api-gateway/pull/17) → develop |
 | HU-OPT-167 | Descargas autenticadas `opti-front` | done | [#30](https://github.com/code-corhuila/opti-front/pull/30) → develop |
 | HU-OPT-168 | Promover slice MVP 3 a `qa` | done | PRs qa + tablero [#76](https://github.com/code-corhuila/opti-docs/issues/76) |
-| HU-OPT-169 | Abrir `release/3.0.0` → `main` | doing | PRs release + tablero [#77](https://github.com/code-corhuila/opti-docs/issues/77) |
+| HU-OPT-169 | Merge `release/3.0.0` → `main` + tag `v3.0.0` | done | merges 2026-11-15 + tags · tablero [#77](https://github.com/code-corhuila/opti-docs/issues/77) |
 | HU-OPT-170 | Retirar credenciales demo fijas (`auth-db` V019) | doing | auth-db [#19](https://github.com/code-corhuila/opti-auth-db/pull/19) + tablero [#78](https://github.com/code-corhuila/opti-docs/issues/78) |
 | HU-OPT-171 | [backlog] Plan contract-tests place-order + PDF | todo | [#79](https://github.com/code-corhuila/opti-docs/issues/79) |
 | HU-OPT-172 | [backlog] E2E smoke login → PDF | todo | [#80](https://github.com/code-corhuila/opti-docs/issues/80) |
@@ -74,10 +74,10 @@ Track **HCCDP Solution Architectures** en [`certification/`](../../certification
 
 ### Estado Git Flow (2026-11-10)
 
-| Repo | develop | qa | main (`release/3.0.0`) |
-|------|---------|-----|------------------------|
-| sales-db / sales-api / sales-portal / gateway / front | mergeado | mergeado | **OPEN** |
-| products-* / customers-* (compañero) | mergeado | mergeado | **OPEN** |
+| Repo | develop | qa | main + `v3.0.0` |
+|------|---------|-----|------------------|
+| sales-db / sales-api / sales-portal / gateway / front | mergeado | mergeado | **mergeado + tag (15-nov)** |
+| products-* / customers-* (compañero) | mergeado | mergeado | **mergeado + tag** |
 
 ### Follow-up seguridad
 
@@ -99,8 +99,7 @@ Track **HCCDP Solution Architectures** en [`certification/`](../../certification
 
 | Status | Cards semana 15 |
 |--------|-----------------|
-| Done | Producto [#65](https://github.com/code-corhuila/opti-docs/issues/65)–[#70](https://github.com/code-corhuila/opti-docs/issues/70) · estudio/qa [#72](https://github.com/code-corhuila/opti-docs/issues/72)–[#76](https://github.com/code-corhuila/opti-docs/issues/76) |
-| In review | [#77](https://github.com/code-corhuila/opti-docs/issues/77) release/3.0.0 → main |
+| Done | Producto [#65](https://github.com/code-corhuila/opti-docs/issues/65)–[#70](https://github.com/code-corhuila/opti-docs/issues/70) · estudio/qa/release [#72](https://github.com/code-corhuila/opti-docs/issues/72)–[#77](https://github.com/code-corhuila/opti-docs/issues/77) |
 | Blocked | [#78](https://github.com/code-corhuila/opti-docs/issues/78) auth-db V019 |
 | Backlog | [#79](https://github.com/code-corhuila/opti-docs/issues/79) contratos · [#80](https://github.com/code-corhuila/opti-docs/issues/80) E2E |
 
@@ -109,23 +108,22 @@ Track **HCCDP Solution Architectures** en [`certification/`](../../certification
 | Ceremonia | Evidencia |
 |-----------|-----------|
 | Planning | Kickoff testing + MVP 3 + tablero + prep expo |
-| Daily | develop → qa → release/3.0.0; mover Status en board |
-| Review | **Expo al profesor:** video → exposición del proyecto completo → dos preguntas por integrante |
-| Retro | develop+qa listos; #77 abierto; #79/#80 en backlog; feedback de la expo |
-| PRs por ambiente | feat→develop done · qa done · release→main open |
+| Daily | develop → qa → merge release + tag `v3.0.0` (dom 15-nov) |
+| Review | **Expo al profesor:** video → exposición → dos preguntas por integrante |
+| Retro | MVP 3 en `main`/`v3.0.0`; #79/#80 backlog; auth-db #19 abierto |
+| PRs por ambiente | feat→develop done · qa done · release→main **done** + tag |
 | Board sync | Issues en `opti-docs` + projects/3 y /15 |
 
 ## 3. Bloqueadores y riesgos
 
-- PRs `release/3.0.0` → `main` aún abiertos (sin tag `v3.0.0`).
-- auth-db #19 CI fallido.
+- auth-db #19 / infra #7 siguen abiertos (CI).
 - Sin suite de contratos / E2E / load sistemáticos.
 
 ## 4. Plan para la próxima semana
 
-- Merge a `main` + tag `v3.0.0`.
-- Resolver CI auth-db #19 tras la ventana de demo.
-- Plan mínimo contract + E2E smoke del journey de pago/PDF.
+- Resolver CI auth-db #19 / infra #7.
+- Plan mínimo contract + E2E smoke (#79/#80).
+- Opcional: zips/`release notes` de `v3.0.0` si el curso pide paquete Corte-3.
 
 ## 5. Autochequeo
 
@@ -139,8 +137,8 @@ Track **HCCDP Solution Architectures** en [`certification/`](../../certification
 ## 6. Evidencia
 
 - Notas week-15 (este directorio)
-- develop / qa / release PRs (ver README.md EN)
+- develop / qa / **main + `v3.0.0`** (ver README.md EN; merges 2026-11-15)
 - Tableros: [projects/3](https://github.com/orgs/code-corhuila/projects/3) · [projects/15](https://github.com/orgs/code-corhuila/projects/15)
-- Cards: [#72](https://github.com/code-corhuila/opti-docs/issues/72)–[#80](https://github.com/code-corhuila/opti-docs/issues/80) + producto [#65](https://github.com/code-corhuila/opti-docs/issues/65)–[#70](https://github.com/code-corhuila/opti-docs/issues/70)
+- Cards Done hasta [#77](https://github.com/code-corhuila/opti-docs/issues/77); blocked [#78](https://github.com/code-corhuila/opti-docs/issues/78); backlog [#79](https://github.com/code-corhuila/opti-docs/issues/79)/[#80](https://github.com/code-corhuila/opti-docs/issues/80)
 - Certificación C3: [`certification/README.md`](../../certification/README.md) · certificado + diseño (Semana 15)
 - Late-report: inscripción/caps. 1–8 **no** estaban en [`13-week`](../../13-week/hu-status/README.md) ni [`14-week`](../../14-week/hu-status/README.md) — declarados aquí (§B)

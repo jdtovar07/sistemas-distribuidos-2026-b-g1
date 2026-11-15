@@ -8,11 +8,11 @@
 - FULL_NAME: Juan Diego Tovar Rodriguez
 - GITHUB_USER: jdtovar07
 - TEAM: The Illusionists
-- SPRINT_GOAL: Document testing at scale and MVP 3 production-grade release; land invoice-PDF / private payment-evidence on `develop` → `qa` → open `release/3.0.0` → `main`; sync opti-board / Opti View backlog; present the full OptiView project to the professor; complete Huawei ICT Academy C3 certification; late-report early C3 study (Weeks 13–14) that was never listed in those HU-status files.
+- SPRINT_GOAL: Document testing at scale and MVP 3 production-grade release; land invoice-PDF / private payment-evidence through `develop` → `qa` → `main` with SemVer `v3.0.0`; sync opti-board / Opti View backlog; present the full OptiView project to the professor; complete Huawei ICT Academy C3 certification; late-report early C3 study (Weeks 13–14).
 <!-- CONFIG-END -->
 
 > **Week window:** Monday **2026-11-09** → Sunday **2026-11-15** (each course week is Mon–Sun).  
-> **Week 15 deliverable:** (1) testing-at-scale notes, (2) MVP 3 shipping notes, (3) payment PDF slice on `develop`/`qa` + open `release/3.0.0` → `main`, (4) classroom presentation, (5) **C3 certification completed this week**, (6) **late-report** of C3 progress from Weeks 13–14 that did **not** appear in those weeks’ HU-status.
+> **Week 15 deliverable:** (1) testing-at-scale notes, (2) MVP 3 shipping notes, (3) payment PDF slice **`develop` → `qa` → `main` + tag `v3.0.0`** (merged **2026-11-15**), (4) classroom presentation, (5) **C3 certification completed**, (6) late-report of C3 progress from Weeks 13–14.
 
 ## 1. User stories worked this week
 
@@ -30,7 +30,7 @@
 | HU-OPT-166 | Large private receipt payloads only on payment create (`opti-api-gateway`) | done | [`a2b6e85`](https://github.com/code-corhuila/opti-api-gateway/commit/a2b6e85) · develop [#17](https://github.com/code-corhuila/opti-api-gateway/pull/17) · board [#67](https://github.com/code-corhuila/opti-docs/issues/67) |
 | HU-OPT-167 | Authenticated downloads + shell polish in `opti-front` | done | [`d330808`](https://github.com/code-corhuila/opti-front/commit/d330808) · develop [#30](https://github.com/code-corhuila/opti-front/pull/30) · board [#69](https://github.com/code-corhuila/opti-docs/issues/69) (HU-142) |
 | HU-OPT-168 | Promote MVP 3 payments/PDF slice to `qa` (cherry-pick per env) | done | qa PRs + board [#76](https://github.com/code-corhuila/opti-docs/issues/76) |
-| HU-OPT-169 | Open `release/3.0.0` → `main` for MVP 3 cut | doing | release PRs + board [#77](https://github.com/code-corhuila/opti-docs/issues/77) (In review) |
+| HU-OPT-169 | Merge `release/3.0.0` → `main` and tag SemVer `v3.0.0` | done | merges 2026-11-15 + tags `v3.0.0` · board [#77](https://github.com/code-corhuila/opti-docs/issues/77) |
 | HU-OPT-170 | Retire fixed demo credentials (`opti-auth-db` V019) | doing | PR [#19](https://github.com/code-corhuila/opti-auth-db/pull/19) + board [#78](https://github.com/code-corhuila/opti-docs/issues/78) (Blocked/CI) |
 | HU-OPT-171 | [backlog] Contract-test plan for place-order + payment PDF | todo | board [#79](https://github.com/code-corhuila/opti-docs/issues/79) |
 | HU-OPT-172 | [backlog] E2E smoke: login → place-order → invoice PDF | todo | board [#80](https://github.com/code-corhuila/opti-docs/issues/80) |
@@ -51,7 +51,7 @@
 ## 2. My individual contribution
 
 > **Author:** Juan Diego Tovar Rodriguez / `jdtovar07` (`jdtovar-2021a@corhuila.edu.co`).  
-> **Week 15 scope:** testing-at-scale + MVP 3 notes; payment PDF / private-evidence vertical slice; Git Flow `develop` → `qa` + open `release/3.0.0`; classroom expo; **Huawei ICT Academy C3 certification completed** this week.
+> **Week 15 scope:** testing-at-scale + MVP 3 notes; payment PDF / private-evidence vertical slice; Git Flow `develop` → `qa` → **`main` + `v3.0.0`** (2026-11-15); classroom expo; **Huawei ICT Academy C3 certification completed** this week.
 
 ### Classroom presentation (this week)
 
@@ -91,22 +91,22 @@ Completed the **HCCDP Solution Architectures** track under [`certification/`](..
 
 Feature commits authored by **Juan Diego Tovar Rodriguez**. PRs opened/merged with team (@BackSua). Teammate-owned companions on products/customers ride the same train.
 
-| Repo | Feature commit (mine) | → `develop` | → `qa` | → `main` (`release/3.0.0`) |
-|------|----------------------|-------------|--------|----------------------------|
-| `opti-sales-db` | [`972c2fe`](https://github.com/code-corhuila/opti-sales-db/commit/972c2fe) | [#20](https://github.com/code-corhuila/opti-sales-db/pull/20) [`ee42ba2`](https://github.com/code-corhuila/opti-sales-db/commit/ee42ba2) | [#21](https://github.com/code-corhuila/opti-sales-db/pull/21) [`db95435`](https://github.com/code-corhuila/opti-sales-db/commit/db95435) | [#22](https://github.com/code-corhuila/opti-sales-db/pull/22) **OPEN** |
-| `opti-sales-api` | [`04caffd`](https://github.com/code-corhuila/opti-sales-api/commit/04caffd) (+ `b55b726`, `43f8396`) | [#18](https://github.com/code-corhuila/opti-sales-api/pull/18) [`402a4ad`](https://github.com/code-corhuila/opti-sales-api/commit/402a4ad) | [#19](https://github.com/code-corhuila/opti-sales-api/pull/19) [`535ced6`](https://github.com/code-corhuila/opti-sales-api/commit/535ced6) | [#20](https://github.com/code-corhuila/opti-sales-api/pull/20) **OPEN** |
-| `opti-sales-portal` | [`2e161bd`](https://github.com/code-corhuila/opti-sales-portal/commit/2e161bd) | [#19](https://github.com/code-corhuila/opti-sales-portal/pull/19) [`cae999b`](https://github.com/code-corhuila/opti-sales-portal/commit/cae999b) | [#20](https://github.com/code-corhuila/opti-sales-portal/pull/20) [`3c74aff`](https://github.com/code-corhuila/opti-sales-portal/commit/3c74aff) | [#21](https://github.com/code-corhuila/opti-sales-portal/pull/21) **OPEN** |
-| `opti-api-gateway` | [`a2b6e85`](https://github.com/code-corhuila/opti-api-gateway/commit/a2b6e85) | [#17](https://github.com/code-corhuila/opti-api-gateway/pull/17) [`939e0ea`](https://github.com/code-corhuila/opti-api-gateway/commit/939e0ea) | [#18](https://github.com/code-corhuila/opti-api-gateway/pull/18) [`2868d11`](https://github.com/code-corhuila/opti-api-gateway/commit/2868d11) | [#19](https://github.com/code-corhuila/opti-api-gateway/pull/19) **OPEN** |
-| `opti-front` | [`d330808`](https://github.com/code-corhuila/opti-front/commit/d330808) | [#30](https://github.com/code-corhuila/opti-front/pull/30) [`4ff44f1`](https://github.com/code-corhuila/opti-front/commit/4ff44f1) | [#31](https://github.com/code-corhuila/opti-front/pull/31) [`4da0f05`](https://github.com/code-corhuila/opti-front/commit/4da0f05) | [#32](https://github.com/code-corhuila/opti-front/pull/32) **OPEN** |
+| Repo | Feature commit (mine) | → `develop` | → `qa` | → `main` + `v3.0.0` (2026-11-15) |
+|------|----------------------|-------------|--------|--------------------------------------|
+| `opti-sales-db` | [`972c2fe`](https://github.com/code-corhuila/opti-sales-db/commit/972c2fe) | [#20](https://github.com/code-corhuila/opti-sales-db/pull/20) [`ee42ba2`](https://github.com/code-corhuila/opti-sales-db/commit/ee42ba2) | [#21](https://github.com/code-corhuila/opti-sales-db/pull/21) [`db95435`](https://github.com/code-corhuila/opti-sales-db/commit/db95435) | [#22](https://github.com/code-corhuila/opti-sales-db/pull/22) [`ebf6d90`](https://github.com/code-corhuila/opti-sales-db/commit/ebf6d90) · [tag](https://github.com/code-corhuila/opti-sales-db/releases/tag/v3.0.0) |
+| `opti-sales-api` | [`04caffd`](https://github.com/code-corhuila/opti-sales-api/commit/04caffd) (+ `b55b726`, `43f8396`) | [#18](https://github.com/code-corhuila/opti-sales-api/pull/18) [`402a4ad`](https://github.com/code-corhuila/opti-sales-api/commit/402a4ad) | [#19](https://github.com/code-corhuila/opti-sales-api/pull/19) [`535ced6`](https://github.com/code-corhuila/opti-sales-api/commit/535ced6) | [#20](https://github.com/code-corhuila/opti-sales-api/pull/20) [`7b7da90`](https://github.com/code-corhuila/opti-sales-api/commit/7b7da90) · [tag](https://github.com/code-corhuila/opti-sales-api/releases/tag/v3.0.0) |
+| `opti-sales-portal` | [`2e161bd`](https://github.com/code-corhuila/opti-sales-portal/commit/2e161bd) | [#19](https://github.com/code-corhuila/opti-sales-portal/pull/19) [`cae999b`](https://github.com/code-corhuila/opti-sales-portal/commit/cae999b) | [#20](https://github.com/code-corhuila/opti-sales-portal/pull/20) [`3c74aff`](https://github.com/code-corhuila/opti-sales-portal/commit/3c74aff) | [#21](https://github.com/code-corhuila/opti-sales-portal/pull/21) [`be6a91b`](https://github.com/code-corhuila/opti-sales-portal/commit/be6a91b) · [tag](https://github.com/code-corhuila/opti-sales-portal/releases/tag/v3.0.0) |
+| `opti-api-gateway` | [`a2b6e85`](https://github.com/code-corhuila/opti-api-gateway/commit/a2b6e85) | [#17](https://github.com/code-corhuila/opti-api-gateway/pull/17) [`939e0ea`](https://github.com/code-corhuila/opti-api-gateway/commit/939e0ea) | [#18](https://github.com/code-corhuila/opti-api-gateway/pull/18) [`2868d11`](https://github.com/code-corhuila/opti-api-gateway/commit/2868d11) | [#19](https://github.com/code-corhuila/opti-api-gateway/pull/19) [`f5fc376`](https://github.com/code-corhuila/opti-api-gateway/commit/f5fc376) · [tag](https://github.com/code-corhuila/opti-api-gateway/releases/tag/v3.0.0) |
+| `opti-front` | [`d330808`](https://github.com/code-corhuila/opti-front/commit/d330808) | [#30](https://github.com/code-corhuila/opti-front/pull/30) [`4ff44f1`](https://github.com/code-corhuila/opti-front/commit/4ff44f1) | [#31](https://github.com/code-corhuila/opti-front/pull/31) [`4da0f05`](https://github.com/code-corhuila/opti-front/commit/4da0f05) | [#32](https://github.com/code-corhuila/opti-front/pull/32) [`f4f0a19`](https://github.com/code-corhuila/opti-front/commit/f4f0a19) · [tag](https://github.com/code-corhuila/opti-front/releases/tag/v3.0.0) |
 
-**Teammate companions (same MVP 3 train):**
+**Teammate companions (same MVP 3 train — also `v3.0.0` on 2026-11-15):**
 
-| Repo | → `develop` | → `qa` | → `main` |
-|------|-------------|--------|----------|
-| `opti-products-api` | [#12](https://github.com/code-corhuila/opti-products-api/pull/12) | [#13](https://github.com/code-corhuila/opti-products-api/pull/13) | [#14](https://github.com/code-corhuila/opti-products-api/pull/14) OPEN |
-| `opti-products-portal` | [#12](https://github.com/code-corhuila/opti-products-portal/pull/12) | [#13](https://github.com/code-corhuila/opti-products-portal/pull/13) | [#14](https://github.com/code-corhuila/opti-products-portal/pull/14) OPEN |
-| `opti-customers-api` | [#7](https://github.com/code-corhuila/opti-customers-api/pull/7) | [#8](https://github.com/code-corhuila/opti-customers-api/pull/8) | [#9](https://github.com/code-corhuila/opti-customers-api/pull/9) OPEN |
-| `opti-customers-portal` | [#12](https://github.com/code-corhuila/opti-customers-portal/pull/12) | [#13](https://github.com/code-corhuila/opti-customers-portal/pull/13) | [#14](https://github.com/code-corhuila/opti-customers-portal/pull/14) OPEN |
+| Repo | → `develop` | → `qa` | → `main` + tag |
+|------|-------------|--------|----------------|
+| `opti-products-api` | [#12](https://github.com/code-corhuila/opti-products-api/pull/12) | [#13](https://github.com/code-corhuila/opti-products-api/pull/13) | [#14](https://github.com/code-corhuila/opti-products-api/pull/14) · [v3.0.0](https://github.com/code-corhuila/opti-products-api/releases/tag/v3.0.0) |
+| `opti-products-portal` | [#12](https://github.com/code-corhuila/opti-products-portal/pull/12) | [#13](https://github.com/code-corhuila/opti-products-portal/pull/13) | [#14](https://github.com/code-corhuila/opti-products-portal/pull/14) · [v3.0.0](https://github.com/code-corhuila/opti-products-portal/releases/tag/v3.0.0) |
+| `opti-customers-api` | [#7](https://github.com/code-corhuila/opti-customers-api/pull/7) | [#8](https://github.com/code-corhuila/opti-customers-api/pull/8) | [#9](https://github.com/code-corhuila/opti-customers-api/pull/9) · [v3.0.0](https://github.com/code-corhuila/opti-customers-api/releases/tag/v3.0.0) |
+| `opti-customers-portal` | [#12](https://github.com/code-corhuila/opti-customers-portal/pull/12) | [#13](https://github.com/code-corhuila/opti-customers-portal/pull/13) | [#14](https://github.com/code-corhuila/opti-customers-portal/pull/14) · [v3.0.0](https://github.com/code-corhuila/opti-customers-portal/releases/tag/v3.0.0) |
 
 ### Security follow-up (separate from MVP 3 cut)
 
@@ -130,8 +130,8 @@ Left unmerged on purpose for classroom demo (`admin` / `OptiView2026` still work
 
 | Production-grade item | OptiView status (today) |
 |-----------------------|-------------------------|
-| Payment / invoice evidence | On **`develop` + `qa`**; `release/3.0.0` PRs open to **`main`** |
-| Versioned release | `v2.0.0` / `v2.1.0` exist; **`v3.0.0` tag pending** main merges |
+| Payment / invoice evidence | On **`develop` + `qa` + `main`**; SemVer **`v3.0.0`** tagged 2026-11-15 |
+| Versioned release | `v2.0.0` / `v2.1.0` baseline; **`v3.0.0` cut** on the MVP 3 train |
 | Unit / CI | Present on several repos |
 | Contract / E2E / load / chaos | Documented; not yet blocking gates |
 | Observability | Stack in `opti-infra`; SDK progressive |
@@ -159,10 +159,9 @@ Issues live in [`code-corhuila/opti-docs`](https://github.com/code-corhuila/opti
 
 | Board Status | Items (Week 15) |
 |--------------|-----------------|
-| **Done** | Product slice already on board: [#65](https://github.com/code-corhuila/opti-docs/issues/65)–[#70](https://github.com/code-corhuila/opti-docs/issues/70) (HU-138…143). Study + qa: [#72](https://github.com/code-corhuila/opti-docs/issues/72)–[#76](https://github.com/code-corhuila/opti-docs/issues/76) (HU-159…162, 168). |
-| **In review** | [#77](https://github.com/code-corhuila/opti-docs/issues/77) HU-169 — `release/3.0.0` → `main` |
-| **In progress / Blocked** | [#78](https://github.com/code-corhuila/opti-docs/issues/78) HU-170 — auth-db V019 (CI red; hold for demo) |
-| **Backlog** | [#79](https://github.com/code-corhuila/opti-docs/issues/79) contract-test plan · [#80](https://github.com/code-corhuila/opti-docs/issues/80) E2E smoke · prior security backlog still open (e.g. Redis [#55](https://github.com/code-corhuila/opti-docs/issues/55)–[#57](https://github.com/code-corhuila/opti-docs/issues/57), Wompi [#61](https://github.com/code-corhuila/opti-docs/issues/61)–[#63](https://github.com/code-corhuila/opti-docs/issues/63)) |
+| **Done** | Product slice [#65](https://github.com/code-corhuila/opti-docs/issues/65)–[#70](https://github.com/code-corhuila/opti-docs/issues/70) (HU-138…143). Study + qa + release: [#72](https://github.com/code-corhuila/opti-docs/issues/72)–[#77](https://github.com/code-corhuila/opti-docs/issues/77) (HU-159…162, 168–169). |
+| **In progress / Blocked** | [#78](https://github.com/code-corhuila/opti-docs/issues/78) HU-170 — auth-db V019 (CI red) |
+| **Backlog** | [#79](https://github.com/code-corhuila/opti-docs/issues/79) contract-test plan · [#80](https://github.com/code-corhuila/opti-docs/issues/80) E2E smoke · prior security backlog (e.g. Redis [#55](https://github.com/code-corhuila/opti-docs/issues/55)–[#57](https://github.com/code-corhuila/opti-docs/issues/57), Wompi [#61](https://github.com/code-corhuila/opti-docs/issues/61)–[#63](https://github.com/code-corhuila/opti-docs/issues/63)) |
 
 Mapping note: fork HUs **163–167** are the personal evidence of commits that implement board product HUs **138–142** (same vertical slice).
 
@@ -171,24 +170,23 @@ Mapping note: fork HUs **163–167** are the personal evidence of commits that i
 | Ceremony | When / evidence |
 |----------|-----------------|
 | Planning | Mon: testing-at-scale + MVP 3 notes; pull PDF slice + Git Flow onto board/backlog; prep classroom expo |
-| Daily | Async: develop → qa → open `release/3.0.0`; sync card Status on opti-board / Opti View backlog |
+| Daily | Async: develop → qa → merge `release/3.0.0` + tag `v3.0.0` (Sun 15 Nov); sync board Status |
 | Review | **Classroom expo to the professor:** video → live presentation of the full project → two questions per teammate |
-| Retro | Slice on develop+qa; main/tag open on board (#77); contracts/E2E parked as backlog (#79/#80); expo feedback taken for next cut |
-| Per-env PRs | feat→develop **done** · qa-* **done** · release/3.0.0→main **open** |
+| Retro | MVP 3 on `main`/`v3.0.0`; contracts/E2E still backlog (#79/#80); auth-db V019 still open |
+| Per-env PRs | feat→develop **done** · qa-* **done** · release/3.0.0→main **done** + tag |
 | Board sync | Created/closed Week 15 issues on `opti-docs`; Status set on [projects/3](https://github.com/orgs/code-corhuila/projects/3) + [projects/15](https://github.com/orgs/code-corhuila/projects/15) |
 
 ## 3. Blockers and risks
 
-- **`release/3.0.0` → `main` still OPEN** across the train — no `v3.0.0` tag until merges land (needs `ariel5253` approval on `main` per policy).
-- `opti-auth-db` #19 CI `rebuild` FAILURE — security hardening blocked independently of MVP 3.
-- Contract tests / automated E2E / load baseline still missing for a fully production-grade claim.
+- `opti-auth-db` #19 CI `rebuild` FAILURE — demo-credential retirement still open (independent of MVP 3 cut).
+- Contract tests / automated E2E / load baseline still missing for a fully production-grade claim beyond the tagged cut.
 - Secret store / Redis requirepass and uneven branch protection remain backlog.
 
 ## 4. Plan for next week
 
-- Merge `release/3.0.0` PRs to `main` and cut SemVer **`v3.0.0`** (+ zips if required).
-- Fix CI on auth-db #19 (and infra #7) after demo window — or keep demo seeds until classroom closes.
-- Draft minimal contract-test + one E2E smoke for login → place-order → invoice PDF.
+- Fix CI on auth-db #19 (and infra #7); decide when to retire fixed demo passwords post-classroom.
+- Draft minimal contract-test + one E2E smoke for login → place-order → invoice PDF (`#79`/`#80`).
+- Optional: package `v3.0.0` zips / release notes if the course asks for a Corte-3 delivery bundle.
 
 ## 5. Compliance self-check
 
@@ -226,13 +224,13 @@ Notes: Week window Mon–Sun. Section B late-reports C3 enrollment/chs 1–8 tha
 - https://github.com/code-corhuila/opti-api-gateway/pull/18
 - https://github.com/code-corhuila/opti-front/pull/31
 
-**`release/3.0.0` → `main` (OPEN):**
+**`release/3.0.0` → `main` + tag `v3.0.0` (merged 2026-11-15):**
 
-- https://github.com/code-corhuila/opti-sales-db/pull/22
-- https://github.com/code-corhuila/opti-sales-api/pull/20
-- https://github.com/code-corhuila/opti-sales-portal/pull/21
-- https://github.com/code-corhuila/opti-api-gateway/pull/19
-- https://github.com/code-corhuila/opti-front/pull/32
+- https://github.com/code-corhuila/opti-sales-db/pull/22 · https://github.com/code-corhuila/opti-sales-db/releases/tag/v3.0.0
+- https://github.com/code-corhuila/opti-sales-api/pull/20 · https://github.com/code-corhuila/opti-sales-api/releases/tag/v3.0.0
+- https://github.com/code-corhuila/opti-sales-portal/pull/21 · https://github.com/code-corhuila/opti-sales-portal/releases/tag/v3.0.0
+- https://github.com/code-corhuila/opti-api-gateway/pull/19 · https://github.com/code-corhuila/opti-api-gateway/releases/tag/v3.0.0
+- https://github.com/code-corhuila/opti-front/pull/32 · https://github.com/code-corhuila/opti-front/releases/tag/v3.0.0
 
 **Security follow-up (OPEN):**
 
@@ -242,8 +240,7 @@ Notes: Week window Mon–Sun. Section B late-reports C3 enrollment/chs 1–8 tha
 **Board / backlog (Week 15 cards):**
 
 - Boards: https://github.com/orgs/code-corhuila/projects/3 · https://github.com/orgs/code-corhuila/projects/15
-- Done: https://github.com/code-corhuila/opti-docs/issues/72 … https://github.com/code-corhuila/opti-docs/issues/76 (+ product [#65](https://github.com/code-corhuila/opti-docs/issues/65)–[#70](https://github.com/code-corhuila/opti-docs/issues/70))
-- In review: https://github.com/code-corhuila/opti-docs/issues/77
+- Done: https://github.com/code-corhuila/opti-docs/issues/72 … https://github.com/code-corhuila/opti-docs/issues/77 (+ product [#65](https://github.com/code-corhuila/opti-docs/issues/65)–[#70](https://github.com/code-corhuila/opti-docs/issues/70))
 - Blocked: https://github.com/code-corhuila/opti-docs/issues/78
 - Backlog: https://github.com/code-corhuila/opti-docs/issues/79 · https://github.com/code-corhuila/opti-docs/issues/80
 
