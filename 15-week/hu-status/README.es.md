@@ -53,7 +53,7 @@
 ## 2. Mi contribución individual
 
 > **Autor:** Juan Diego Tovar Rodriguez / `jdtovar07`.  
-> Slice PDF/pagos; Git Flow develop→qa + release abierto; exposición; **certificación C3 Huawei completada** esta semana.
+> Slice PDF/pagos; Git Flow develop → qa → **`main` + `v3.0.0` (15-nov)**; exposición; C3 completada.
 
 ### Exposición en clase (esta semana)
 
